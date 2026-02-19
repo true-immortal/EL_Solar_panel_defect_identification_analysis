@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>SolarGuard — Session History</title>
+<link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Mono:wght@300;400;500&family=Outfit:wght@300;400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="{{ url_for('static', filename='css/main.css') }}">
+<link rel="stylesheet" href="{{ url_for('static', filename='css/dashboard.css') }}">
+</head>
+<body class="dashboard-body">
+<div class="noise-overlay"></div>
+<nav class="nav" style="position:sticky">
+  <div class="nav-brand"><svg width="24" height="24" viewBox="0 0 28 28" fill="none"><polygon points="14,2 26,8 26,20 14,26 2,20 2,8" stroke="#F5C842" stroke-width="2" fill="none"/><circle cx="14" cy="14" r="3" fill="#F5C842"/></svg><span>SolarGuard<sup>AI</sup></span></div>
+  <div class="nav-pills"><a href="/" class="pill">← Home</a></div>
+</nav>
+<div style="padding:32px;max-width:1200px;margin:0 auto">
+  <h1 style="font-family:var(--font-head);font-size:28px;margin-bottom:8px">Session History</h1>
+  <p style="color:var(--text-2);margin-bottom:28px;font-size:14px">All previous analysis sessions stored locally</p>
+  <div id="historyGrid" class="history-grid-page"><div class="loading-text">Loading...</div></div>
+</div>
+<script>
+(async () => {
+  const resp = await fetch('/api/history');
+  const rows = await resp.json();
+  const grid = document.getElementById('historyGrid');
+  if (!rows.length) { grid.innerHTML = '<p style="color:var(--text-3)">No sessions found yet.</p>'; return; }
+  grid.innerHTML = rows.map(r => {
+    const s = JSON.parse(r.summary_json || '{}');
+    const d = new Date(r.timestamp).toLocaleString('en-IN',{dateStyle:'medium',timeStyle:'short'});
+    const hc = r.avg_health >= 80 ? '#34C759' : r.avg_health >= 50 ? '#FFCC00' : '#FF3B30';
+    return `<div class="history-card" onclick="window.location='/dashboard?session=${r.id}'">
+      <div class="hc-top"><span class="hc-folder">${r.folder_name}</span><span class="hc-date">${d}</span></div>
+      <div class="hc-kpis">
+        <div class="hc-kpi"><span class="hc-num">${r.total_panels}</span><span class="hc-lbl">Panels</span></div>
+        <div class="hc-kpi"><span class="hc-num">${r.total_defects}</span><span class="hc-lbl">Defects</span></div>
+        <div class="hc-kpi"><span class="hc-num" style="color:${hc}">${r.avg_health}%</span><span class="hc-lbl">Avg Health</span></div>
+        <div class="hc-kpi"><span class="hc-num" style="color:#FF3B30">${s.critical_panels||0}</span><span class="hc-lbl">Critical</span></div>
+      </div>
+      <div class="hc-footer">View Dashboard →</div>
+    </div>`;
+  }).join('');
+})();
+</script>
+</body>
+</html>

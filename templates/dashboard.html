@@ -13,129 +13,84 @@
 <body class="dashboard-body">
 <div class="noise-overlay"></div>
 
-<!-- Sidebar -->
 <aside class="sidebar" id="sidebar">
   <div class="sidebar-brand">
-    <svg width="24" height="24" viewBox="0 0 28 28" fill="none">
-      <polygon points="14,2 26,8 26,20 14,26 2,20 2,8" stroke="#F5C842" stroke-width="2" fill="none"/>
-      <circle cx="14" cy="14" r="3" fill="#F5C842"/>
-    </svg>
+    <svg width="24" height="24" viewBox="0 0 28 28" fill="none"><polygon points="14,2 26,8 26,20 14,26 2,20 2,8" stroke="#F5C842" stroke-width="2" fill="none"/><circle cx="14" cy="14" r="3" fill="#F5C842"/></svg>
     <span>SolarGuard<sup>AI</sup></span>
   </div>
-
   <nav class="sidebar-nav">
-    <a href="#overview" class="nav-item active" data-section="overview">
+    <a class="nav-item active" data-section="overview">
       <svg width="18" height="18" viewBox="0 0 18 18" fill="none"><rect x="1" y="1" width="6" height="6" rx="1" stroke="currentColor" stroke-width="1.5"/><rect x="11" y="1" width="6" height="6" rx="1" stroke="currentColor" stroke-width="1.5"/><rect x="1" y="11" width="6" height="6" rx="1" stroke="currentColor" stroke-width="1.5"/><rect x="11" y="11" width="6" height="6" rx="1" stroke="currentColor" stroke-width="1.5"/></svg>
       Overview
     </a>
-    <a href="#panels" class="nav-item" data-section="panels">
+    <a class="nav-item" data-section="panels">
       <svg width="18" height="18" viewBox="0 0 18 18" fill="none"><rect x="1" y="1" width="16" height="4" rx="1" stroke="currentColor" stroke-width="1.5"/><rect x="1" y="7" width="16" height="4" rx="1" stroke="currentColor" stroke-width="1.5"/><rect x="1" y="13" width="16" height="4" rx="1" stroke="currentColor" stroke-width="1.5"/></svg>
       Priority Queue
     </a>
-    <a href="#analytics" class="nav-item" data-section="analytics">
+    <a class="nav-item" data-section="analytics">
       <svg width="18" height="18" viewBox="0 0 18 18" fill="none"><polyline points="1,14 5,8 9,10 13,4 17,6" stroke="currentColor" stroke-width="1.5" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg>
       Analytics
     </a>
-    <a href="#inspector" class="nav-item" data-section="inspector">
+    <a class="nav-item" data-section="inspector">
       <svg width="18" height="18" viewBox="0 0 18 18" fill="none"><circle cx="8" cy="8" r="5" stroke="currentColor" stroke-width="1.5"/><path d="M12 12L16 16" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
       Panel Inspector
     </a>
+    <a class="nav-item" data-section="financials">
+      <svg width="18" height="18" viewBox="0 0 18 18" fill="none"><path d="M9 1v16M5 5h5.5a2.5 2.5 0 010 5H5m0 0h6a2.5 2.5 0 010 5H5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
+      Financial Impact
+    </a>
+    <a class="nav-item" data-section="history">
+      <svg width="18" height="18" viewBox="0 0 18 18" fill="none"><circle cx="9" cy="9" r="7" stroke="currentColor" stroke-width="1.5"/><path d="M9 5v4l3 2" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
+      History & Trends
+    </a>
   </nav>
-
   <div class="sidebar-footer">
-    <a href="/" class="btn-ghost btn-sm">← New Analysis</a>
-    <button class="btn-sm btn-export" id="exportBtn">Export Report</button>
+    <a href="/" class="btn-ghost btn-sm">← New Scan</a>
+    <button class="btn-sm btn-export" id="exportPdfBtn">⬇ PDF Report</button>
+    <button class="btn-sm btn-export-csv" id="exportCsvBtn">⬇ CSV Export</button>
   </div>
 </aside>
 
-<!-- Main Content -->
 <div class="main-content">
-  <!-- Topbar -->
   <header class="topbar">
     <div class="topbar-left">
       <h2 class="topbar-title" id="sessionTitle">Loading analysis...</h2>
       <span class="topbar-meta" id="sessionMeta"></span>
     </div>
     <div class="topbar-right">
-      <div class="health-badge" id="globalHealthBadge">
+      <!-- Confidence Threshold Slider -->
+      <div class="conf-control">
+        <label class="conf-label">Detection Threshold</label>
+        <div class="conf-row">
+          <input type="range" id="confSlider" min="10" max="85" value="25" class="conf-slider">
+          <span class="conf-val" id="confVal">0.25</span>
+        </div>
+        <button class="btn-rerun" id="rerunBtn">Re-run</button>
+      </div>
+      <div class="health-badge">
         <span class="health-label">Fleet Health</span>
         <span class="health-value" id="globalHealthValue">—</span>
       </div>
     </div>
   </header>
 
-  <!-- OVERVIEW SECTION -->
+  <!-- OVERVIEW -->
   <section class="section active" id="section-overview">
     <div class="kpi-grid">
-      <div class="kpi-card kpi-total">
-        <div class="kpi-icon">
-          <svg width="22" height="22" viewBox="0 0 22 22" fill="none"><rect x="1" y="1" width="8" height="8" rx="1.5" stroke="currentColor" stroke-width="1.5"/><rect x="13" y="1" width="8" height="8" rx="1.5" stroke="currentColor" stroke-width="1.5"/><rect x="1" y="13" width="8" height="8" rx="1.5" stroke="currentColor" stroke-width="1.5"/><rect x="13" y="13" width="8" height="8" rx="1.5" stroke="currentColor" stroke-width="1.5"/></svg>
-        </div>
-        <div class="kpi-body">
-          <span class="kpi-num" id="kpiTotal">0</span>
-          <span class="kpi-label">Panels Scanned</span>
-        </div>
-      </div>
-      <div class="kpi-card kpi-defects">
-        <div class="kpi-icon">
-          <svg width="22" height="22" viewBox="0 0 22 22" fill="none"><path d="M11 2L20 19H2L11 2Z" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"/><path d="M11 9V13" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/><circle cx="11" cy="16" r="0.75" fill="currentColor" stroke="currentColor" stroke-width="0.5"/></svg>
-        </div>
-        <div class="kpi-body">
-          <span class="kpi-num" id="kpiDefects">0</span>
-          <span class="kpi-label">Total Defects</span>
-        </div>
-      </div>
-      <div class="kpi-card kpi-critical">
-        <div class="kpi-icon">
-          <svg width="22" height="22" viewBox="0 0 22 22" fill="none"><circle cx="11" cy="11" r="9" stroke="currentColor" stroke-width="1.5"/><path d="M11 7V11" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/><circle cx="11" cy="14.5" r="0.75" fill="currentColor" stroke="currentColor" stroke-width="0.5"/></svg>
-        </div>
-        <div class="kpi-body">
-          <span class="kpi-num" id="kpiCritical">0</span>
-          <span class="kpi-label">Critical Panels</span>
-        </div>
-      </div>
-      <div class="kpi-card kpi-healthy">
-        <div class="kpi-icon">
-          <svg width="22" height="22" viewBox="0 0 22 22" fill="none"><circle cx="11" cy="11" r="9" stroke="currentColor" stroke-width="1.5"/><path d="M7 11L10 14L15 8" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
-        </div>
-        <div class="kpi-body">
-          <span class="kpi-num" id="kpiHealthy">0</span>
-          <span class="kpi-label">Healthy Panels</span>
-        </div>
-      </div>
+      <div class="kpi-card kpi-total"><div class="kpi-icon"><svg width="22" height="22" viewBox="0 0 22 22" fill="none"><rect x="1" y="1" width="8" height="8" rx="1.5" stroke="currentColor" stroke-width="1.5"/><rect x="13" y="1" width="8" height="8" rx="1.5" stroke="currentColor" stroke-width="1.5"/><rect x="1" y="13" width="8" height="8" rx="1.5" stroke="currentColor" stroke-width="1.5"/><rect x="13" y="13" width="8" height="8" rx="1.5" stroke="currentColor" stroke-width="1.5"/></svg></div><div class="kpi-body"><span class="kpi-num" id="kpiTotal">0</span><span class="kpi-label">Panels Scanned</span></div></div>
+      <div class="kpi-card kpi-defects"><div class="kpi-icon"><svg width="22" height="22" viewBox="0 0 22 22" fill="none"><path d="M11 2L20 19H2L11 2Z" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"/><path d="M11 9V13" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/><circle cx="11" cy="16" r="0.75" fill="currentColor"/></svg></div><div class="kpi-body"><span class="kpi-num" id="kpiDefects">0</span><span class="kpi-label">Total Defects</span></div></div>
+      <div class="kpi-card kpi-critical"><div class="kpi-icon"><svg width="22" height="22" viewBox="0 0 22 22" fill="none"><circle cx="11" cy="11" r="9" stroke="currentColor" stroke-width="1.5"/><path d="M11 7V11" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/><circle cx="11" cy="14.5" r="0.75" fill="currentColor"/></svg></div><div class="kpi-body"><span class="kpi-num" id="kpiCritical">0</span><span class="kpi-label">Critical Panels</span></div></div>
+      <div class="kpi-card kpi-power"><div class="kpi-icon"><svg width="22" height="22" viewBox="0 0 22 22" fill="none"><path d="M13 2L4 13h7l-2 7 9-11h-7l2-7z" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"/></svg></div><div class="kpi-body"><span class="kpi-num" id="kpiPower">0%</span><span class="kpi-label">Total Power Loss</span></div></div>
     </div>
-
     <div class="charts-grid">
-      <div class="chart-card chart-wide">
-        <div class="chart-header">
-          <h3>Panel Health Score Distribution</h3>
-          <span class="chart-sub">Sorted by priority (highest defects first)</span>
-        </div>
-        <div class="chart-wrap"><canvas id="healthBarChart"></canvas></div>
-      </div>
-      <div class="chart-card">
-        <div class="chart-header">
-          <h3>Severity Distribution</h3>
-        </div>
-        <div class="chart-wrap chart-wrap--sm"><canvas id="severityDonut"></canvas></div>
-      </div>
-      <div class="chart-card">
-        <div class="chart-header">
-          <h3>Defect Type Frequency</h3>
-        </div>
-        <div class="chart-wrap chart-wrap--sm"><canvas id="defectTypeChart"></canvas></div>
-      </div>
-      <div class="chart-card chart-wide">
-        <div class="chart-header">
-          <h3>Defect Count vs. Health Score</h3>
-          <span class="chart-sub">Correlation scatter plot</span>
-        </div>
-        <div class="chart-wrap"><canvas id="scatterChart"></canvas></div>
-      </div>
+      <div class="chart-card chart-wide"><div class="chart-header"><h3>Panel Health Score Distribution</h3><span class="chart-sub">Click a bar to open Panel Inspector</span></div><div class="chart-wrap"><canvas id="healthBarChart"></canvas></div></div>
+      <div class="chart-card"><div class="chart-header"><h3>Severity Distribution</h3></div><div class="chart-wrap chart-wrap--sm"><canvas id="severityDonut"></canvas></div></div>
+      <div class="chart-card"><div class="chart-header"><h3>Defect Type Frequency</h3></div><div class="chart-wrap chart-wrap--sm"><canvas id="defectTypeChart"></canvas></div></div>
+      <div class="chart-card chart-wide"><div class="chart-header"><h3>Defect Count vs. Health Score</h3><span class="chart-sub">Correlation scatter — click points to inspect</span></div><div class="chart-wrap"><canvas id="scatterChart"></canvas></div></div>
     </div>
   </section>
 
-  <!-- PRIORITY QUEUE SECTION -->
+  <!-- PRIORITY QUEUE -->
   <section class="section" id="section-panels">
     <div class="section-header">
       <h2>Priority Inspection Queue</h2>
@@ -149,67 +104,101 @@
       </div>
     </div>
     <div class="panel-table-wrap">
-      <table class="panel-table" id="panelTable">
-        <thead>
-          <tr>
-            <th>Rank</th>
-            <th>Panel ID</th>
-            <th>Health Score</th>
-            <th>Defects</th>
-            <th>Severity</th>
-            <th>Top Defect</th>
-            <th>Action</th>
-          </tr>
-        </thead>
+      <table class="panel-table">
+        <thead><tr><th>Rank</th><th>Panel</th><th>Health</th><th>Defects</th><th>Severity</th><th>Power Loss</th><th>Repair Cost</th><th>Status</th><th>Action</th></tr></thead>
         <tbody id="panelTableBody"></tbody>
       </table>
     </div>
   </section>
 
-  <!-- ANALYTICS SECTION -->
+  <!-- ANALYTICS -->
   <section class="section" id="section-analytics">
     <div class="charts-grid">
-      <div class="chart-card chart-wide">
-        <div class="chart-header">
-          <h3>Confidence Score Distribution by Defect Type</h3>
-        </div>
-        <div class="chart-wrap"><canvas id="confidenceChart"></canvas></div>
-      </div>
-      <div class="chart-card">
-        <div class="chart-header">
-          <h3>Defect Co-occurrence Heatmap</h3>
-        </div>
-        <div id="heatmapContainer" class="heatmap-wrap"></div>
-      </div>
-      <div class="chart-card">
-        <div class="chart-header">
-          <h3>Inspection Efficiency Gain</h3>
-          <span class="chart-sub">Estimated time saved vs. manual inspection</span>
-        </div>
-        <div class="efficiency-card" id="efficiencyCard"></div>
-      </div>
+      <div class="chart-card chart-wide"><div class="chart-header"><h3>Confidence Distribution by Defect Type</h3></div><div class="chart-wrap"><canvas id="confidenceChart"></canvas></div></div>
+      <div class="chart-card"><div class="chart-header"><h3>Defect Co-occurrence Heatmap</h3></div><div id="heatmapContainer" class="heatmap-wrap"></div></div>
+      <div class="chart-card"><div class="chart-header"><h3>Inspection Efficiency Gain</h3><span class="chart-sub">AI vs manual inspection time</span></div><div class="efficiency-card" id="efficiencyCard"></div></div>
     </div>
   </section>
 
-  <!-- PANEL INSPECTOR SECTION -->
+  <!-- PANEL INSPECTOR -->
   <section class="section" id="section-inspector">
     <div class="inspector-layout">
       <div class="inspector-sidebar">
-        <div class="inspector-search">
-          <input type="text" placeholder="Search panel..." id="inspectorSearch" class="search-input">
-        </div>
+        <input type="text" placeholder="Search panel..." id="inspectorSearch" class="search-input">
         <div class="inspector-list" id="inspectorList"></div>
       </div>
       <div class="inspector-main" id="inspectorMain">
         <div class="inspector-placeholder">
           <svg width="64" height="64" viewBox="0 0 64 64" fill="none" opacity="0.3"><circle cx="28" cy="28" r="18" stroke="white" stroke-width="2"/><path d="M41 41L54 54" stroke="white" stroke-width="2" stroke-linecap="round"/></svg>
-          <p>Select a panel to inspect</p>
+          <p>Select a panel from the list</p>
         </div>
       </div>
     </div>
   </section>
 
-</div><!-- /main-content -->
+  <!-- FINANCIAL IMPACT -->
+  <section class="section" id="section-financials">
+    <div class="fin-kpi-grid">
+      <div class="fin-kpi"><span class="fin-kpi-label">Total Power Loss</span><span class="fin-kpi-val" id="finPowerLoss">—</span><span class="fin-kpi-sub">Across all panels</span></div>
+      <div class="fin-kpi fin-kpi--red"><span class="fin-kpi-label">Est. Repair Cost</span><span class="fin-kpi-val" id="finRepairCost">—</span><span class="fin-kpi-sub">Total to fix all defects</span></div>
+      <div class="fin-kpi fin-kpi--orange"><span class="fin-kpi-label">Annual Revenue Loss</span><span class="fin-kpi-val" id="finRevLoss">—</span><span class="fin-kpi-sub">If defects left unrepaired</span></div>
+      <div class="fin-kpi fin-kpi--green"><span class="fin-kpi-label">ROI of Repair</span><span class="fin-kpi-val" id="finRoi">—</span><span class="fin-kpi-sub">Revenue recovered / repair cost</span></div>
+    </div>
+    <div class="charts-grid" style="margin-top:20px">
+      <div class="chart-card chart-wide"><div class="chart-header"><h3>Power Loss per Panel</h3><span class="chart-sub">% power loss estimated per defect configuration</span></div><div class="chart-wrap"><canvas id="powerLossChart"></canvas></div></div>
+      <div class="chart-card"><div class="chart-header"><h3>Repair Cost Breakdown by Defect Type</h3></div><div class="chart-wrap chart-wrap--sm"><canvas id="repairCostChart"></canvas></div></div>
+      <div class="chart-card"><div class="chart-header"><h3>Panel Repair Priority vs. Cost</h3><span class="chart-sub">Bubble size = repair cost</span></div><div class="chart-wrap chart-wrap--sm"><canvas id="bubbleChart"></canvas></div></div>
+    </div>
+  </section>
+
+  <!-- HISTORY & TRENDS -->
+  <section class="section" id="section-history">
+    <div class="section-header"><h2>Session History & Trends</h2></div>
+    <div class="history-layout">
+      <div class="history-sessions" id="historySessions"><div class="loading-text">Loading history...</div></div>
+      <div class="history-main">
+        <div class="chart-card" style="margin-bottom:16px"><div class="chart-header"><h3>Fleet Health Over Time</h3><span class="chart-sub" id="trendLabel">Select a session to view trends</span></div><div class="chart-wrap"><canvas id="trendChart"></canvas></div></div>
+        <div class="chart-card"><div class="chart-header"><h3>Defect Count Trend</h3></div><div class="chart-wrap"><canvas id="defectTrendChart"></canvas></div></div>
+      </div>
+    </div>
+  </section>
+
+</div>
+
+<!-- STATUS MODAL -->
+<div class="modal-overlay" id="statusModal" style="display:none">
+  <div class="modal-card">
+    <div class="modal-header">
+      <h3>Update Panel Status</h3>
+      <button class="modal-close" onclick="closeModal()">×</button>
+    </div>
+    <div class="modal-body">
+      <div class="form-group">
+        <label class="form-label">Panel</label>
+        <div class="form-value" id="modalPanelName">—</div>
+      </div>
+      <div class="form-group">
+        <label class="form-label">Status</label>
+        <select class="form-select" id="modalStatus">
+          <option>Pending</option>
+          <option>Confirmed</option>
+          <option>Scheduled</option>
+          <option>In Repair</option>
+          <option>Repaired</option>
+          <option>Monitoring</option>
+        </select>
+      </div>
+      <div class="form-group">
+        <label class="form-label">Inspector Notes</label>
+        <textarea class="form-textarea" id="modalNotes" placeholder="Add observations, findings, or repair notes..."></textarea>
+      </div>
+    </div>
+    <div class="modal-footer">
+      <button class="btn-ghost" onclick="closeModal()">Cancel</button>
+      <button class="btn-primary" id="modalSaveBtn">Save Status</button>
+    </div>
+  </div>
+</div>
 
 <script src="{{ url_for('static', filename='js/dashboard.js') }}"></script>
 </body>
