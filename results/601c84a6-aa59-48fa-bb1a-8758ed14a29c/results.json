@@ -1,0 +1,2202 @@
+{
+  "session_id": "601c84a6-aa59-48fa-bb1a-8758ed14a29c",
+  "folder_name": "testimagesforweb",
+  "conf_threshold": 0.25,
+  "panels": [
+    {
+      "id": "c8ac0b73-2af8-430a-95ab-3aa5836d07c1",
+      "filename": "testimagesforweb_detail_C3_674_s.jpg",
+      "defect_count": 14,
+      "defect_summary": {
+        "Finger": {
+          "count": 11,
+          "confidences": [
+            0.955,
+            0.895,
+            0.802,
+            0.746,
+            0.704,
+            0.666,
+            0.62,
+            0.618,
+            0.612,
+            0.435,
+            0.367
+          ],
+          "severity": "High",
+          "color": "#FF6B35",
+          "power_loss_pct": 5,
+          "repair_cost": 1500,
+          "avg_confidence": 0.675
+        },
+        "Horizontal Dislocation": {
+          "count": 1,
+          "confidences": [
+            0.396
+          ],
+          "severity": "High",
+          "color": "#FF9500",
+          "power_loss_pct": 8,
+          "repair_cost": 2000,
+          "avg_confidence": 0.396
+        },
+        "Black Core": {
+          "count": 2,
+          "confidences": [
+            0.393,
+            0.393
+          ],
+          "severity": "Critical",
+          "color": "#FF2D55",
+          "power_loss_pct": 20,
+          "repair_cost": 4500,
+          "avg_confidence": 0.393
+        }
+      },
+      "health_score": 0.0,
+      "power_loss_pct": 56.0,
+      "repair_cost": 15459,
+      "annual_revenue_loss": 2509,
+      "worst_severity": "Critical",
+      "image_size": {
+        "width": 1024,
+        "height": 690
+      },
+      "annotated_image": "/results/601c84a6-aa59-48fa-bb1a-8758ed14a29c/annotated_testimagesforweb_detail_C3_674_s.jpg",
+      "original_image": "/uploads/601c84a6-aa59-48fa-bb1a-8758ed14a29c/testimagesforweb_detail_C3_674_s.jpg",
+      "detections": [
+        {
+          "class_id": 2,
+          "confidence": 0.955,
+          "bbox": [
+            837,
+            53,
+            1024,
+            193
+          ]
+        },
+        {
+          "class_id": 2,
+          "confidence": 0.895,
+          "bbox": [
+            484,
+            273,
+            576,
+            325
+          ]
+        },
+        {
+          "class_id": 2,
+          "confidence": 0.802,
+          "bbox": [
+            844,
+            478,
+            1023,
+            548
+          ]
+        },
+        {
+          "class_id": 2,
+          "confidence": 0.746,
+          "bbox": [
+            0,
+            198,
+            258,
+            391
+          ]
+        },
+        {
+          "class_id": 2,
+          "confidence": 0.704,
+          "bbox": [
+            271,
+            193,
+            458,
+            375
+          ]
+        },
+        {
+          "class_id": 2,
+          "confidence": 0.666,
+          "bbox": [
+            7,
+            312,
+            254,
+            393
+          ]
+        },
+        {
+          "class_id": 2,
+          "confidence": 0.62,
+          "bbox": [
+            837,
+            197,
+            1024,
+            377
+          ]
+        },
+        {
+          "class_id": 2,
+          "confidence": 0.618,
+          "bbox": [
+            271,
+            414,
+            476,
+            472
+          ]
+        },
+        {
+          "class_id": 2,
+          "confidence": 0.612,
+          "bbox": [
+            922,
+            100,
+            1024,
+            191
+          ]
+        },
+        {
+          "class_id": 2,
+          "confidence": 0.435,
+          "bbox": [
+            355,
+            100,
+            640,
+            208
+          ]
+        },
+        {
+          "class_id": 4,
+          "confidence": 0.396,
+          "bbox": [
+            483,
+            203,
+            842,
+            470
+          ]
+        },
+        {
+          "class_id": 0,
+          "confidence": 0.393,
+          "bbox": [
+            842,
+            193,
+            1016,
+            413
+          ]
+        },
+        {
+          "class_id": 0,
+          "confidence": 0.393,
+          "bbox": [
+            477,
+            195,
+            849,
+            477
+          ]
+        },
+        {
+          "class_id": 2,
+          "confidence": 0.367,
+          "bbox": [
+            80,
+            203,
+            257,
+            267
+          ]
+        }
+      ],
+      "status": "Pending",
+      "notes": "",
+      "timestamp": "2026-02-20T01:03:40.256459",
+      "priority_rank": 1
+    },
+    {
+      "id": "d68ed064-af8e-4e2e-abe7-010446ce6e33",
+      "filename": "testimagesforweb_images_3.jpg",
+      "defect_count": 9,
+      "defect_summary": {
+        "Class 11": {
+          "count": 4,
+          "confidences": [
+            0.626,
+            0.443,
+            0.289,
+            0.269
+          ],
+          "severity": "Low",
+          "color": "#888",
+          "power_loss_pct": 2,
+          "repair_cost": 500,
+          "avg_confidence": 0.407
+        },
+        "Printing Error": {
+          "count": 3,
+          "confidences": [
+            0.49,
+            0.478,
+            0.358
+          ],
+          "severity": "Medium",
+          "color": "#FFCC00",
+          "power_loss_pct": 3,
+          "repair_cost": 800,
+          "avg_confidence": 0.442
+        },
+        "Fragment": {
+          "count": 1,
+          "confidences": [
+            0.358
+          ],
+          "severity": "Critical",
+          "color": "#FF0000",
+          "power_loss_pct": 30,
+          "repair_cost": 6000,
+          "avg_confidence": 0.358
+        },
+        "Finger": {
+          "count": 1,
+          "confidences": [
+            0.255
+          ],
+          "severity": "High",
+          "color": "#FF6B35",
+          "power_loss_pct": 5,
+          "repair_cost": 1500,
+          "avg_confidence": 0.255
+        }
+      },
+      "health_score": 76.9,
+      "power_loss_pct": 19.2,
+      "repair_cost": 4405,
+      "annual_revenue_loss": 860,
+      "worst_severity": "Critical",
+      "image_size": {
+        "width": 183,
+        "height": 181
+      },
+      "annotated_image": "/results/601c84a6-aa59-48fa-bb1a-8758ed14a29c/annotated_testimagesforweb_images_3.jpg",
+      "original_image": "/uploads/601c84a6-aa59-48fa-bb1a-8758ed14a29c/testimagesforweb_images_3.jpg",
+      "detections": [
+        {
+          "class_id": 11,
+          "confidence": 0.626,
+          "bbox": [
+            157,
+            69,
+            165,
+            76
+          ]
+        },
+        {
+          "class_id": 5,
+          "confidence": 0.49,
+          "bbox": [
+            84,
+            91,
+            181,
+            108
+          ]
+        },
+        {
+          "class_id": 5,
+          "confidence": 0.478,
+          "bbox": [
+            86,
+            8,
+            181,
+            25
+          ]
+        },
+        {
+          "class_id": 11,
+          "confidence": 0.443,
+          "bbox": [
+            158,
+            164,
+            174,
+            177
+          ]
+        },
+        {
+          "class_id": 3,
+          "confidence": 0.358,
+          "bbox": [
+            22,
+            135,
+            33,
+            157
+          ]
+        },
+        {
+          "class_id": 5,
+          "confidence": 0.358,
+          "bbox": [
+            0,
+            6,
+            66,
+            26
+          ]
+        },
+        {
+          "class_id": 11,
+          "confidence": 0.289,
+          "bbox": [
+            161,
+            82,
+            178,
+            95
+          ]
+        },
+        {
+          "class_id": 11,
+          "confidence": 0.269,
+          "bbox": [
+            112,
+            176,
+            119,
+            181
+          ]
+        },
+        {
+          "class_id": 2,
+          "confidence": 0.255,
+          "bbox": [
+            1,
+            106,
+            69,
+            133
+          ]
+        }
+      ],
+      "status": "Pending",
+      "notes": "",
+      "timestamp": "2026-02-20T01:03:46.374344",
+      "priority_rank": 2
+    },
+    {
+      "id": "fa0cd14f-684d-42fa-863b-2e8dcbd9850d",
+      "filename": "testimagesforweb_Chinese-22_9_15-EL-e1494353617635-1.jpg",
+      "defect_count": 7,
+      "defect_summary": {
+        "Other Defect": {
+          "count": 1,
+          "confidences": [
+            0.809
+          ],
+          "severity": "Low",
+          "color": "#636366",
+          "power_loss_pct": 2,
+          "repair_cost": 500,
+          "avg_confidence": 0.809
+        },
+        "Finger": {
+          "count": 5,
+          "confidences": [
+            0.618,
+            0.515,
+            0.503,
+            0.316,
+            0.282
+          ],
+          "severity": "High",
+          "color": "#FF6B35",
+          "power_loss_pct": 5,
+          "repair_cost": 1500,
+          "avg_confidence": 0.447
+        },
+        "Fragment": {
+          "count": 1,
+          "confidences": [
+            0.3
+          ],
+          "severity": "Critical",
+          "color": "#FF0000",
+          "power_loss_pct": 30,
+          "repair_cost": 6000,
+          "avg_confidence": 0.3
+        }
+      },
+      "health_score": 64.8,
+      "power_loss_pct": 21.8,
+      "repair_cost": 5556,
+      "annual_revenue_loss": 977,
+      "worst_severity": "Critical",
+      "image_size": {
+        "width": 758,
+        "height": 400
+      },
+      "annotated_image": "/results/601c84a6-aa59-48fa-bb1a-8758ed14a29c/annotated_testimagesforweb_Chinese-22_9_15-EL-e1494353617635-1.jpg",
+      "original_image": "/uploads/601c84a6-aa59-48fa-bb1a-8758ed14a29c/testimagesforweb_Chinese-22_9_15-EL-e1494353617635-1.jpg",
+      "detections": [
+        {
+          "class_id": 10,
+          "confidence": 0.809,
+          "bbox": [
+            688,
+            198,
+            756,
+            263
+          ]
+        },
+        {
+          "class_id": 2,
+          "confidence": 0.618,
+          "bbox": [
+            402,
+            180,
+            509,
+            369
+          ]
+        },
+        {
+          "class_id": 2,
+          "confidence": 0.515,
+          "bbox": [
+            657,
+            97,
+            758,
+            262
+          ]
+        },
+        {
+          "class_id": 2,
+          "confidence": 0.503,
+          "bbox": [
+            418,
+            40,
+            493,
+            70
+          ]
+        },
+        {
+          "class_id": 2,
+          "confidence": 0.316,
+          "bbox": [
+            686,
+            198,
+            756,
+            263
+          ]
+        },
+        {
+          "class_id": 3,
+          "confidence": 0.3,
+          "bbox": [
+            331,
+            122,
+            416,
+            144
+          ]
+        },
+        {
+          "class_id": 2,
+          "confidence": 0.282,
+          "bbox": [
+            413,
+            333,
+            471,
+            386
+          ]
+        }
+      ],
+      "status": "Pending",
+      "notes": "",
+      "timestamp": "2026-02-20T01:03:33.502509",
+      "priority_rank": 3
+    },
+    {
+      "id": "77c69f03-ac0d-4f24-9d53-e1c0720e0081",
+      "filename": "testimagesforweb_crack-39.PNG",
+      "defect_count": 6,
+      "defect_summary": {
+        "Fragment": {
+          "count": 4,
+          "confidences": [
+            0.537,
+            0.508,
+            0.425,
+            0.388
+          ],
+          "severity": "Critical",
+          "color": "#FF0000",
+          "power_loss_pct": 30,
+          "repair_cost": 6000,
+          "avg_confidence": 0.465
+        },
+        "Printing Error": {
+          "count": 1,
+          "confidences": [
+            0.419
+          ],
+          "severity": "Medium",
+          "color": "#FFCC00",
+          "power_loss_pct": 3,
+          "repair_cost": 800,
+          "avg_confidence": 0.419
+        },
+        "Black Core": {
+          "count": 1,
+          "confidences": [
+            0.338
+          ],
+          "severity": "Critical",
+          "color": "#FF2D55",
+          "power_loss_pct": 20,
+          "repair_cost": 4500,
+          "avg_confidence": 0.338
+        }
+      },
+      "health_score": 53.6,
+      "power_loss_pct": 63.8,
+      "repair_cost": 13004,
+      "annual_revenue_loss": 2858,
+      "worst_severity": "Critical",
+      "image_size": {
+        "width": 360,
+        "height": 368
+      },
+      "annotated_image": "/results/601c84a6-aa59-48fa-bb1a-8758ed14a29c/annotated_testimagesforweb_crack-39.PNG",
+      "original_image": "/uploads/601c84a6-aa59-48fa-bb1a-8758ed14a29c/testimagesforweb_crack-39.PNG",
+      "detections": [
+        {
+          "class_id": 3,
+          "confidence": 0.537,
+          "bbox": [
+            174,
+            137,
+            185,
+            223
+          ]
+        },
+        {
+          "class_id": 3,
+          "confidence": 0.508,
+          "bbox": [
+            240,
+            176,
+            250,
+            257
+          ]
+        },
+        {
+          "class_id": 3,
+          "confidence": 0.425,
+          "bbox": [
+            258,
+            172,
+            268,
+            263
+          ]
+        },
+        {
+          "class_id": 5,
+          "confidence": 0.419,
+          "bbox": [
+            0,
+            257,
+            360,
+            294
+          ]
+        },
+        {
+          "class_id": 3,
+          "confidence": 0.388,
+          "bbox": [
+            204,
+            161,
+            214,
+            241
+          ]
+        },
+        {
+          "class_id": 0,
+          "confidence": 0.338,
+          "bbox": [
+            0,
+            277,
+            360,
+            368
+          ]
+        }
+      ],
+      "status": "Pending",
+      "notes": "",
+      "timestamp": "2026-02-20T01:03:34.334271",
+      "priority_rank": 4
+    },
+    {
+      "id": "9f866a8c-5533-4925-9359-3f172f2ed48e",
+      "filename": "testimagesforweb_images.jpg",
+      "defect_count": 5,
+      "defect_summary": {
+        "Fragment": {
+          "count": 4,
+          "confidences": [
+            0.549,
+            0.499,
+            0.383,
+            0.285
+          ],
+          "severity": "Critical",
+          "color": "#FF0000",
+          "power_loss_pct": 30,
+          "repair_cost": 6000,
+          "avg_confidence": 0.429
+        },
+        "Finger": {
+          "count": 1,
+          "confidences": [
+            0.43
+          ],
+          "severity": "High",
+          "color": "#FF6B35",
+          "power_loss_pct": 5,
+          "repair_cost": 1500,
+          "avg_confidence": 0.43
+        }
+      },
+      "health_score": 60.5,
+      "power_loss_pct": 53.6,
+      "repair_cost": 10941,
+      "annual_revenue_loss": 2401,
+      "worst_severity": "Critical",
+      "image_size": {
+        "width": 225,
+        "height": 225
+      },
+      "annotated_image": "/results/601c84a6-aa59-48fa-bb1a-8758ed14a29c/annotated_testimagesforweb_images.jpg",
+      "original_image": "/uploads/601c84a6-aa59-48fa-bb1a-8758ed14a29c/testimagesforweb_images.jpg",
+      "detections": [
+        {
+          "class_id": 3,
+          "confidence": 0.549,
+          "bbox": [
+            194,
+            63,
+            200,
+            112
+          ]
+        },
+        {
+          "class_id": 3,
+          "confidence": 0.499,
+          "bbox": [
+            197,
+            127,
+            203,
+            161
+          ]
+        },
+        {
+          "class_id": 2,
+          "confidence": 0.43,
+          "bbox": [
+            0,
+            17,
+            153,
+            106
+          ]
+        },
+        {
+          "class_id": 3,
+          "confidence": 0.383,
+          "bbox": [
+            93,
+            142,
+            99,
+            173
+          ]
+        },
+        {
+          "class_id": 3,
+          "confidence": 0.285,
+          "bbox": [
+            114,
+            118,
+            120,
+            169
+          ]
+        }
+      ],
+      "status": "Pending",
+      "notes": "",
+      "timestamp": "2026-02-20T01:03:48.783724",
+      "priority_rank": 5
+    },
+    {
+      "id": "fc04dc32-b175-49d0-bd0b-21eef11d3294",
+      "filename": "testimagesforweb_images_2.jpg",
+      "defect_count": 4,
+      "defect_summary": {
+        "Finger": {
+          "count": 1,
+          "confidences": [
+            0.756
+          ],
+          "severity": "High",
+          "color": "#FF6B35",
+          "power_loss_pct": 5,
+          "repair_cost": 1500,
+          "avg_confidence": 0.756
+        },
+        "Fragment": {
+          "count": 2,
+          "confidences": [
+            0.626,
+            0.527
+          ],
+          "severity": "Critical",
+          "color": "#FF0000",
+          "power_loss_pct": 30,
+          "repair_cost": 6000,
+          "avg_confidence": 0.577
+        },
+        "Black Core": {
+          "count": 1,
+          "confidences": [
+            0.265
+          ],
+          "severity": "Critical",
+          "color": "#FF2D55",
+          "power_loss_pct": 20,
+          "repair_cost": 4500,
+          "avg_confidence": 0.265
+        }
+      },
+      "health_score": 62.6,
+      "power_loss_pct": 43.7,
+      "repair_cost": 9244,
+      "annual_revenue_loss": 1958,
+      "worst_severity": "Critical",
+      "image_size": {
+        "width": 225,
+        "height": 225
+      },
+      "annotated_image": "/results/601c84a6-aa59-48fa-bb1a-8758ed14a29c/annotated_testimagesforweb_images_2.jpg",
+      "original_image": "/uploads/601c84a6-aa59-48fa-bb1a-8758ed14a29c/testimagesforweb_images_2.jpg",
+      "detections": [
+        {
+          "class_id": 2,
+          "confidence": 0.756,
+          "bbox": [
+            82,
+            108,
+            158,
+            176
+          ]
+        },
+        {
+          "class_id": 3,
+          "confidence": 0.626,
+          "bbox": [
+            100,
+            10,
+            104,
+            36
+          ]
+        },
+        {
+          "class_id": 3,
+          "confidence": 0.527,
+          "bbox": [
+            112,
+            180,
+            116,
+            208
+          ]
+        },
+        {
+          "class_id": 0,
+          "confidence": 0.265,
+          "bbox": [
+            0,
+            185,
+            46,
+            224
+          ]
+        }
+      ],
+      "status": "Pending",
+      "notes": "",
+      "timestamp": "2026-02-20T01:03:45.592666",
+      "priority_rank": 6
+    },
+    {
+      "id": "4103fc89-0bfa-424b-95db-2ca6d1e7e79b",
+      "filename": "testimagesforweb_crack-48.PNG",
+      "defect_count": 3,
+      "defect_summary": {
+        "Fragment": {
+          "count": 1,
+          "confidences": [
+            0.301
+          ],
+          "severity": "Critical",
+          "color": "#FF0000",
+          "power_loss_pct": 30,
+          "repair_cost": 6000,
+          "avg_confidence": 0.301
+        },
+        "Class 11": {
+          "count": 1,
+          "confidences": [
+            0.297
+          ],
+          "severity": "Low",
+          "color": "#888",
+          "power_loss_pct": 2,
+          "repair_cost": 500,
+          "avg_confidence": 0.297
+        },
+        "Finger": {
+          "count": 1,
+          "confidences": [
+            0.252
+          ],
+          "severity": "High",
+          "color": "#FF6B35",
+          "power_loss_pct": 5,
+          "repair_cost": 1500,
+          "avg_confidence": 0.252
+        }
+      },
+      "health_score": 90.1,
+      "power_loss_pct": 10.9,
+      "repair_cost": 2332,
+      "annual_revenue_loss": 488,
+      "worst_severity": "Critical",
+      "image_size": {
+        "width": 371,
+        "height": 369
+      },
+      "annotated_image": "/results/601c84a6-aa59-48fa-bb1a-8758ed14a29c/annotated_testimagesforweb_crack-48.PNG",
+      "original_image": "/uploads/601c84a6-aa59-48fa-bb1a-8758ed14a29c/testimagesforweb_crack-48.PNG",
+      "detections": [
+        {
+          "class_id": 3,
+          "confidence": 0.301,
+          "bbox": [
+            14,
+            13,
+            23,
+            65
+          ]
+        },
+        {
+          "class_id": 11,
+          "confidence": 0.297,
+          "bbox": [
+            168,
+            47,
+            185,
+            64
+          ]
+        },
+        {
+          "class_id": 2,
+          "confidence": 0.252,
+          "bbox": [
+            90,
+            222,
+            282,
+            268
+          ]
+        }
+      ],
+      "status": "Pending",
+      "notes": "",
+      "timestamp": "2026-02-20T01:03:39.569951",
+      "priority_rank": 7
+    },
+    {
+      "id": "852a6e1b-826a-44a3-adb5-e0c55b539f56",
+      "filename": "testimagesforweb_images_6.jpg",
+      "defect_count": 3,
+      "defect_summary": {
+        "Printing Error": {
+          "count": 1,
+          "confidences": [
+            0.563
+          ],
+          "severity": "Medium",
+          "color": "#FFCC00",
+          "power_loss_pct": 3,
+          "repair_cost": 800,
+          "avg_confidence": 0.563
+        },
+        "Class 11": {
+          "count": 1,
+          "confidences": [
+            0.497
+          ],
+          "severity": "Low",
+          "color": "#888",
+          "power_loss_pct": 2,
+          "repair_cost": 500,
+          "avg_confidence": 0.497
+        },
+        "Fragment": {
+          "count": 1,
+          "confidences": [
+            0.458
+          ],
+          "severity": "Critical",
+          "color": "#FF0000",
+          "power_loss_pct": 30,
+          "repair_cost": 6000,
+          "avg_confidence": 0.458
+        }
+      },
+      "health_score": 86.0,
+      "power_loss_pct": 16.4,
+      "repair_cost": 3447,
+      "annual_revenue_loss": 735,
+      "worst_severity": "Critical",
+      "image_size": {
+        "width": 225,
+        "height": 225
+      },
+      "annotated_image": "/results/601c84a6-aa59-48fa-bb1a-8758ed14a29c/annotated_testimagesforweb_images_6.jpg",
+      "original_image": "/uploads/601c84a6-aa59-48fa-bb1a-8758ed14a29c/testimagesforweb_images_6.jpg",
+      "detections": [
+        {
+          "class_id": 5,
+          "confidence": 0.563,
+          "bbox": [
+            2,
+            150,
+            222,
+            214
+          ]
+        },
+        {
+          "class_id": 11,
+          "confidence": 0.497,
+          "bbox": [
+            66,
+            17,
+            79,
+            29
+          ]
+        },
+        {
+          "class_id": 3,
+          "confidence": 0.458,
+          "bbox": [
+            22,
+            139,
+            31,
+            185
+          ]
+        }
+      ],
+      "status": "Pending",
+      "notes": "",
+      "timestamp": "2026-02-20T01:03:47.841626",
+      "priority_rank": 8
+    },
+    {
+      "id": "da636c81-793b-49cc-baf7-82d6299e32de",
+      "filename": "testimagesforweb_crack-40.PNG",
+      "defect_count": 2,
+      "defect_summary": {
+        "Fragment": {
+          "count": 2,
+          "confidences": [
+            0.525,
+            0.417
+          ],
+          "severity": "Critical",
+          "color": "#FF0000",
+          "power_loss_pct": 30,
+          "repair_cost": 6000,
+          "avg_confidence": 0.471
+        }
+      },
+      "health_score": 81.2,
+      "power_loss_pct": 28.3,
+      "repair_cost": 5652,
+      "annual_revenue_loss": 1268,
+      "worst_severity": "Critical",
+      "image_size": {
+        "width": 447,
+        "height": 446
+      },
+      "annotated_image": "/results/601c84a6-aa59-48fa-bb1a-8758ed14a29c/annotated_testimagesforweb_crack-40.PNG",
+      "original_image": "/uploads/601c84a6-aa59-48fa-bb1a-8758ed14a29c/testimagesforweb_crack-40.PNG",
+      "detections": [
+        {
+          "class_id": 3,
+          "confidence": 0.525,
+          "bbox": [
+            273,
+            393,
+            285,
+            445
+          ]
+        },
+        {
+          "class_id": 3,
+          "confidence": 0.417,
+          "bbox": [
+            61,
+            163,
+            73,
+            264
+          ]
+        }
+      ],
+      "status": "Pending",
+      "notes": "",
+      "timestamp": "2026-02-20T01:03:35.228524",
+      "priority_rank": 9
+    },
+    {
+      "id": "83eb0926-61e0-43d3-b6bf-137b0a9ff2df",
+      "filename": "testimagesforweb_el_test1-1.jpg",
+      "defect_count": 15,
+      "defect_summary": {
+        "Finger": {
+          "count": 5,
+          "confidences": [
+            0.578,
+            0.521,
+            0.473,
+            0.335,
+            0.286
+          ],
+          "severity": "High",
+          "color": "#FF6B35",
+          "power_loss_pct": 5,
+          "repair_cost": 1500,
+          "avg_confidence": 0.439
+        },
+        "Class 12": {
+          "count": 10,
+          "confidences": [
+            0.46,
+            0.426,
+            0.413,
+            0.371,
+            0.368,
+            0.332,
+            0.312,
+            0.28,
+            0.264,
+            0.261
+          ],
+          "severity": "Low",
+          "color": "#888",
+          "power_loss_pct": 2,
+          "repair_cost": 500,
+          "avg_confidence": 0.349
+        }
+      },
+      "health_score": 63.2,
+      "power_loss_pct": 17.9,
+      "repair_cost": 5033,
+      "annual_revenue_loss": 802,
+      "worst_severity": "High",
+      "image_size": {
+        "width": 560,
+        "height": 377
+      },
+      "annotated_image": "/results/601c84a6-aa59-48fa-bb1a-8758ed14a29c/annotated_testimagesforweb_el_test1-1.jpg",
+      "original_image": "/uploads/601c84a6-aa59-48fa-bb1a-8758ed14a29c/testimagesforweb_el_test1-1.jpg",
+      "detections": [
+        {
+          "class_id": 2,
+          "confidence": 0.578,
+          "bbox": [
+            64,
+            23,
+            126,
+            49
+          ]
+        },
+        {
+          "class_id": 2,
+          "confidence": 0.521,
+          "bbox": [
+            497,
+            301,
+            557,
+            325
+          ]
+        },
+        {
+          "class_id": 2,
+          "confidence": 0.473,
+          "bbox": [
+            498,
+            19,
+            557,
+            83
+          ]
+        },
+        {
+          "class_id": 12,
+          "confidence": 0.46,
+          "bbox": [
+            302,
+            6,
+            326,
+            278
+          ]
+        },
+        {
+          "class_id": 12,
+          "confidence": 0.426,
+          "bbox": [
+            242,
+            2,
+            269,
+            243
+          ]
+        },
+        {
+          "class_id": 12,
+          "confidence": 0.413,
+          "bbox": [
+            175,
+            21,
+            200,
+            354
+          ]
+        },
+        {
+          "class_id": 12,
+          "confidence": 0.371,
+          "bbox": [
+            483,
+            65,
+            508,
+            371
+          ]
+        },
+        {
+          "class_id": 12,
+          "confidence": 0.368,
+          "bbox": [
+            360,
+            0,
+            385,
+            375
+          ]
+        },
+        {
+          "class_id": 2,
+          "confidence": 0.335,
+          "bbox": [
+            498,
+            114,
+            558,
+            142
+          ]
+        },
+        {
+          "class_id": 12,
+          "confidence": 0.332,
+          "bbox": [
+            119,
+            5,
+            142,
+            298
+          ]
+        },
+        {
+          "class_id": 12,
+          "confidence": 0.312,
+          "bbox": [
+            358,
+            199,
+            383,
+            367
+          ]
+        },
+        {
+          "class_id": 2,
+          "confidence": 0.286,
+          "bbox": [
+            501,
+            54,
+            557,
+            82
+          ]
+        },
+        {
+          "class_id": 12,
+          "confidence": 0.28,
+          "bbox": [
+            426,
+            203,
+            451,
+            374
+          ]
+        },
+        {
+          "class_id": 12,
+          "confidence": 0.264,
+          "bbox": [
+            302,
+            236,
+            324,
+            376
+          ]
+        },
+        {
+          "class_id": 12,
+          "confidence": 0.261,
+          "bbox": [
+            231,
+            0,
+            262,
+            321
+          ]
+        }
+      ],
+      "status": "Pending",
+      "notes": "",
+      "timestamp": "2026-02-20T01:03:44.619996",
+      "priority_rank": 10
+    },
+    {
+      "id": "c158580a-b17b-4cc7-bf14-1609e4c984d2",
+      "filename": "testimagesforweb_crack-43.PNG",
+      "defect_count": 9,
+      "defect_summary": {
+        "Finger": {
+          "count": 8,
+          "confidences": [
+            0.61,
+            0.363,
+            0.316,
+            0.308,
+            0.294,
+            0.293,
+            0.286,
+            0.257
+          ],
+          "severity": "High",
+          "color": "#FF6B35",
+          "power_loss_pct": 5,
+          "repair_cost": 1500,
+          "avg_confidence": 0.341
+        },
+        "Other Defect": {
+          "count": 1,
+          "confidences": [
+            0.469
+          ],
+          "severity": "Low",
+          "color": "#636366",
+          "power_loss_pct": 2,
+          "repair_cost": 500,
+          "avg_confidence": 0.469
+        }
+      },
+      "health_score": 65.9,
+      "power_loss_pct": 14.6,
+      "repair_cost": 4325,
+      "annual_revenue_loss": 654,
+      "worst_severity": "High",
+      "image_size": {
+        "width": 544,
+        "height": 548
+      },
+      "annotated_image": "/results/601c84a6-aa59-48fa-bb1a-8758ed14a29c/annotated_testimagesforweb_crack-43.PNG",
+      "original_image": "/uploads/601c84a6-aa59-48fa-bb1a-8758ed14a29c/testimagesforweb_crack-43.PNG",
+      "detections": [
+        {
+          "class_id": 2,
+          "confidence": 0.61,
+          "bbox": [
+            117,
+            459,
+            168,
+            538
+          ]
+        },
+        {
+          "class_id": 10,
+          "confidence": 0.469,
+          "bbox": [
+            241,
+            0,
+            426,
+            185
+          ]
+        },
+        {
+          "class_id": 2,
+          "confidence": 0.363,
+          "bbox": [
+            0,
+            459,
+            57,
+            534
+          ]
+        },
+        {
+          "class_id": 2,
+          "confidence": 0.316,
+          "bbox": [
+            15,
+            0,
+            258,
+            545
+          ]
+        },
+        {
+          "class_id": 2,
+          "confidence": 0.308,
+          "bbox": [
+            139,
+            460,
+            189,
+            539
+          ]
+        },
+        {
+          "class_id": 2,
+          "confidence": 0.294,
+          "bbox": [
+            318,
+            0,
+            467,
+            538
+          ]
+        },
+        {
+          "class_id": 2,
+          "confidence": 0.293,
+          "bbox": [
+            257,
+            23,
+            383,
+            548
+          ]
+        },
+        {
+          "class_id": 2,
+          "confidence": 0.286,
+          "bbox": [
+            158,
+            1,
+            332,
+            529
+          ]
+        },
+        {
+          "class_id": 2,
+          "confidence": 0.257,
+          "bbox": [
+            388,
+            90,
+            533,
+            548
+          ]
+        }
+      ],
+      "status": "Pending",
+      "notes": "",
+      "timestamp": "2026-02-20T01:03:37.826325",
+      "priority_rank": 11
+    },
+    {
+      "id": "62f937f8-f15d-44a9-aa86-2710e9f9aabe",
+      "filename": "testimagesforweb_Zellbruch.png",
+      "defect_count": 4,
+      "defect_summary": {
+        "Finger": {
+          "count": 2,
+          "confidences": [
+            0.87,
+            0.317
+          ],
+          "severity": "High",
+          "color": "#FF6B35",
+          "power_loss_pct": 5,
+          "repair_cost": 1500,
+          "avg_confidence": 0.594
+        },
+        "Other Defect": {
+          "count": 1,
+          "confidences": [
+            0.529
+          ],
+          "severity": "Low",
+          "color": "#636366",
+          "power_loss_pct": 2,
+          "repair_cost": 500,
+          "avg_confidence": 0.529
+        },
+        "Printing Error": {
+          "count": 1,
+          "confidences": [
+            0.284
+          ],
+          "severity": "Medium",
+          "color": "#FFCC00",
+          "power_loss_pct": 3,
+          "repair_cost": 800,
+          "avg_confidence": 0.284
+        }
+      },
+      "health_score": 82.5,
+      "power_loss_pct": 7.8,
+      "repair_cost": 2272,
+      "annual_revenue_loss": 349,
+      "worst_severity": "High",
+      "image_size": {
+        "width": 500,
+        "height": 313
+      },
+      "annotated_image": "/results/601c84a6-aa59-48fa-bb1a-8758ed14a29c/annotated_testimagesforweb_Zellbruch.png",
+      "original_image": "/uploads/601c84a6-aa59-48fa-bb1a-8758ed14a29c/testimagesforweb_Zellbruch.png",
+      "detections": [
+        {
+          "class_id": 2,
+          "confidence": 0.87,
+          "bbox": [
+            434,
+            161,
+            498,
+            245
+          ]
+        },
+        {
+          "class_id": 10,
+          "confidence": 0.529,
+          "bbox": [
+            128,
+            164,
+            221,
+            291
+          ]
+        },
+        {
+          "class_id": 2,
+          "confidence": 0.317,
+          "bbox": [
+            78,
+            92,
+            123,
+            158
+          ]
+        },
+        {
+          "class_id": 5,
+          "confidence": 0.284,
+          "bbox": [
+            195,
+            0,
+            265,
+            311
+          ]
+        }
+      ],
+      "status": "Pending",
+      "notes": "",
+      "timestamp": "2026-02-20T01:03:50.092680",
+      "priority_rank": 12
+    },
+    {
+      "id": "1da28d04-dfd8-42e6-94c1-0b920c387ff0",
+      "filename": "testimagesforweb_crack-42.PNG",
+      "defect_count": 3,
+      "defect_summary": {
+        "Finger": {
+          "count": 3,
+          "confidences": [
+            0.785,
+            0.559,
+            0.486
+          ],
+          "severity": "High",
+          "color": "#FF6B35",
+          "power_loss_pct": 5,
+          "repair_cost": 1500,
+          "avg_confidence": 0.61
+        }
+      },
+      "health_score": 78.0,
+      "power_loss_pct": 9.2,
+      "repair_cost": 2745,
+      "annual_revenue_loss": 412,
+      "worst_severity": "High",
+      "image_size": {
+        "width": 620,
+        "height": 533
+      },
+      "annotated_image": "/results/601c84a6-aa59-48fa-bb1a-8758ed14a29c/annotated_testimagesforweb_crack-42.PNG",
+      "original_image": "/uploads/601c84a6-aa59-48fa-bb1a-8758ed14a29c/testimagesforweb_crack-42.PNG",
+      "detections": [
+        {
+          "class_id": 2,
+          "confidence": 0.785,
+          "bbox": [
+            304,
+            10,
+            484,
+            142
+          ]
+        },
+        {
+          "class_id": 2,
+          "confidence": 0.559,
+          "bbox": [
+            1,
+            7,
+            306,
+            149
+          ]
+        },
+        {
+          "class_id": 2,
+          "confidence": 0.486,
+          "bbox": [
+            7,
+            121,
+            489,
+            422
+          ]
+        }
+      ],
+      "status": "Pending",
+      "notes": "",
+      "timestamp": "2026-02-20T01:03:36.825602",
+      "priority_rank": 13
+    },
+    {
+      "id": "fdf95eb4-90f2-4500-ad5e-ad572a22e275",
+      "filename": "testimagesforweb_elektrolumineszenz_pv.jpg",
+      "defect_count": 2,
+      "defect_summary": {
+        "Finger": {
+          "count": 1,
+          "confidences": [
+            0.486
+          ],
+          "severity": "High",
+          "color": "#FF6B35",
+          "power_loss_pct": 5,
+          "repair_cost": 1500,
+          "avg_confidence": 0.486
+        },
+        "Class 12": {
+          "count": 1,
+          "confidences": [
+            0.255
+          ],
+          "severity": "Low",
+          "color": "#888",
+          "power_loss_pct": 2,
+          "repair_cost": 500,
+          "avg_confidence": 0.255
+        }
+      },
+      "health_score": 93.4,
+      "power_loss_pct": 2.9,
+      "repair_cost": 856,
+      "annual_revenue_loss": 130,
+      "worst_severity": "High",
+      "image_size": {
+        "width": 520,
+        "height": 693
+      },
+      "annotated_image": "/results/601c84a6-aa59-48fa-bb1a-8758ed14a29c/annotated_testimagesforweb_elektrolumineszenz_pv.jpg",
+      "original_image": "/uploads/601c84a6-aa59-48fa-bb1a-8758ed14a29c/testimagesforweb_elektrolumineszenz_pv.jpg",
+      "detections": [
+        {
+          "class_id": 2,
+          "confidence": 0.486,
+          "bbox": [
+            442,
+            7,
+            510,
+            90
+          ]
+        },
+        {
+          "class_id": 12,
+          "confidence": 0.255,
+          "bbox": [
+            154,
+            8,
+            195,
+            355
+          ]
+        }
+      ],
+      "status": "Pending",
+      "notes": "",
+      "timestamp": "2026-02-20T01:03:42.766267",
+      "priority_rank": 14
+    },
+    {
+      "id": "18af9f02-d9da-4118-a4cb-99ca5e577cb3",
+      "filename": "testimagesforweb_1479285761_1.jpg",
+      "defect_count": 1,
+      "defect_summary": {
+        "Finger": {
+          "count": 1,
+          "confidences": [
+            0.369
+          ],
+          "severity": "High",
+          "color": "#FF6B35",
+          "power_loss_pct": 5,
+          "repair_cost": 1500,
+          "avg_confidence": 0.369
+        }
+      },
+      "health_score": 95.6,
+      "power_loss_pct": 1.8,
+      "repair_cost": 554,
+      "annual_revenue_loss": 81,
+      "worst_severity": "High",
+      "image_size": {
+        "width": 800,
+        "height": 533
+      },
+      "annotated_image": "/results/601c84a6-aa59-48fa-bb1a-8758ed14a29c/annotated_testimagesforweb_1479285761_1.jpg",
+      "original_image": "/uploads/601c84a6-aa59-48fa-bb1a-8758ed14a29c/testimagesforweb_1479285761_1.jpg",
+      "detections": [
+        {
+          "class_id": 2,
+          "confidence": 0.369,
+          "bbox": [
+            744,
+            12,
+            799,
+            62
+          ]
+        }
+      ],
+      "status": "Pending",
+      "notes": "",
+      "timestamp": "2026-02-20T01:03:32.393036",
+      "priority_rank": 15
+    },
+    {
+      "id": "e5e9dc68-b6a2-4f4a-83ce-6fd5b939b64c",
+      "filename": "testimagesforweb_elektrolumineszenz-pv.jpg",
+      "defect_count": 1,
+      "defect_summary": {
+        "Finger": {
+          "count": 1,
+          "confidences": [
+            0.373
+          ],
+          "severity": "High",
+          "color": "#FF6B35",
+          "power_loss_pct": 5,
+          "repair_cost": 1500,
+          "avg_confidence": 0.373
+        }
+      },
+      "health_score": 95.5,
+      "power_loss_pct": 1.9,
+      "repair_cost": 560,
+      "annual_revenue_loss": 85,
+      "worst_severity": "High",
+      "image_size": {
+        "width": 520,
+        "height": 390
+      },
+      "annotated_image": "/results/601c84a6-aa59-48fa-bb1a-8758ed14a29c/annotated_testimagesforweb_elektrolumineszenz-pv.jpg",
+      "original_image": "/uploads/601c84a6-aa59-48fa-bb1a-8758ed14a29c/testimagesforweb_elektrolumineszenz-pv.jpg",
+      "detections": [
+        {
+          "class_id": 2,
+          "confidence": 0.373,
+          "bbox": [
+            0,
+            253,
+            242,
+            347
+          ]
+        }
+      ],
+      "status": "Pending",
+      "notes": "",
+      "timestamp": "2026-02-20T01:03:41.099078",
+      "priority_rank": 16
+    },
+    {
+      "id": "83bc1c8f-8786-45bc-9a8a-25a631e74c92",
+      "filename": "testimagesforweb_elektrolumineszenz.png",
+      "defect_count": 4,
+      "defect_summary": {
+        "Printing Error": {
+          "count": 4,
+          "confidences": [
+            0.449,
+            0.434,
+            0.365,
+            0.306
+          ],
+          "severity": "Medium",
+          "color": "#FFCC00",
+          "power_loss_pct": 3,
+          "repair_cost": 800,
+          "avg_confidence": 0.389
+        }
+      },
+      "health_score": 90.7,
+      "power_loss_pct": 4.7,
+      "repair_cost": 1243,
+      "annual_revenue_loss": 211,
+      "worst_severity": "Medium",
+      "image_size": {
+        "width": 582,
+        "height": 575
+      },
+      "annotated_image": "/results/601c84a6-aa59-48fa-bb1a-8758ed14a29c/annotated_testimagesforweb_elektrolumineszenz.png",
+      "original_image": "/uploads/601c84a6-aa59-48fa-bb1a-8758ed14a29c/testimagesforweb_elektrolumineszenz.png",
+      "detections": [
+        {
+          "class_id": 5,
+          "confidence": 0.449,
+          "bbox": [
+            317,
+            1,
+            406,
+            575
+          ]
+        },
+        {
+          "class_id": 5,
+          "confidence": 0.434,
+          "bbox": [
+            458,
+            0,
+            548,
+            575
+          ]
+        },
+        {
+          "class_id": 5,
+          "confidence": 0.365,
+          "bbox": [
+            26,
+            0,
+            115,
+            575
+          ]
+        },
+        {
+          "class_id": 5,
+          "confidence": 0.306,
+          "bbox": [
+            172,
+            0,
+            249,
+            573
+          ]
+        }
+      ],
+      "status": "Pending",
+      "notes": "",
+      "timestamp": "2026-02-20T01:03:42.046847",
+      "priority_rank": 17
+    },
+    {
+      "id": "68d64b09-e5ca-462f-b465-cc7fbd4a58d6",
+      "filename": "testimagesforweb_unnamed.jpg",
+      "defect_count": 3,
+      "defect_summary": {
+        "Printing Error": {
+          "count": 3,
+          "confidences": [
+            0.595,
+            0.526,
+            0.41
+          ],
+          "severity": "Medium",
+          "color": "#FFCC00",
+          "power_loss_pct": 3,
+          "repair_cost": 800,
+          "avg_confidence": 0.51
+        }
+      },
+      "health_score": 90.8,
+      "power_loss_pct": 4.6,
+      "repair_cost": 1225,
+      "annual_revenue_loss": 206,
+      "worst_severity": "Medium",
+      "image_size": {
+        "width": 512,
+        "height": 384
+      },
+      "annotated_image": "/results/601c84a6-aa59-48fa-bb1a-8758ed14a29c/annotated_testimagesforweb_unnamed.jpg",
+      "original_image": "/uploads/601c84a6-aa59-48fa-bb1a-8758ed14a29c/testimagesforweb_unnamed.jpg",
+      "detections": [
+        {
+          "class_id": 5,
+          "confidence": 0.595,
+          "bbox": [
+            395,
+            0,
+            474,
+            384
+          ]
+        },
+        {
+          "class_id": 5,
+          "confidence": 0.526,
+          "bbox": [
+            64,
+            0,
+            134,
+            383
+          ]
+        },
+        {
+          "class_id": 5,
+          "confidence": 0.41,
+          "bbox": [
+            424,
+            1,
+            510,
+            384
+          ]
+        }
+      ],
+      "status": "Pending",
+      "notes": "",
+      "timestamp": "2026-02-20T01:03:49.518727",
+      "priority_rank": 18
+    },
+    {
+      "id": "58d8fa3d-3edc-4791-9349-c8301b26e6c3",
+      "filename": "testimagesforweb_1479285761.jpg",
+      "defect_count": 2,
+      "defect_summary": {
+        "Printing Error": {
+          "count": 2,
+          "confidences": [
+            0.295,
+            0.279
+          ],
+          "severity": "Medium",
+          "color": "#FFCC00",
+          "power_loss_pct": 3,
+          "repair_cost": 800,
+          "avg_confidence": 0.287
+        }
+      },
+      "health_score": 96.6,
+      "power_loss_pct": 1.7,
+      "repair_cost": 459,
+      "annual_revenue_loss": 76,
+      "worst_severity": "Medium",
+      "image_size": {
+        "width": 800,
+        "height": 533
+      },
+      "annotated_image": "/results/601c84a6-aa59-48fa-bb1a-8758ed14a29c/annotated_testimagesforweb_1479285761.jpg",
+      "original_image": "/uploads/601c84a6-aa59-48fa-bb1a-8758ed14a29c/testimagesforweb_1479285761.jpg",
+      "detections": [
+        {
+          "class_id": 5,
+          "confidence": 0.295,
+          "bbox": [
+            101,
+            0,
+            227,
+            529
+          ]
+        },
+        {
+          "class_id": 5,
+          "confidence": 0.279,
+          "bbox": [
+            172,
+            0,
+            298,
+            533
+          ]
+        }
+      ],
+      "status": "Pending",
+      "notes": "",
+      "timestamp": "2026-02-20T01:03:33.017375",
+      "priority_rank": 19
+    },
+    {
+      "id": "a9508483-c425-48c1-9334-bf47d4ada631",
+      "filename": "testimagesforweb_images_4.jpg",
+      "defect_count": 2,
+      "defect_summary": {
+        "Printing Error": {
+          "count": 1,
+          "confidences": [
+            0.256
+          ],
+          "severity": "Medium",
+          "color": "#FFCC00",
+          "power_loss_pct": 3,
+          "repair_cost": 800,
+          "avg_confidence": 0.256
+        },
+        "Class 12": {
+          "count": 1,
+          "confidences": [
+            0.253
+          ],
+          "severity": "Low",
+          "color": "#888",
+          "power_loss_pct": 2,
+          "repair_cost": 500,
+          "avg_confidence": 0.253
+        }
+      },
+      "health_score": 97.7,
+      "power_loss_pct": 1.3,
+      "repair_cost": 331,
+      "annual_revenue_loss": 58,
+      "worst_severity": "Medium",
+      "image_size": {
+        "width": 299,
+        "height": 168
+      },
+      "annotated_image": "/results/601c84a6-aa59-48fa-bb1a-8758ed14a29c/annotated_testimagesforweb_images_4.jpg",
+      "original_image": "/uploads/601c84a6-aa59-48fa-bb1a-8758ed14a29c/testimagesforweb_images_4.jpg",
+      "detections": [
+        {
+          "class_id": 5,
+          "confidence": 0.256,
+          "bbox": [
+            279,
+            3,
+            298,
+            111
+          ]
+        },
+        {
+          "class_id": 12,
+          "confidence": 0.253,
+          "bbox": [
+            165,
+            4,
+            185,
+            168
+          ]
+        }
+      ],
+      "status": "Pending",
+      "notes": "",
+      "timestamp": "2026-02-20T01:03:46.910932",
+      "priority_rank": 20
+    },
+    {
+      "id": "32eb3b26-c819-4c4e-8465-2f2bf0713d1a",
+      "filename": "testimagesforweb_crack-46.PNG",
+      "defect_count": 1,
+      "defect_summary": {
+        "Printing Error": {
+          "count": 1,
+          "confidences": [
+            0.457
+          ],
+          "severity": "Medium",
+          "color": "#FFCC00",
+          "power_loss_pct": 3,
+          "repair_cost": 800,
+          "avg_confidence": 0.457
+        }
+      },
+      "health_score": 97.3,
+      "power_loss_pct": 1.4,
+      "repair_cost": 366,
+      "annual_revenue_loss": 63,
+      "worst_severity": "Medium",
+      "image_size": {
+        "width": 463,
+        "height": 471
+      },
+      "annotated_image": "/results/601c84a6-aa59-48fa-bb1a-8758ed14a29c/annotated_testimagesforweb_crack-46.PNG",
+      "original_image": "/uploads/601c84a6-aa59-48fa-bb1a-8758ed14a29c/testimagesforweb_crack-46.PNG",
+      "detections": [
+        {
+          "class_id": 5,
+          "confidence": 0.457,
+          "bbox": [
+            29,
+            2,
+            118,
+            471
+          ]
+        }
+      ],
+      "status": "Pending",
+      "notes": "",
+      "timestamp": "2026-02-20T01:03:38.714462",
+      "priority_rank": 21
+    },
+    {
+      "id": "b0aa4d78-ba85-4e5c-bfee-a2c1732df979",
+      "filename": "testimagesforweb_el_crack.jpg",
+      "defect_count": 1,
+      "defect_summary": {
+        "Printing Error": {
+          "count": 1,
+          "confidences": [
+            0.4
+          ],
+          "severity": "Medium",
+          "color": "#FFCC00",
+          "power_loss_pct": 3,
+          "repair_cost": 800,
+          "avg_confidence": 0.4
+        }
+      },
+      "health_score": 97.6,
+      "power_loss_pct": 1.2,
+      "repair_cost": 320,
+      "annual_revenue_loss": 54,
+      "worst_severity": "Medium",
+      "image_size": {
+        "width": 956,
+        "height": 919
+      },
+      "annotated_image": "/results/601c84a6-aa59-48fa-bb1a-8758ed14a29c/annotated_testimagesforweb_el_crack.jpg",
+      "original_image": "/uploads/601c84a6-aa59-48fa-bb1a-8758ed14a29c/testimagesforweb_el_crack.jpg",
+      "detections": [
+        {
+          "class_id": 5,
+          "confidence": 0.4,
+          "bbox": [
+            357,
+            0,
+            561,
+            919
+          ]
+        }
+      ],
+      "status": "Pending",
+      "notes": "",
+      "timestamp": "2026-02-20T01:03:43.765979",
+      "priority_rank": 22
+    },
+    {
+      "id": "7d983920-de1c-49d8-9e8e-a3df917eeb2d",
+      "filename": "testimagesforweb_crack-41.PNG",
+      "defect_count": 3,
+      "defect_summary": {
+        "Class 11": {
+          "count": 3,
+          "confidences": [
+            0.743,
+            0.49,
+            0.359
+          ],
+          "severity": "Low",
+          "color": "#888",
+          "power_loss_pct": 2,
+          "repair_cost": 500,
+          "avg_confidence": 0.531
+        }
+      },
+      "health_score": 95.2,
+      "power_loss_pct": 3.2,
+      "repair_cost": 796,
+      "annual_revenue_loss": 143,
+      "worst_severity": "Low",
+      "image_size": {
+        "width": 452,
+        "height": 452
+      },
+      "annotated_image": "/results/601c84a6-aa59-48fa-bb1a-8758ed14a29c/annotated_testimagesforweb_crack-41.PNG",
+      "original_image": "/uploads/601c84a6-aa59-48fa-bb1a-8758ed14a29c/testimagesforweb_crack-41.PNG",
+      "detections": [
+        {
+          "class_id": 11,
+          "confidence": 0.743,
+          "bbox": [
+            43,
+            156,
+            80,
+            192
+          ]
+        },
+        {
+          "class_id": 11,
+          "confidence": 0.49,
+          "bbox": [
+            366,
+            32,
+            386,
+            53
+          ]
+        },
+        {
+          "class_id": 11,
+          "confidence": 0.359,
+          "bbox": [
+            271,
+            232,
+            300,
+            263
+          ]
+        }
+      ],
+      "status": "Pending",
+      "notes": "",
+      "timestamp": "2026-02-20T01:03:36.059167",
+      "priority_rank": 23
+    },
+    {
+      "id": "11ee9586-6f63-446b-9011-ef228faec70d",
+      "filename": "testimagesforweb_08-RE-Mike-Solar-PV-fig-05-490x620.jpg",
+      "defect_count": 0,
+      "defect_summary": {},
+      "health_score": 100.0,
+      "power_loss_pct": 0.0,
+      "repair_cost": 0,
+      "annual_revenue_loss": 0,
+      "worst_severity": "Good",
+      "image_size": {
+        "width": 500,
+        "height": 279
+      },
+      "annotated_image": "/results/601c84a6-aa59-48fa-bb1a-8758ed14a29c/annotated_testimagesforweb_08-RE-Mike-Solar-PV-fig-05-490x620.jpg",
+      "original_image": "/uploads/601c84a6-aa59-48fa-bb1a-8758ed14a29c/testimagesforweb_08-RE-Mike-Solar-PV-fig-05-490x620.jpg",
+      "detections": [],
+      "status": "Pending",
+      "notes": "",
+      "timestamp": "2026-02-20T01:03:31.329211",
+      "priority_rank": 24
+    }
+  ],
+  "summary": {
+    "total_panels": 24,
+    "total_defects": 104,
+    "avg_health_score": 79.8,
+    "total_power_loss_pct": 387.9,
+    "total_repair_cost": 91125,
+    "total_annual_revenue_loss": 17378,
+    "defect_type_distribution": {
+      "Finger": 41,
+      "Horizontal Dislocation": 1,
+      "Black Core": 4,
+      "Class 11": 9,
+      "Printing Error": 18,
+      "Fragment": 16,
+      "Other Defect": 3,
+      "Class 12": 12
+    },
+    "severity_distribution": {
+      "Critical": 9,
+      "High": 7,
+      "Medium": 6,
+      "Low": 1,
+      "Good": 1
+    },
+    "critical_panels": 9,
+    "healthy_panels": 1
+  }
+}
