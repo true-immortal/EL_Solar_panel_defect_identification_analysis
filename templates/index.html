@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>SolarGuard — AI Defect Detection</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Mono:wght@300;400;500&family=Outfit:wght@300;400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="{{ url_for('static', filename='css/main.css') }}">
+</head>
+<body>
+<div class="noise-overlay"></div>
+
+<nav class="nav">
+  <div class="nav-brand">
+    <svg width="28" height="28" viewBox="0 0 28 28" fill="none">
+      <polygon points="14,2 26,8 26,20 14,26 2,20 2,8" stroke="#F5C842" stroke-width="2" fill="none"/>
+      <polygon points="14,7 21,11 21,17 14,21 7,17 7,11" fill="#F5C842" opacity="0.3"/>
+      <circle cx="14" cy="14" r="3" fill="#F5C842"/>
+    </svg>
+    <span>SolarGuard<sup>AI</sup></span>
+  </div>
+  <div class="nav-pills">
+    <span class="pill pill--active">Detection</span>
+    <span class="pill">Analysis</span>
+    <span class="pill">Reports</span>
+  </div>
+  <div class="nav-status">
+    <span class="status-dot"></span>
+    <span class="status-label">Model Ready</span>
+  </div>
+</nav>
+
+<main class="hero">
+  <div class="hero-bg">
+    <div class="grid-lines"></div>
+    <div class="orb orb-1"></div>
+    <div class="orb orb-2"></div>
+  </div>
+
+  <div class="hero-content">
+    <div class="badge">
+      <span class="badge-dot"></span>
+      YOLOv8 · EL Imaging · Real-time Analysis
+    </div>
+    <h1>
+      <span class="line-1">Detect Solar</span>
+      <span class="line-2">Panel <em>Defects</em></span>
+      <span class="line-3">Instantly</span>
+    </h1>
+    <p class="hero-sub">Upload a batch of Electroluminescence images. Get prioritized defect analysis, health scores, and actionable insights — powered by deep learning.</p>
+
+    <!-- Hidden inputs -->
+    <input type="file" id="folderInput" webkitdirectory mozdirectory multiple accept=".jpg,.jpeg,.png,.tif,.tiff,.bmp" style="display:none">
+    <input type="file" id="fileInput" multiple accept=".jpg,.jpeg,.png,.tif,.tiff,.bmp" style="display:none">
+
+    <div class="upload-zone" id="uploadZone">
+
+      <!-- Empty state -->
+      <div class="upload-inner" id="uploadInner">
+        <div class="upload-methods">
+          <button class="upload-method-btn" id="folderBtn">
+            <svg width="32" height="32" viewBox="0 0 32 32" fill="none">
+              <path d="M3 8C3 6.9 3.9 6 5 6H13L15 9H27C28.1 9 29 9.9 29 11V24C29 25.1 28.1 26 27 26H5C3.9 26 3 25.1 3 24V8Z" stroke="#F5C842" stroke-width="1.8" fill="none"/>
+              <path d="M16 15V21M13 18L16 15L19 18" stroke="#F5C842" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+            <span class="method-label">Select Folder</span>
+            <span class="method-sub">Scans all images inside</span>
+          </button>
+
+          <div class="upload-or">
+            <span class="or-line"></span>
+            <span class="or-text">or</span>
+            <span class="or-line"></span>
+          </div>
+
+          <button class="upload-method-btn upload-method-btn--secondary" id="filesBtn">
+            <svg width="32" height="32" viewBox="0 0 32 32" fill="none">
+              <path d="M8 4H20L28 12V28C28 29.1 27.1 30 26 30H8C6.9 30 6 29.1 6 28V6C6 4.9 6.9 4 8 4Z" stroke="currentColor" stroke-width="1.8" fill="none"/>
+              <path d="M20 4V12H28" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/>
+              <path d="M12 18H20M12 22H17" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/>
+            </svg>
+            <span class="method-label">Select Images</span>
+            <span class="method-sub">Pick individual files</span>
+          </button>
+        </div>
+
+        <div class="upload-drop-hint">
+          <svg width="14" height="14" viewBox="0 0 14 14" fill="none"><circle cx="7" cy="7" r="6" stroke="currentColor" stroke-width="1.2"/><path d="M7 5V7M7 9h.01" stroke="currentColor" stroke-width="1.2" stroke-linecap="round"/></svg>
+          Or drag &amp; drop a folder / images anywhere here
+        </div>
+      </div>
+
+      <!-- Loaded state -->
+      <div class="file-preview" id="filePreview" style="display:none">
+        <div class="folder-summary" id="folderSummary">
+          <div class="folder-icon">
+            <svg width="20" height="20" viewBox="0 0 20 20" fill="none"><path d="M2 5C2 4.4 2.4 4 3 4H8L9.5 6H17C17.6 6 18 6.4 18 7V15C18 15.6 17.6 16 17 16H3C2.4 16 2 15.6 2 15V5Z" fill="#F5C842" fill-opacity="0.2" stroke="#F5C842" stroke-width="1.3"/></svg>
+          </div>
+          <div class="folder-info">
+            <span class="folder-name" id="folderName">—</span>
+            <span class="folder-count" id="folderCount">0 images ready</span>
+          </div>
+          <button class="btn-ghost btn-xs" id="clearBtn">✕ Clear</button>
+        </div>
+
+        <div class="file-list" id="fileList"></div>
+
+        <div class="upload-actions">
+          <span class="ready-hint" id="readyHint"></span>
+          <button class="btn-primary" id="analyzeBtn">
+            <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><circle cx="8" cy="8" r="6" stroke="currentColor" stroke-width="1.5"/><path d="M6 8L7.5 9.5L10 6.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            <span class="btn-text">Run Analysis</span>
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <div class="stats-row">
+      <div class="stat">
+        <span class="stat-num">8</span>
+        <span class="stat-label">Defect Types</span>
+      </div>
+      <div class="stat-div"></div>
+      <div class="stat">
+        <span class="stat-num">&lt;2s</span>
+        <span class="stat-label">Per Image</span>
+      </div>
+      <div class="stat-div"></div>
+      <div class="stat">
+        <span class="stat-num">mAP 94%</span>
+        <span class="stat-label">Model Accuracy</span>
+      </div>
+    </div>
+  </div>
+
+  <div class="hero-visual">
+    <div class="panel-grid">
+      <div class="panel-card panel-critical"><span class="panel-badge">Critical</span><div class="panel-img"><div class="defect-box" style="top:20%;left:15%;width:30%;height:25%;border-color:#FF3B30"></div><div class="defect-box" style="top:55%;left:60%;width:25%;height:20%;border-color:#FF9500"></div></div></div>
+      <div class="panel-card panel-medium"><span class="panel-badge" style="background:#FFCC00;color:#000">Medium</span><div class="panel-img"><div class="defect-box" style="top:30%;left:40%;width:20%;height:20%;border-color:#FFCC00"></div></div></div>
+      <div class="panel-card panel-healthy"><span class="panel-badge" style="background:#34C759">Healthy</span><div class="panel-img"></div></div>
+      <div class="panel-card panel-high"><span class="panel-badge" style="background:#FF6B35">High</span><div class="panel-img"><div class="defect-box" style="top:10%;left:10%;width:40%;height:30%;border-color:#FF6B35"></div></div></div>
+    </div>
+  </div>
+</main>
+
+<!-- Loading Overlay -->
+<div class="loading-overlay" id="loadingOverlay" style="display:none">
+  <div class="loading-card">
+    <div class="loading-icon">
+      <svg width="60" height="60" viewBox="0 0 60 60" fill="none">
+        <circle cx="30" cy="30" r="26" stroke="#1a1a1a" stroke-width="3"/>
+        <circle cx="30" cy="30" r="26" stroke="#F5C842" stroke-width="3" stroke-dasharray="40 124" stroke-linecap="round" class="spin-circle"/>
+      </svg>
+      <div class="loading-hex">
+        <svg width="28" height="28" viewBox="0 0 28 28" fill="none">
+          <polygon points="14,2 26,8 26,20 14,26 2,20 2,8" fill="#F5C842" opacity="0.2"/>
+          <circle cx="14" cy="14" r="4" fill="#F5C842"/>
+        </svg>
+      </div>
+    </div>
+    <h3 class="loading-title">Analyzing Panels</h3>
+    <p class="loading-sub" id="loadingStatus">Initializing YOLOv8 model...</p>
+    <div class="progress-bar">
+      <div class="progress-fill" id="progressFill"></div>
+    </div>
+    <span class="progress-count" id="progressCount">0 / 0</span>
+  </div>
+</div>
+
+<script src="{{ url_for('static', filename='js/upload.js') }}"></script>
+</body>
+</html>

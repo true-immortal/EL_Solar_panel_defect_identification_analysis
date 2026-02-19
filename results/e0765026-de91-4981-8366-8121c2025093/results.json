@@ -1,0 +1,3753 @@
+{
+  "session_id": "e0765026-de91-4981-8366-8121c2025093",
+  "panels": [
+    {
+      "id": "a893e1ef-bbc9-4c21-aa61-3cec0f6af715",
+      "filename": "testimagesforweb_crack-15.PNG",
+      "defect_count": 16,
+      "defect_summary": {
+        "Other Defect": {
+          "count": 2,
+          "confidences": [
+            0.9183104634284973,
+            0.30409348011016846
+          ],
+          "severity": "Low",
+          "color": "#636366",
+          "avg_confidence": 0.611
+        },
+        "Finger": {
+          "count": 4,
+          "confidences": [
+            0.7658494114875793,
+            0.5360104441642761,
+            0.41011443734169006,
+            0.34130585193634033
+          ],
+          "severity": "High",
+          "color": "#FF6B35",
+          "avg_confidence": 0.513
+        },
+        "Fragment": {
+          "count": 3,
+          "confidences": [
+            0.6302998661994934,
+            0.5312865972518921,
+            0.48289796710014343
+          ],
+          "severity": "Critical",
+          "color": "#FF0000",
+          "avg_confidence": 0.548
+        },
+        "Class 11": {
+          "count": 1,
+          "confidences": [
+            0.4814857244491577
+          ],
+          "severity": "Low",
+          "color": "#888",
+          "avg_confidence": 0.481
+        },
+        "Printing Error": {
+          "count": 6,
+          "confidences": [
+            0.37354975938796997,
+            0.35485365986824036,
+            0.3496483564376831,
+            0.3262152671813965,
+            0.3052304685115814,
+            0.2639896869659424
+          ],
+          "severity": "Medium",
+          "color": "#FFCC00",
+          "avg_confidence": 0.329
+        }
+      },
+      "health_score": 25.5,
+      "worst_severity": "Critical",
+      "image_size": {
+        "width": 449,
+        "height": 475
+      },
+      "annotated_image": "/results/e0765026-de91-4981-8366-8121c2025093/annotated_testimagesforweb_crack-15.PNG",
+      "original_image": "/uploads/e0765026-de91-4981-8366-8121c2025093/testimagesforweb_crack-15.PNG",
+      "detections": [
+        {
+          "class_id": 10,
+          "confidence": 0.9183104634284973,
+          "bbox": [
+            73,
+            68,
+            200,
+            175
+          ]
+        },
+        {
+          "class_id": 2,
+          "confidence": 0.7658494114875793,
+          "bbox": [
+            323,
+            302,
+            447,
+            402
+          ]
+        },
+        {
+          "class_id": 3,
+          "confidence": 0.6302998661994934,
+          "bbox": [
+            87,
+            194,
+            94,
+            235
+          ]
+        },
+        {
+          "class_id": 2,
+          "confidence": 0.5360104441642761,
+          "bbox": [
+            74,
+            65,
+            195,
+            182
+          ]
+        },
+        {
+          "class_id": 3,
+          "confidence": 0.5312865972518921,
+          "bbox": [
+            43,
+            191,
+            50,
+            235
+          ]
+        },
+        {
+          "class_id": 3,
+          "confidence": 0.48289796710014343,
+          "bbox": [
+            276,
+            191,
+            282,
+            235
+          ]
+        },
+        {
+          "class_id": 11,
+          "confidence": 0.4814857244491577,
+          "bbox": [
+            386,
+            10,
+            410,
+            33
+          ]
+        },
+        {
+          "class_id": 2,
+          "confidence": 0.41011443734169006,
+          "bbox": [
+            3,
+            352,
+            45,
+            403
+          ]
+        },
+        {
+          "class_id": 5,
+          "confidence": 0.37354975938796997,
+          "bbox": [
+            1,
+            365,
+            231,
+            457
+          ]
+        },
+        {
+          "class_id": 5,
+          "confidence": 0.35485365986824036,
+          "bbox": [
+            3,
+            115,
+            449,
+            217
+          ]
+        },
+        {
+          "class_id": 5,
+          "confidence": 0.3496483564376831,
+          "bbox": [
+            1,
+            131,
+            244,
+            200
+          ]
+        },
+        {
+          "class_id": 2,
+          "confidence": 0.34130585193634033,
+          "bbox": [
+            29,
+            307,
+            269,
+            421
+          ]
+        },
+        {
+          "class_id": 5,
+          "confidence": 0.3262152671813965,
+          "bbox": [
+            4,
+            253,
+            403,
+            338
+          ]
+        },
+        {
+          "class_id": 5,
+          "confidence": 0.3052304685115814,
+          "bbox": [
+            0,
+            6,
+            449,
+            96
+          ]
+        },
+        {
+          "class_id": 10,
+          "confidence": 0.30409348011016846,
+          "bbox": [
+            255,
+            71,
+            448,
+            176
+          ]
+        },
+        {
+          "class_id": 5,
+          "confidence": 0.2639896869659424,
+          "bbox": [
+            3,
+            278,
+            268,
+            332
+          ]
+        }
+      ],
+      "timestamp": "2026-02-19T20:26:51.259948",
+      "priority_rank": 1
+    },
+    {
+      "id": "d3a4fb38-79bb-4b3e-9930-3a620f567d49",
+      "filename": "testimagesforweb_detail_C3_674_s.jpg",
+      "defect_count": 14,
+      "defect_summary": {
+        "Finger": {
+          "count": 11,
+          "confidences": [
+            0.954538881778717,
+            0.8950250744819641,
+            0.8018884658813477,
+            0.7455583214759827,
+            0.7036969661712646,
+            0.6663486361503601,
+            0.6203922629356384,
+            0.6175892949104309,
+            0.6121832132339478,
+            0.4354538023471832,
+            0.3668716251850128
+          ],
+          "severity": "High",
+          "color": "#FF6B35",
+          "avg_confidence": 0.675
+        },
+        "Horizontal Dislocation": {
+          "count": 1,
+          "confidences": [
+            0.396422803401947
+          ],
+          "severity": "High",
+          "color": "#FF9500",
+          "avg_confidence": 0.396
+        },
+        "Black Core": {
+          "count": 2,
+          "confidences": [
+            0.3934783637523651,
+            0.39323800802230835
+          ],
+          "severity": "Critical",
+          "color": "#FF2D55",
+          "avg_confidence": 0.393
+        }
+      },
+      "health_score": 0,
+      "worst_severity": "Critical",
+      "image_size": {
+        "width": 1024,
+        "height": 690
+      },
+      "annotated_image": "/results/e0765026-de91-4981-8366-8121c2025093/annotated_testimagesforweb_detail_C3_674_s.jpg",
+      "original_image": "/uploads/e0765026-de91-4981-8366-8121c2025093/testimagesforweb_detail_C3_674_s.jpg",
+      "detections": [
+        {
+          "class_id": 2,
+          "confidence": 0.954538881778717,
+          "bbox": [
+            837,
+            53,
+            1024,
+            193
+          ]
+        },
+        {
+          "class_id": 2,
+          "confidence": 0.8950250744819641,
+          "bbox": [
+            484,
+            273,
+            576,
+            325
+          ]
+        },
+        {
+          "class_id": 2,
+          "confidence": 0.8018884658813477,
+          "bbox": [
+            844,
+            478,
+            1023,
+            548
+          ]
+        },
+        {
+          "class_id": 2,
+          "confidence": 0.7455583214759827,
+          "bbox": [
+            0,
+            198,
+            258,
+            391
+          ]
+        },
+        {
+          "class_id": 2,
+          "confidence": 0.7036969661712646,
+          "bbox": [
+            271,
+            193,
+            458,
+            375
+          ]
+        },
+        {
+          "class_id": 2,
+          "confidence": 0.6663486361503601,
+          "bbox": [
+            7,
+            312,
+            254,
+            393
+          ]
+        },
+        {
+          "class_id": 2,
+          "confidence": 0.6203922629356384,
+          "bbox": [
+            837,
+            197,
+            1024,
+            377
+          ]
+        },
+        {
+          "class_id": 2,
+          "confidence": 0.6175892949104309,
+          "bbox": [
+            271,
+            414,
+            476,
+            472
+          ]
+        },
+        {
+          "class_id": 2,
+          "confidence": 0.6121832132339478,
+          "bbox": [
+            922,
+            100,
+            1024,
+            191
+          ]
+        },
+        {
+          "class_id": 2,
+          "confidence": 0.4354538023471832,
+          "bbox": [
+            355,
+            100,
+            640,
+            208
+          ]
+        },
+        {
+          "class_id": 4,
+          "confidence": 0.396422803401947,
+          "bbox": [
+            483,
+            203,
+            842,
+            470
+          ]
+        },
+        {
+          "class_id": 0,
+          "confidence": 0.3934783637523651,
+          "bbox": [
+            842,
+            193,
+            1016,
+            413
+          ]
+        },
+        {
+          "class_id": 0,
+          "confidence": 0.39323800802230835,
+          "bbox": [
+            477,
+            195,
+            849,
+            477
+          ]
+        },
+        {
+          "class_id": 2,
+          "confidence": 0.3668716251850128,
+          "bbox": [
+            80,
+            203,
+            257,
+            267
+          ]
+        }
+      ],
+      "timestamp": "2026-02-19T20:27:20.215067",
+      "priority_rank": 2
+    },
+    {
+      "id": "6255c0fe-69d0-4747-b9f3-e2d70dfc7087",
+      "filename": "testimagesforweb_images_3.jpg",
+      "defect_count": 9,
+      "defect_summary": {
+        "Class 11": {
+          "count": 4,
+          "confidences": [
+            0.6257455348968506,
+            0.4430588483810425,
+            0.2894950211048126,
+            0.2686977684497833
+          ],
+          "severity": "Low",
+          "color": "#888",
+          "avg_confidence": 0.407
+        },
+        "Printing Error": {
+          "count": 3,
+          "confidences": [
+            0.4895156919956207,
+            0.47751450538635254,
+            0.3581749498844147
+          ],
+          "severity": "Medium",
+          "color": "#FFCC00",
+          "avg_confidence": 0.442
+        },
+        "Fragment": {
+          "count": 1,
+          "confidences": [
+            0.35839635133743286
+          ],
+          "severity": "Critical",
+          "color": "#FF0000",
+          "avg_confidence": 0.358
+        },
+        "Finger": {
+          "count": 1,
+          "confidences": [
+            0.25523701310157776
+          ],
+          "severity": "High",
+          "color": "#FF6B35",
+          "avg_confidence": 0.255
+        }
+      },
+      "health_score": 76.9,
+      "worst_severity": "Critical",
+      "image_size": {
+        "width": 183,
+        "height": 181
+      },
+      "annotated_image": "/results/e0765026-de91-4981-8366-8121c2025093/annotated_testimagesforweb_images_3.jpg",
+      "original_image": "/uploads/e0765026-de91-4981-8366-8121c2025093/testimagesforweb_images_3.jpg",
+      "detections": [
+        {
+          "class_id": 11,
+          "confidence": 0.6257455348968506,
+          "bbox": [
+            157,
+            69,
+            165,
+            76
+          ]
+        },
+        {
+          "class_id": 5,
+          "confidence": 0.4895156919956207,
+          "bbox": [
+            84,
+            91,
+            181,
+            108
+          ]
+        },
+        {
+          "class_id": 5,
+          "confidence": 0.47751450538635254,
+          "bbox": [
+            86,
+            8,
+            181,
+            25
+          ]
+        },
+        {
+          "class_id": 11,
+          "confidence": 0.4430588483810425,
+          "bbox": [
+            158,
+            164,
+            174,
+            177
+          ]
+        },
+        {
+          "class_id": 3,
+          "confidence": 0.35839635133743286,
+          "bbox": [
+            22,
+            135,
+            33,
+            157
+          ]
+        },
+        {
+          "class_id": 5,
+          "confidence": 0.3581749498844147,
+          "bbox": [
+            0,
+            6,
+            66,
+            26
+          ]
+        },
+        {
+          "class_id": 11,
+          "confidence": 0.2894950211048126,
+          "bbox": [
+            161,
+            82,
+            178,
+            95
+          ]
+        },
+        {
+          "class_id": 11,
+          "confidence": 0.2686977684497833,
+          "bbox": [
+            112,
+            176,
+            119,
+            181
+          ]
+        },
+        {
+          "class_id": 2,
+          "confidence": 0.25523701310157776,
+          "bbox": [
+            1,
+            106,
+            69,
+            133
+          ]
+        }
+      ],
+      "timestamp": "2026-02-19T20:27:29.219495",
+      "priority_rank": 3
+    },
+    {
+      "id": "3f1633de-c4ad-43a5-b7b6-6a7a6523b594",
+      "filename": "testimagesforweb_Chinese-22_9_15-EL-e1494353617635-1.jpg",
+      "defect_count": 7,
+      "defect_summary": {
+        "Other Defect": {
+          "count": 1,
+          "confidences": [
+            0.8089553117752075
+          ],
+          "severity": "Low",
+          "color": "#636366",
+          "avg_confidence": 0.809
+        },
+        "Finger": {
+          "count": 5,
+          "confidences": [
+            0.6179260015487671,
+            0.5146093964576721,
+            0.5026872754096985,
+            0.31559914350509644,
+            0.28217336535453796
+          ],
+          "severity": "High",
+          "color": "#FF6B35",
+          "avg_confidence": 0.447
+        },
+        "Fragment": {
+          "count": 1,
+          "confidences": [
+            0.29955366253852844
+          ],
+          "severity": "Critical",
+          "color": "#FF0000",
+          "avg_confidence": 0.3
+        }
+      },
+      "health_score": 64.8,
+      "worst_severity": "Critical",
+      "image_size": {
+        "width": 758,
+        "height": 400
+      },
+      "annotated_image": "/results/e0765026-de91-4981-8366-8121c2025093/annotated_testimagesforweb_Chinese-22_9_15-EL-e1494353617635-1.jpg",
+      "original_image": "/uploads/e0765026-de91-4981-8366-8121c2025093/testimagesforweb_Chinese-22_9_15-EL-e1494353617635-1.jpg",
+      "detections": [
+        {
+          "class_id": 10,
+          "confidence": 0.8089553117752075,
+          "bbox": [
+            688,
+            198,
+            756,
+            263
+          ]
+        },
+        {
+          "class_id": 2,
+          "confidence": 0.6179260015487671,
+          "bbox": [
+            402,
+            180,
+            509,
+            369
+          ]
+        },
+        {
+          "class_id": 2,
+          "confidence": 0.5146093964576721,
+          "bbox": [
+            657,
+            97,
+            758,
+            262
+          ]
+        },
+        {
+          "class_id": 2,
+          "confidence": 0.5026872754096985,
+          "bbox": [
+            418,
+            40,
+            493,
+            70
+          ]
+        },
+        {
+          "class_id": 2,
+          "confidence": 0.31559914350509644,
+          "bbox": [
+            686,
+            198,
+            756,
+            263
+          ]
+        },
+        {
+          "class_id": 3,
+          "confidence": 0.29955366253852844,
+          "bbox": [
+            331,
+            122,
+            416,
+            144
+          ]
+        },
+        {
+          "class_id": 2,
+          "confidence": 0.28217336535453796,
+          "bbox": [
+            413,
+            333,
+            471,
+            386
+          ]
+        }
+      ],
+      "timestamp": "2026-02-19T20:26:45.388038",
+      "priority_rank": 4
+    },
+    {
+      "id": "dc12148f-a29c-4fb8-883c-9ed4868564ba",
+      "filename": "testimagesforweb_crack-39.PNG",
+      "defect_count": 6,
+      "defect_summary": {
+        "Fragment": {
+          "count": 4,
+          "confidences": [
+            0.5365666747093201,
+            0.5084792375564575,
+            0.42509233951568604,
+            0.3875162601470947
+          ],
+          "severity": "Critical",
+          "color": "#FF0000",
+          "avg_confidence": 0.464
+        },
+        "Printing Error": {
+          "count": 1,
+          "confidences": [
+            0.4186159372329712
+          ],
+          "severity": "Medium",
+          "color": "#FFCC00",
+          "avg_confidence": 0.419
+        },
+        "Black Core": {
+          "count": 1,
+          "confidences": [
+            0.3382207453250885
+          ],
+          "severity": "Critical",
+          "color": "#FF2D55",
+          "avg_confidence": 0.338
+        }
+      },
+      "health_score": 53.6,
+      "worst_severity": "Critical",
+      "image_size": {
+        "width": 360,
+        "height": 368
+      },
+      "annotated_image": "/results/e0765026-de91-4981-8366-8121c2025093/annotated_testimagesforweb_crack-39.PNG",
+      "original_image": "/uploads/e0765026-de91-4981-8366-8121c2025093/testimagesforweb_crack-39.PNG",
+      "detections": [
+        {
+          "class_id": 3,
+          "confidence": 0.5365666747093201,
+          "bbox": [
+            174,
+            137,
+            185,
+            223
+          ]
+        },
+        {
+          "class_id": 3,
+          "confidence": 0.5084792375564575,
+          "bbox": [
+            240,
+            176,
+            250,
+            257
+          ]
+        },
+        {
+          "class_id": 3,
+          "confidence": 0.42509233951568604,
+          "bbox": [
+            258,
+            172,
+            268,
+            263
+          ]
+        },
+        {
+          "class_id": 5,
+          "confidence": 0.4186159372329712,
+          "bbox": [
+            0,
+            257,
+            360,
+            294
+          ]
+        },
+        {
+          "class_id": 3,
+          "confidence": 0.3875162601470947,
+          "bbox": [
+            204,
+            161,
+            214,
+            241
+          ]
+        },
+        {
+          "class_id": 0,
+          "confidence": 0.3382207453250885,
+          "bbox": [
+            0,
+            277,
+            360,
+            368
+          ]
+        }
+      ],
+      "timestamp": "2026-02-19T20:27:09.065738",
+      "priority_rank": 5
+    },
+    {
+      "id": "6c9eb552-da4e-4cd3-bd43-e9851924c996",
+      "filename": "testimagesforweb_crack-33.PNG",
+      "defect_count": 5,
+      "defect_summary": {
+        "Fragment": {
+          "count": 4,
+          "confidences": [
+            0.6559008955955505,
+            0.6452330946922302,
+            0.574177622795105,
+            0.30531904101371765
+          ],
+          "severity": "Critical",
+          "color": "#FF0000",
+          "avg_confidence": 0.545
+        },
+        "Finger": {
+          "count": 1,
+          "confidences": [
+            0.30096206068992615
+          ],
+          "severity": "High",
+          "color": "#FF6B35",
+          "avg_confidence": 0.301
+        }
+      },
+      "health_score": 52.8,
+      "worst_severity": "Critical",
+      "image_size": {
+        "width": 561,
+        "height": 568
+      },
+      "annotated_image": "/results/e0765026-de91-4981-8366-8121c2025093/annotated_testimagesforweb_crack-33.PNG",
+      "original_image": "/uploads/e0765026-de91-4981-8366-8121c2025093/testimagesforweb_crack-33.PNG",
+      "detections": [
+        {
+          "class_id": 3,
+          "confidence": 0.6559008955955505,
+          "bbox": [
+            116,
+            381,
+            132,
+            465
+          ]
+        },
+        {
+          "class_id": 3,
+          "confidence": 0.6452330946922302,
+          "bbox": [
+            142,
+            112,
+            159,
+            182
+          ]
+        },
+        {
+          "class_id": 3,
+          "confidence": 0.574177622795105,
+          "bbox": [
+            469,
+            119,
+            487,
+            215
+          ]
+        },
+        {
+          "class_id": 3,
+          "confidence": 0.30531904101371765,
+          "bbox": [
+            518,
+            149,
+            535,
+            224
+          ]
+        },
+        {
+          "class_id": 2,
+          "confidence": 0.30096206068992615,
+          "bbox": [
+            269,
+            287,
+            540,
+            425
+          ]
+        }
+      ],
+      "timestamp": "2026-02-19T20:27:05.199072",
+      "priority_rank": 6
+    },
+    {
+      "id": "21f6ed05-2780-429b-b5d2-6c8d8a338754",
+      "filename": "testimagesforweb_images.jpg",
+      "defect_count": 5,
+      "defect_summary": {
+        "Fragment": {
+          "count": 4,
+          "confidences": [
+            0.5492150187492371,
+            0.4992324113845825,
+            0.3826228380203247,
+            0.2847493290901184
+          ],
+          "severity": "Critical",
+          "color": "#FF0000",
+          "avg_confidence": 0.429
+        },
+        "Finger": {
+          "count": 1,
+          "confidences": [
+            0.4296823740005493
+          ],
+          "severity": "High",
+          "color": "#FF6B35",
+          "avg_confidence": 0.43
+        }
+      },
+      "health_score": 60.5,
+      "worst_severity": "Critical",
+      "image_size": {
+        "width": 225,
+        "height": 225
+      },
+      "annotated_image": "/results/e0765026-de91-4981-8366-8121c2025093/annotated_testimagesforweb_images.jpg",
+      "original_image": "/uploads/e0765026-de91-4981-8366-8121c2025093/testimagesforweb_images.jpg",
+      "detections": [
+        {
+          "class_id": 3,
+          "confidence": 0.5492150187492371,
+          "bbox": [
+            194,
+            63,
+            200,
+            112
+          ]
+        },
+        {
+          "class_id": 3,
+          "confidence": 0.4992324113845825,
+          "bbox": [
+            197,
+            127,
+            203,
+            161
+          ]
+        },
+        {
+          "class_id": 2,
+          "confidence": 0.4296823740005493,
+          "bbox": [
+            0,
+            17,
+            153,
+            106
+          ]
+        },
+        {
+          "class_id": 3,
+          "confidence": 0.3826228380203247,
+          "bbox": [
+            93,
+            142,
+            99,
+            173
+          ]
+        },
+        {
+          "class_id": 3,
+          "confidence": 0.2847493290901184,
+          "bbox": [
+            114,
+            118,
+            120,
+            169
+          ]
+        }
+      ],
+      "timestamp": "2026-02-19T20:27:33.224021",
+      "priority_rank": 7
+    },
+    {
+      "id": "e2febb3b-bec3-46ce-8c8c-63fa593384e7",
+      "filename": "testimagesforweb_crack-19.PNG",
+      "defect_count": 4,
+      "defect_summary": {
+        "Fragment": {
+          "count": 1,
+          "confidences": [
+            0.62416011095047
+          ],
+          "severity": "Critical",
+          "color": "#FF0000",
+          "avg_confidence": 0.624
+        },
+        "Finger": {
+          "count": 2,
+          "confidences": [
+            0.49383464455604553,
+            0.48378804326057434
+          ],
+          "severity": "High",
+          "color": "#FF6B35",
+          "avg_confidence": 0.489
+        },
+        "Printing Error": {
+          "count": 1,
+          "confidences": [
+            0.28686562180519104
+          ],
+          "severity": "Medium",
+          "color": "#FFCC00",
+          "avg_confidence": 0.287
+        }
+      },
+      "health_score": 74.1,
+      "worst_severity": "Critical",
+      "image_size": {
+        "width": 559,
+        "height": 561
+      },
+      "annotated_image": "/results/e0765026-de91-4981-8366-8121c2025093/annotated_testimagesforweb_crack-19.PNG",
+      "original_image": "/uploads/e0765026-de91-4981-8366-8121c2025093/testimagesforweb_crack-19.PNG",
+      "detections": [
+        {
+          "class_id": 3,
+          "confidence": 0.62416011095047,
+          "bbox": [
+            1,
+            160,
+            123,
+            206
+          ]
+        },
+        {
+          "class_id": 2,
+          "confidence": 0.49383464455604553,
+          "bbox": [
+            318,
+            102,
+            517,
+            280
+          ]
+        },
+        {
+          "class_id": 2,
+          "confidence": 0.48378804326057434,
+          "bbox": [
+            0,
+            60,
+            326,
+            300
+          ]
+        },
+        {
+          "class_id": 5,
+          "confidence": 0.28686562180519104,
+          "bbox": [
+            2,
+            0,
+            555,
+            60
+          ]
+        }
+      ],
+      "timestamp": "2026-02-19T20:26:57.881075",
+      "priority_rank": 8
+    },
+    {
+      "id": "ec6fdaea-6e2a-46a9-a32e-02ce0b3fa5b7",
+      "filename": "testimagesforweb_images_2.jpg",
+      "defect_count": 4,
+      "defect_summary": {
+        "Finger": {
+          "count": 1,
+          "confidences": [
+            0.756442129611969
+          ],
+          "severity": "High",
+          "color": "#FF6B35",
+          "avg_confidence": 0.756
+        },
+        "Fragment": {
+          "count": 2,
+          "confidences": [
+            0.6257692575454712,
+            0.5272784233093262
+          ],
+          "severity": "Critical",
+          "color": "#FF0000",
+          "avg_confidence": 0.577
+        },
+        "Black Core": {
+          "count": 1,
+          "confidences": [
+            0.2648458480834961
+          ],
+          "severity": "Critical",
+          "color": "#FF2D55",
+          "avg_confidence": 0.265
+        }
+      },
+      "health_score": 62.6,
+      "worst_severity": "Critical",
+      "image_size": {
+        "width": 225,
+        "height": 225
+      },
+      "annotated_image": "/results/e0765026-de91-4981-8366-8121c2025093/annotated_testimagesforweb_images_2.jpg",
+      "original_image": "/uploads/e0765026-de91-4981-8366-8121c2025093/testimagesforweb_images_2.jpg",
+      "detections": [
+        {
+          "class_id": 2,
+          "confidence": 0.756442129611969,
+          "bbox": [
+            82,
+            108,
+            158,
+            176
+          ]
+        },
+        {
+          "class_id": 3,
+          "confidence": 0.6257692575454712,
+          "bbox": [
+            100,
+            10,
+            104,
+            36
+          ]
+        },
+        {
+          "class_id": 3,
+          "confidence": 0.5272784233093262,
+          "bbox": [
+            112,
+            180,
+            116,
+            208
+          ]
+        },
+        {
+          "class_id": 0,
+          "confidence": 0.2648458480834961,
+          "bbox": [
+            0,
+            185,
+            46,
+            224
+          ]
+        }
+      ],
+      "timestamp": "2026-02-19T20:27:27.778927",
+      "priority_rank": 9
+    },
+    {
+      "id": "efce2ba5-6c87-496d-895e-f4b059f82671",
+      "filename": "testimagesforweb_crack-48.PNG",
+      "defect_count": 3,
+      "defect_summary": {
+        "Fragment": {
+          "count": 1,
+          "confidences": [
+            0.30089911818504333
+          ],
+          "severity": "Critical",
+          "color": "#FF0000",
+          "avg_confidence": 0.301
+        },
+        "Class 11": {
+          "count": 1,
+          "confidences": [
+            0.2974974811077118
+          ],
+          "severity": "Low",
+          "color": "#888",
+          "avg_confidence": 0.297
+        },
+        "Finger": {
+          "count": 1,
+          "confidences": [
+            0.2523329555988312
+          ],
+          "severity": "High",
+          "color": "#FF6B35",
+          "avg_confidence": 0.252
+        }
+      },
+      "health_score": 90.1,
+      "worst_severity": "Critical",
+      "image_size": {
+        "width": 371,
+        "height": 369
+      },
+      "annotated_image": "/results/e0765026-de91-4981-8366-8121c2025093/annotated_testimagesforweb_crack-48.PNG",
+      "original_image": "/uploads/e0765026-de91-4981-8366-8121c2025093/testimagesforweb_crack-48.PNG",
+      "detections": [
+        {
+          "class_id": 3,
+          "confidence": 0.30089911818504333,
+          "bbox": [
+            14,
+            13,
+            23,
+            65
+          ]
+        },
+        {
+          "class_id": 11,
+          "confidence": 0.2974974811077118,
+          "bbox": [
+            168,
+            47,
+            185,
+            64
+          ]
+        },
+        {
+          "class_id": 2,
+          "confidence": 0.2523329555988312,
+          "bbox": [
+            90,
+            222,
+            282,
+            268
+          ]
+        }
+      ],
+      "timestamp": "2026-02-19T20:27:17.653882",
+      "priority_rank": 10
+    },
+    {
+      "id": "0e6f1743-0426-4621-b826-48f16ce2222d",
+      "filename": "testimagesforweb_images_6.jpg",
+      "defect_count": 3,
+      "defect_summary": {
+        "Printing Error": {
+          "count": 1,
+          "confidences": [
+            0.5631415843963623
+          ],
+          "severity": "Medium",
+          "color": "#FFCC00",
+          "avg_confidence": 0.563
+        },
+        "Class 11": {
+          "count": 1,
+          "confidences": [
+            0.4973391890525818
+          ],
+          "severity": "Low",
+          "color": "#888",
+          "avg_confidence": 0.497
+        },
+        "Fragment": {
+          "count": 1,
+          "confidences": [
+            0.457708477973938
+          ],
+          "severity": "Critical",
+          "color": "#FF0000",
+          "avg_confidence": 0.458
+        }
+      },
+      "health_score": 86.0,
+      "worst_severity": "Critical",
+      "image_size": {
+        "width": 225,
+        "height": 225
+      },
+      "annotated_image": "/results/e0765026-de91-4981-8366-8121c2025093/annotated_testimagesforweb_images_6.jpg",
+      "original_image": "/uploads/e0765026-de91-4981-8366-8121c2025093/testimagesforweb_images_6.jpg",
+      "detections": [
+        {
+          "class_id": 5,
+          "confidence": 0.5631415843963623,
+          "bbox": [
+            2,
+            150,
+            222,
+            214
+          ]
+        },
+        {
+          "class_id": 11,
+          "confidence": 0.4973391890525818,
+          "bbox": [
+            66,
+            17,
+            79,
+            29
+          ]
+        },
+        {
+          "class_id": 3,
+          "confidence": 0.457708477973938,
+          "bbox": [
+            22,
+            139,
+            31,
+            185
+          ]
+        }
+      ],
+      "timestamp": "2026-02-19T20:27:31.621860",
+      "priority_rank": 11
+    },
+    {
+      "id": "36a6dbe4-4361-4940-b563-e7aa0e63d7c0",
+      "filename": "testimagesforweb_crack-17.PNG",
+      "defect_count": 2,
+      "defect_summary": {
+        "Finger": {
+          "count": 1,
+          "confidences": [
+            0.824008047580719
+          ],
+          "severity": "High",
+          "color": "#FF6B35",
+          "avg_confidence": 0.824
+        },
+        "Fragment": {
+          "count": 1,
+          "confidences": [
+            0.25445443391799927
+          ],
+          "severity": "Critical",
+          "color": "#FF0000",
+          "avg_confidence": 0.254
+        }
+      },
+      "health_score": 85.0,
+      "worst_severity": "Critical",
+      "image_size": {
+        "width": 278,
+        "height": 281
+      },
+      "annotated_image": "/results/e0765026-de91-4981-8366-8121c2025093/annotated_testimagesforweb_crack-17.PNG",
+      "original_image": "/uploads/e0765026-de91-4981-8366-8121c2025093/testimagesforweb_crack-17.PNG",
+      "detections": [
+        {
+          "class_id": 2,
+          "confidence": 0.824008047580719,
+          "bbox": [
+            161,
+            48,
+            249,
+            140
+          ]
+        },
+        {
+          "class_id": 3,
+          "confidence": 0.25445443391799927,
+          "bbox": [
+            77,
+            152,
+            86,
+            229
+          ]
+        }
+      ],
+      "timestamp": "2026-02-19T20:26:54.133369",
+      "priority_rank": 12
+    },
+    {
+      "id": "e0c2fe2b-c4c8-4945-a214-247911c68045",
+      "filename": "testimagesforweb_crack-21.PNG",
+      "defect_count": 2,
+      "defect_summary": {
+        "Fragment": {
+          "count": 1,
+          "confidences": [
+            0.4299514889717102
+          ],
+          "severity": "Critical",
+          "color": "#FF0000",
+          "avg_confidence": 0.43
+        },
+        "Class 11": {
+          "count": 1,
+          "confidences": [
+            0.28985196352005005
+          ],
+          "severity": "Low",
+          "color": "#888",
+          "avg_confidence": 0.29
+        }
+      },
+      "health_score": 90.5,
+      "worst_severity": "Critical",
+      "image_size": {
+        "width": 594,
+        "height": 586
+      },
+      "annotated_image": "/results/e0765026-de91-4981-8366-8121c2025093/annotated_testimagesforweb_crack-21.PNG",
+      "original_image": "/uploads/e0765026-de91-4981-8366-8121c2025093/testimagesforweb_crack-21.PNG",
+      "detections": [
+        {
+          "class_id": 3,
+          "confidence": 0.4299514889717102,
+          "bbox": [
+            490,
+            424,
+            513,
+            551
+          ]
+        },
+        {
+          "class_id": 11,
+          "confidence": 0.28985196352005005,
+          "bbox": [
+            451,
+            462,
+            479,
+            558
+          ]
+        }
+      ],
+      "timestamp": "2026-02-19T20:27:02.471952",
+      "priority_rank": 13
+    },
+    {
+      "id": "ca05d5a8-fd6e-4a37-a591-f63d327461d2",
+      "filename": "testimagesforweb_crack-40.PNG",
+      "defect_count": 2,
+      "defect_summary": {
+        "Fragment": {
+          "count": 2,
+          "confidences": [
+            0.5254133939743042,
+            0.416789710521698
+          ],
+          "severity": "Critical",
+          "color": "#FF0000",
+          "avg_confidence": 0.471
+        }
+      },
+      "health_score": 81.2,
+      "worst_severity": "Critical",
+      "image_size": {
+        "width": 447,
+        "height": 446
+      },
+      "annotated_image": "/results/e0765026-de91-4981-8366-8121c2025093/annotated_testimagesforweb_crack-40.PNG",
+      "original_image": "/uploads/e0765026-de91-4981-8366-8121c2025093/testimagesforweb_crack-40.PNG",
+      "detections": [
+        {
+          "class_id": 3,
+          "confidence": 0.5254133939743042,
+          "bbox": [
+            273,
+            393,
+            285,
+            445
+          ]
+        },
+        {
+          "class_id": 3,
+          "confidence": 0.416789710521698,
+          "bbox": [
+            61,
+            163,
+            73,
+            264
+          ]
+        }
+      ],
+      "timestamp": "2026-02-19T20:27:10.537624",
+      "priority_rank": 14
+    },
+    {
+      "id": "480ca5b1-149e-44c9-bebd-1390e23f3001",
+      "filename": "testimagesforweb_crack-14.PNG",
+      "defect_count": 19,
+      "defect_summary": {
+        "Finger": {
+          "count": 16,
+          "confidences": [
+            0.8977256417274475,
+            0.8960351943969727,
+            0.8845449090003967,
+            0.8725426197052002,
+            0.865401029586792,
+            0.7581865787506104,
+            0.7216445803642273,
+            0.7201708555221558,
+            0.699569821357727,
+            0.6620469689369202,
+            0.5536999106407166,
+            0.5253962278366089,
+            0.39116379618644714,
+            0.35930541157722473,
+            0.33541786670684814,
+            0.27629876136779785
+          ],
+          "severity": "High",
+          "color": "#FF6B35",
+          "avg_confidence": 0.651
+        },
+        "Printing Error": {
+          "count": 1,
+          "confidences": [
+            0.3789944350719452
+          ],
+          "severity": "Medium",
+          "color": "#FFCC00",
+          "avg_confidence": 0.379
+        },
+        "Other Defect": {
+          "count": 2,
+          "confidences": [
+            0.2824764847755432,
+            0.25305306911468506
+          ],
+          "severity": "Low",
+          "color": "#636366",
+          "avg_confidence": 0.268
+        }
+      },
+      "health_score": 0,
+      "worst_severity": "High",
+      "image_size": {
+        "width": 494,
+        "height": 511
+      },
+      "annotated_image": "/results/e0765026-de91-4981-8366-8121c2025093/annotated_testimagesforweb_crack-14.PNG",
+      "original_image": "/uploads/e0765026-de91-4981-8366-8121c2025093/testimagesforweb_crack-14.PNG",
+      "detections": [
+        {
+          "class_id": 2,
+          "confidence": 0.8977256417274475,
+          "bbox": [
+            383,
+            2,
+            494,
+            134
+          ]
+        },
+        {
+          "class_id": 2,
+          "confidence": 0.8960351943969727,
+          "bbox": [
+            155,
+            149,
+            250,
+            257
+          ]
+        },
+        {
+          "class_id": 2,
+          "confidence": 0.8845449090003967,
+          "bbox": [
+            3,
+            256,
+            103,
+            375
+          ]
+        },
+        {
+          "class_id": 2,
+          "confidence": 0.8725426197052002,
+          "bbox": [
+            398,
+            273,
+            491,
+            374
+          ]
+        },
+        {
+          "class_id": 2,
+          "confidence": 0.865401029586792,
+          "bbox": [
+            168,
+            53,
+            243,
+            130
+          ]
+        },
+        {
+          "class_id": 2,
+          "confidence": 0.7581865787506104,
+          "bbox": [
+            384,
+            139,
+            490,
+            256
+          ]
+        },
+        {
+          "class_id": 2,
+          "confidence": 0.7216445803642273,
+          "bbox": [
+            267,
+            153,
+            375,
+            252
+          ]
+        },
+        {
+          "class_id": 2,
+          "confidence": 0.7201708555221558,
+          "bbox": [
+            203,
+            146,
+            248,
+            171
+          ]
+        },
+        {
+          "class_id": 2,
+          "confidence": 0.699569821357727,
+          "bbox": [
+            122,
+            415,
+            200,
+            458
+          ]
+        },
+        {
+          "class_id": 2,
+          "confidence": 0.6620469689369202,
+          "bbox": [
+            317,
+            392,
+            357,
+            424
+          ]
+        },
+        {
+          "class_id": 2,
+          "confidence": 0.5536999106407166,
+          "bbox": [
+            160,
+            461,
+            270,
+            510
+          ]
+        },
+        {
+          "class_id": 2,
+          "confidence": 0.5253962278366089,
+          "bbox": [
+            175,
+            255,
+            324,
+            506
+          ]
+        },
+        {
+          "class_id": 2,
+          "confidence": 0.39116379618644714,
+          "bbox": [
+            249,
+            80,
+            301,
+            104
+          ]
+        },
+        {
+          "class_id": 5,
+          "confidence": 0.3789944350719452,
+          "bbox": [
+            85,
+            1,
+            156,
+            500
+          ]
+        },
+        {
+          "class_id": 2,
+          "confidence": 0.35930541157722473,
+          "bbox": [
+            195,
+            203,
+            246,
+            256
+          ]
+        },
+        {
+          "class_id": 2,
+          "confidence": 0.33541786670684814,
+          "bbox": [
+            55,
+            444,
+            115,
+            468
+          ]
+        },
+        {
+          "class_id": 10,
+          "confidence": 0.2824764847755432,
+          "bbox": [
+            253,
+            2,
+            402,
+            88
+          ]
+        },
+        {
+          "class_id": 2,
+          "confidence": 0.27629876136779785,
+          "bbox": [
+            393,
+            226,
+            456,
+            247
+          ]
+        },
+        {
+          "class_id": 10,
+          "confidence": 0.25305306911468506,
+          "bbox": [
+            127,
+            460,
+            193,
+            508
+          ]
+        }
+      ],
+      "timestamp": "2026-02-19T20:26:49.772304",
+      "priority_rank": 15
+    },
+    {
+      "id": "ed4a7064-daa3-4f80-84d0-5d3f4a889d7e",
+      "filename": "testimagesforweb_crack-13.PNG",
+      "defect_count": 15,
+      "defect_summary": {
+        "Finger": {
+          "count": 9,
+          "confidences": [
+            0.5526845455169678,
+            0.5212611556053162,
+            0.45801955461502075,
+            0.43379148840904236,
+            0.4216079115867615,
+            0.3738119602203369,
+            0.3355042338371277,
+            0.2931176424026489,
+            0.2679714262485504
+          ],
+          "severity": "High",
+          "color": "#FF6B35",
+          "avg_confidence": 0.406
+        },
+        "Printing Error": {
+          "count": 4,
+          "confidences": [
+            0.4573485255241394,
+            0.39263370633125305,
+            0.3232240080833435,
+            0.29631462693214417
+          ],
+          "severity": "Medium",
+          "color": "#FFCC00",
+          "avg_confidence": 0.367
+        },
+        "Class 12": {
+          "count": 2,
+          "confidences": [
+            0.35014909505844116,
+            0.2541491389274597
+          ],
+          "severity": "Low",
+          "color": "#888",
+          "avg_confidence": 0.302
+        }
+      },
+      "health_score": 45.5,
+      "worst_severity": "High",
+      "image_size": {
+        "width": 661,
+        "height": 451
+      },
+      "annotated_image": "/results/e0765026-de91-4981-8366-8121c2025093/annotated_testimagesforweb_crack-13.PNG",
+      "original_image": "/uploads/e0765026-de91-4981-8366-8121c2025093/testimagesforweb_crack-13.PNG",
+      "detections": [
+        {
+          "class_id": 2,
+          "confidence": 0.5526845455169678,
+          "bbox": [
+            593,
+            307,
+            604,
+            334
+          ]
+        },
+        {
+          "class_id": 2,
+          "confidence": 0.5212611556053162,
+          "bbox": [
+            490,
+            198,
+            498,
+            223
+          ]
+        },
+        {
+          "class_id": 2,
+          "confidence": 0.45801955461502075,
+          "bbox": [
+            374,
+            430,
+            385,
+            449
+          ]
+        },
+        {
+          "class_id": 5,
+          "confidence": 0.4573485255241394,
+          "bbox": [
+            153,
+            0,
+            257,
+            451
+          ]
+        },
+        {
+          "class_id": 2,
+          "confidence": 0.43379148840904236,
+          "bbox": [
+            154,
+            430,
+            162,
+            448
+          ]
+        },
+        {
+          "class_id": 2,
+          "confidence": 0.4216079115867615,
+          "bbox": [
+            593,
+            197,
+            601,
+            223
+          ]
+        },
+        {
+          "class_id": 5,
+          "confidence": 0.39263370633125305,
+          "bbox": [
+            501,
+            0,
+            603,
+            451
+          ]
+        },
+        {
+          "class_id": 2,
+          "confidence": 0.3738119602203369,
+          "bbox": [
+            44,
+            429,
+            52,
+            447
+          ]
+        },
+        {
+          "class_id": 12,
+          "confidence": 0.35014909505844116,
+          "bbox": [
+            413,
+            6,
+            460,
+            379
+          ]
+        },
+        {
+          "class_id": 2,
+          "confidence": 0.3355042338371277,
+          "bbox": [
+            273,
+            339,
+            281,
+            358
+          ]
+        },
+        {
+          "class_id": 5,
+          "confidence": 0.3232240080833435,
+          "bbox": [
+            281,
+            0,
+            367,
+            448
+          ]
+        },
+        {
+          "class_id": 5,
+          "confidence": 0.29631462693214417,
+          "bbox": [
+            49,
+            0,
+            153,
+            451
+          ]
+        },
+        {
+          "class_id": 2,
+          "confidence": 0.2931176424026489,
+          "bbox": [
+            484,
+            309,
+            492,
+            335
+          ]
+        },
+        {
+          "class_id": 2,
+          "confidence": 0.2679714262485504,
+          "bbox": [
+            432,
+            309,
+            500,
+            366
+          ]
+        },
+        {
+          "class_id": 12,
+          "confidence": 0.2541491389274597,
+          "bbox": [
+            78,
+            9,
+            132,
+            370
+          ]
+        }
+      ],
+      "timestamp": "2026-02-19T20:26:48.384510",
+      "priority_rank": 16
+    },
+    {
+      "id": "6babc05b-bb6c-40e8-b981-ca70a0fed7ee",
+      "filename": "testimagesforweb_el_test1-1.jpg",
+      "defect_count": 15,
+      "defect_summary": {
+        "Finger": {
+          "count": 5,
+          "confidences": [
+            0.5776916146278381,
+            0.5206921696662903,
+            0.4728333353996277,
+            0.33507809042930603,
+            0.285942018032074
+          ],
+          "severity": "High",
+          "color": "#FF6B35",
+          "avg_confidence": 0.438
+        },
+        "Class 12": {
+          "count": 10,
+          "confidences": [
+            0.45973894000053406,
+            0.4260714054107666,
+            0.41291436553001404,
+            0.3713764548301697,
+            0.36810609698295593,
+            0.3322092592716217,
+            0.31228986382484436,
+            0.2804819345474243,
+            0.2644094228744507,
+            0.26126906275749207
+          ],
+          "severity": "Low",
+          "color": "#888",
+          "avg_confidence": 0.349
+        }
+      },
+      "health_score": 63.2,
+      "worst_severity": "High",
+      "image_size": {
+        "width": 560,
+        "height": 377
+      },
+      "annotated_image": "/results/e0765026-de91-4981-8366-8121c2025093/annotated_testimagesforweb_el_test1-1.jpg",
+      "original_image": "/uploads/e0765026-de91-4981-8366-8121c2025093/testimagesforweb_el_test1-1.jpg",
+      "detections": [
+        {
+          "class_id": 2,
+          "confidence": 0.5776916146278381,
+          "bbox": [
+            64,
+            23,
+            126,
+            49
+          ]
+        },
+        {
+          "class_id": 2,
+          "confidence": 0.5206921696662903,
+          "bbox": [
+            497,
+            301,
+            557,
+            325
+          ]
+        },
+        {
+          "class_id": 2,
+          "confidence": 0.4728333353996277,
+          "bbox": [
+            498,
+            19,
+            557,
+            83
+          ]
+        },
+        {
+          "class_id": 12,
+          "confidence": 0.45973894000053406,
+          "bbox": [
+            302,
+            6,
+            326,
+            278
+          ]
+        },
+        {
+          "class_id": 12,
+          "confidence": 0.4260714054107666,
+          "bbox": [
+            242,
+            2,
+            269,
+            243
+          ]
+        },
+        {
+          "class_id": 12,
+          "confidence": 0.41291436553001404,
+          "bbox": [
+            175,
+            21,
+            200,
+            354
+          ]
+        },
+        {
+          "class_id": 12,
+          "confidence": 0.3713764548301697,
+          "bbox": [
+            483,
+            65,
+            508,
+            371
+          ]
+        },
+        {
+          "class_id": 12,
+          "confidence": 0.36810609698295593,
+          "bbox": [
+            360,
+            0,
+            385,
+            375
+          ]
+        },
+        {
+          "class_id": 2,
+          "confidence": 0.33507809042930603,
+          "bbox": [
+            498,
+            114,
+            558,
+            142
+          ]
+        },
+        {
+          "class_id": 12,
+          "confidence": 0.3322092592716217,
+          "bbox": [
+            119,
+            5,
+            142,
+            298
+          ]
+        },
+        {
+          "class_id": 12,
+          "confidence": 0.31228986382484436,
+          "bbox": [
+            358,
+            199,
+            383,
+            367
+          ]
+        },
+        {
+          "class_id": 2,
+          "confidence": 0.285942018032074,
+          "bbox": [
+            501,
+            54,
+            557,
+            82
+          ]
+        },
+        {
+          "class_id": 12,
+          "confidence": 0.2804819345474243,
+          "bbox": [
+            426,
+            203,
+            451,
+            374
+          ]
+        },
+        {
+          "class_id": 12,
+          "confidence": 0.2644094228744507,
+          "bbox": [
+            302,
+            236,
+            324,
+            376
+          ]
+        },
+        {
+          "class_id": 12,
+          "confidence": 0.26126906275749207,
+          "bbox": [
+            231,
+            0,
+            262,
+            321
+          ]
+        }
+      ],
+      "timestamp": "2026-02-19T20:27:26.339889",
+      "priority_rank": 17
+    },
+    {
+      "id": "8baee3f8-bf6f-4ad8-84f1-e3a496db08b7",
+      "filename": "testimagesforweb_Chinese-after-bending-EL-1024x481.png",
+      "defect_count": 10,
+      "defect_summary": {
+        "Finger": {
+          "count": 10,
+          "confidences": [
+            0.8930975198745728,
+            0.748708963394165,
+            0.712857723236084,
+            0.6177319884300232,
+            0.5522432327270508,
+            0.5412066578865051,
+            0.49751096963882446,
+            0.39790481328964233,
+            0.3118298351764679,
+            0.27424734830856323
+          ],
+          "severity": "High",
+          "color": "#FF6B35",
+          "avg_confidence": 0.555
+        }
+      },
+      "health_score": 33.4,
+      "worst_severity": "High",
+      "image_size": {
+        "width": 1024,
+        "height": 481
+      },
+      "annotated_image": "/results/e0765026-de91-4981-8366-8121c2025093/annotated_testimagesforweb_Chinese-after-bending-EL-1024x481.png",
+      "original_image": "/uploads/e0765026-de91-4981-8366-8121c2025093/testimagesforweb_Chinese-after-bending-EL-1024x481.png",
+      "detections": [
+        {
+          "class_id": 2,
+          "confidence": 0.8930975198745728,
+          "bbox": [
+            561,
+            42,
+            663,
+            77
+          ]
+        },
+        {
+          "class_id": 2,
+          "confidence": 0.748708963394165,
+          "bbox": [
+            899,
+            115,
+            1021,
+            239
+          ]
+        },
+        {
+          "class_id": 2,
+          "confidence": 0.712857723236084,
+          "bbox": [
+            809,
+            202,
+            865,
+            226
+          ]
+        },
+        {
+          "class_id": 2,
+          "confidence": 0.6177319884300232,
+          "bbox": [
+            924,
+            230,
+            1014,
+            306
+          ]
+        },
+        {
+          "class_id": 2,
+          "confidence": 0.5522432327270508,
+          "bbox": [
+            336,
+            170,
+            449,
+            241
+          ]
+        },
+        {
+          "class_id": 2,
+          "confidence": 0.5412066578865051,
+          "bbox": [
+            558,
+            219,
+            664,
+            333
+          ]
+        },
+        {
+          "class_id": 2,
+          "confidence": 0.49751096963882446,
+          "bbox": [
+            121,
+            67,
+            228,
+            95
+          ]
+        },
+        {
+          "class_id": 2,
+          "confidence": 0.39790481328964233,
+          "bbox": [
+            560,
+            397,
+            630,
+            458
+          ]
+        },
+        {
+          "class_id": 2,
+          "confidence": 0.3118298351764679,
+          "bbox": [
+            448,
+            136,
+            560,
+            168
+          ]
+        },
+        {
+          "class_id": 2,
+          "confidence": 0.27424734830856323,
+          "bbox": [
+            334,
+            400,
+            430,
+            456
+          ]
+        }
+      ],
+      "timestamp": "2026-02-19T20:26:46.250865",
+      "priority_rank": 18
+    },
+    {
+      "id": "c19ad3d9-f40d-41b8-a920-3022e5ca0791",
+      "filename": "testimagesforweb_crack-43.PNG",
+      "defect_count": 9,
+      "defect_summary": {
+        "Finger": {
+          "count": 8,
+          "confidences": [
+            0.6098709106445312,
+            0.36287721991539,
+            0.3157273530960083,
+            0.30830755829811096,
+            0.2936357855796814,
+            0.2934008240699768,
+            0.28564077615737915,
+            0.2565213441848755
+          ],
+          "severity": "High",
+          "color": "#FF6B35",
+          "avg_confidence": 0.341
+        },
+        "Other Defect": {
+          "count": 1,
+          "confidences": [
+            0.46891510486602783
+          ],
+          "severity": "Low",
+          "color": "#636366",
+          "avg_confidence": 0.469
+        }
+      },
+      "health_score": 65.9,
+      "worst_severity": "High",
+      "image_size": {
+        "width": 544,
+        "height": 548
+      },
+      "annotated_image": "/results/e0765026-de91-4981-8366-8121c2025093/annotated_testimagesforweb_crack-43.PNG",
+      "original_image": "/uploads/e0765026-de91-4981-8366-8121c2025093/testimagesforweb_crack-43.PNG",
+      "detections": [
+        {
+          "class_id": 2,
+          "confidence": 0.6098709106445312,
+          "bbox": [
+            117,
+            459,
+            168,
+            538
+          ]
+        },
+        {
+          "class_id": 10,
+          "confidence": 0.46891510486602783,
+          "bbox": [
+            241,
+            0,
+            426,
+            185
+          ]
+        },
+        {
+          "class_id": 2,
+          "confidence": 0.36287721991539,
+          "bbox": [
+            0,
+            459,
+            57,
+            534
+          ]
+        },
+        {
+          "class_id": 2,
+          "confidence": 0.3157273530960083,
+          "bbox": [
+            15,
+            0,
+            258,
+            545
+          ]
+        },
+        {
+          "class_id": 2,
+          "confidence": 0.30830755829811096,
+          "bbox": [
+            139,
+            460,
+            189,
+            539
+          ]
+        },
+        {
+          "class_id": 2,
+          "confidence": 0.2936357855796814,
+          "bbox": [
+            318,
+            0,
+            467,
+            538
+          ]
+        },
+        {
+          "class_id": 2,
+          "confidence": 0.2934008240699768,
+          "bbox": [
+            257,
+            23,
+            383,
+            548
+          ]
+        },
+        {
+          "class_id": 2,
+          "confidence": 0.28564077615737915,
+          "bbox": [
+            158,
+            1,
+            332,
+            529
+          ]
+        },
+        {
+          "class_id": 2,
+          "confidence": 0.2565213441848755,
+          "bbox": [
+            388,
+            90,
+            533,
+            548
+          ]
+        }
+      ],
+      "timestamp": "2026-02-19T20:27:14.811288",
+      "priority_rank": 19
+    },
+    {
+      "id": "c8b9735b-9a18-4693-ae19-8ff0c10264cf",
+      "filename": "testimagesforweb_crack-2.PNG",
+      "defect_count": 7,
+      "defect_summary": {
+        "Class 12": {
+          "count": 6,
+          "confidences": [
+            0.3533066511154175,
+            0.3208483159542084,
+            0.30599865317344666,
+            0.29609814286231995,
+            0.2631630301475525,
+            0.25955134630203247
+          ],
+          "severity": "Low",
+          "color": "#888",
+          "avg_confidence": 0.3
+        },
+        "Finger": {
+          "count": 1,
+          "confidences": [
+            0.2794549763202667
+          ],
+          "severity": "High",
+          "color": "#FF6B35",
+          "avg_confidence": 0.279
+        }
+      },
+      "health_score": 91.2,
+      "worst_severity": "High",
+      "image_size": {
+        "width": 334,
+        "height": 209
+      },
+      "annotated_image": "/results/e0765026-de91-4981-8366-8121c2025093/annotated_testimagesforweb_crack-2.PNG",
+      "original_image": "/uploads/e0765026-de91-4981-8366-8121c2025093/testimagesforweb_crack-2.PNG",
+      "detections": [
+        {
+          "class_id": 12,
+          "confidence": 0.3533066511154175,
+          "bbox": [
+            20,
+            0,
+            35,
+            138
+          ]
+        },
+        {
+          "class_id": 12,
+          "confidence": 0.3208483159542084,
+          "bbox": [
+            53,
+            0,
+            69,
+            152
+          ]
+        },
+        {
+          "class_id": 12,
+          "confidence": 0.30599865317344666,
+          "bbox": [
+            231,
+            0,
+            244,
+            150
+          ]
+        },
+        {
+          "class_id": 12,
+          "confidence": 0.29609814286231995,
+          "bbox": [
+            292,
+            0,
+            316,
+            193
+          ]
+        },
+        {
+          "class_id": 2,
+          "confidence": 0.2794549763202667,
+          "bbox": [
+            309,
+            117,
+            333,
+            125
+          ]
+        },
+        {
+          "class_id": 12,
+          "confidence": 0.2631630301475525,
+          "bbox": [
+            119,
+            0,
+            141,
+            160
+          ]
+        },
+        {
+          "class_id": 12,
+          "confidence": 0.25955134630203247,
+          "bbox": [
+            263,
+            0,
+            278,
+            167
+          ]
+        }
+      ],
+      "timestamp": "2026-02-19T20:26:59",
+      "priority_rank": 20
+    },
+    {
+      "id": "52c6b359-3d5f-4f81-bc1a-33c414e87fae",
+      "filename": "testimagesforweb_crack-9.PNG",
+      "defect_count": 5,
+      "defect_summary": {
+        "Finger": {
+          "count": 4,
+          "confidences": [
+            0.7654150724411011,
+            0.4960094392299652,
+            0.4200729727745056,
+            0.3049602210521698
+          ],
+          "severity": "High",
+          "color": "#FF6B35",
+          "avg_confidence": 0.497
+        },
+        "Other Defect": {
+          "count": 1,
+          "confidences": [
+            0.27914634346961975
+          ],
+          "severity": "Low",
+          "color": "#636366",
+          "avg_confidence": 0.279
+        }
+      },
+      "health_score": 75.3,
+      "worst_severity": "High",
+      "image_size": {
+        "width": 563,
+        "height": 427
+      },
+      "annotated_image": "/results/e0765026-de91-4981-8366-8121c2025093/annotated_testimagesforweb_crack-9.PNG",
+      "original_image": "/uploads/e0765026-de91-4981-8366-8121c2025093/testimagesforweb_crack-9.PNG",
+      "detections": [
+        {
+          "class_id": 2,
+          "confidence": 0.7654150724411011,
+          "bbox": [
+            260,
+            133,
+            305,
+            219
+          ]
+        },
+        {
+          "class_id": 2,
+          "confidence": 0.4960094392299652,
+          "bbox": [
+            303,
+            110,
+            497,
+            289
+          ]
+        },
+        {
+          "class_id": 2,
+          "confidence": 0.4200729727745056,
+          "bbox": [
+            131,
+            344,
+            159,
+            413
+          ]
+        },
+        {
+          "class_id": 2,
+          "confidence": 0.3049602210521698,
+          "bbox": [
+            102,
+            15,
+            314,
+            219
+          ]
+        },
+        {
+          "class_id": 10,
+          "confidence": 0.27914634346961975,
+          "bbox": [
+            11,
+            348,
+            45,
+            414
+          ]
+        }
+      ],
+      "timestamp": "2026-02-19T20:27:19.085616",
+      "priority_rank": 21
+    },
+    {
+      "id": "f61cf59d-e7be-4abe-af30-6304f6ee0c60",
+      "filename": "testimagesforweb_crack-1.PNG",
+      "defect_count": 4,
+      "defect_summary": {
+        "Finger": {
+          "count": 1,
+          "confidences": [
+            0.35842230916023254
+          ],
+          "severity": "High",
+          "color": "#FF6B35",
+          "avg_confidence": 0.358
+        },
+        "Printing Error": {
+          "count": 3,
+          "confidences": [
+            0.3325931131839752,
+            0.32891085743904114,
+            0.27630168199539185
+          ],
+          "severity": "Medium",
+          "color": "#FFCC00",
+          "avg_confidence": 0.313
+        }
+      },
+      "health_score": 90.1,
+      "worst_severity": "High",
+      "image_size": {
+        "width": 340,
+        "height": 215
+      },
+      "annotated_image": "/results/e0765026-de91-4981-8366-8121c2025093/annotated_testimagesforweb_crack-1.PNG",
+      "original_image": "/uploads/e0765026-de91-4981-8366-8121c2025093/testimagesforweb_crack-1.PNG",
+      "detections": [
+        {
+          "class_id": 2,
+          "confidence": 0.35842230916023254,
+          "bbox": [
+            0,
+            5,
+            54,
+            134
+          ]
+        },
+        {
+          "class_id": 5,
+          "confidence": 0.3325931131839752,
+          "bbox": [
+            256,
+            8,
+            337,
+            214
+          ]
+        },
+        {
+          "class_id": 5,
+          "confidence": 0.32891085743904114,
+          "bbox": [
+            35,
+            3,
+            94,
+            215
+          ]
+        },
+        {
+          "class_id": 5,
+          "confidence": 0.27630168199539185,
+          "bbox": [
+            137,
+            3,
+            199,
+            215
+          ]
+        }
+      ],
+      "timestamp": "2026-02-19T20:26:47.273908",
+      "priority_rank": 22
+    },
+    {
+      "id": "13adbd73-b0bc-4b13-a88b-8f0dbbb7af2c",
+      "filename": "testimagesforweb_crack-38.PNG",
+      "defect_count": 4,
+      "defect_summary": {
+        "Finger": {
+          "count": 4,
+          "confidences": [
+            0.466139018535614,
+            0.3760223090648651,
+            0.3561079204082489,
+            0.3497512638568878
+          ],
+          "severity": "High",
+          "color": "#FF6B35",
+          "avg_confidence": 0.387
+        }
+      },
+      "health_score": 81.4,
+      "worst_severity": "High",
+      "image_size": {
+        "width": 858,
+        "height": 517
+      },
+      "annotated_image": "/results/e0765026-de91-4981-8366-8121c2025093/annotated_testimagesforweb_crack-38.PNG",
+      "original_image": "/uploads/e0765026-de91-4981-8366-8121c2025093/testimagesforweb_crack-38.PNG",
+      "detections": [
+        {
+          "class_id": 2,
+          "confidence": 0.466139018535614,
+          "bbox": [
+            343,
+            159,
+            428,
+            187
+          ]
+        },
+        {
+          "class_id": 2,
+          "confidence": 0.3760223090648651,
+          "bbox": [
+            774,
+            74,
+            855,
+            100
+          ]
+        },
+        {
+          "class_id": 2,
+          "confidence": 0.3561079204082489,
+          "bbox": [
+            772,
+            245,
+            856,
+            275
+          ]
+        },
+        {
+          "class_id": 2,
+          "confidence": 0.3497512638568878,
+          "bbox": [
+            772,
+            159,
+            856,
+            187
+          ]
+        }
+      ],
+      "timestamp": "2026-02-19T20:27:07.681906",
+      "priority_rank": 23
+    },
+    {
+      "id": "9e1b5ebb-4b58-4382-a8d6-74043290c64b",
+      "filename": "testimagesforweb_Zellbruch.png",
+      "defect_count": 4,
+      "defect_summary": {
+        "Finger": {
+          "count": 2,
+          "confidences": [
+            0.870177149772644,
+            0.3173074722290039
+          ],
+          "severity": "High",
+          "color": "#FF6B35",
+          "avg_confidence": 0.594
+        },
+        "Other Defect": {
+          "count": 1,
+          "confidences": [
+            0.5285624861717224
+          ],
+          "severity": "Low",
+          "color": "#636366",
+          "avg_confidence": 0.529
+        },
+        "Printing Error": {
+          "count": 1,
+          "confidences": [
+            0.2835744619369507
+          ],
+          "severity": "Medium",
+          "color": "#FFCC00",
+          "avg_confidence": 0.284
+        }
+      },
+      "health_score": 82.5,
+      "worst_severity": "High",
+      "image_size": {
+        "width": 500,
+        "height": 313
+      },
+      "annotated_image": "/results/e0765026-de91-4981-8366-8121c2025093/annotated_testimagesforweb_Zellbruch.png",
+      "original_image": "/uploads/e0765026-de91-4981-8366-8121c2025093/testimagesforweb_Zellbruch.png",
+      "detections": [
+        {
+          "class_id": 2,
+          "confidence": 0.870177149772644,
+          "bbox": [
+            434,
+            161,
+            498,
+            245
+          ]
+        },
+        {
+          "class_id": 10,
+          "confidence": 0.5285624861717224,
+          "bbox": [
+            128,
+            164,
+            221,
+            291
+          ]
+        },
+        {
+          "class_id": 2,
+          "confidence": 0.3173074722290039,
+          "bbox": [
+            78,
+            92,
+            123,
+            158
+          ]
+        },
+        {
+          "class_id": 5,
+          "confidence": 0.2835744619369507,
+          "bbox": [
+            195,
+            0,
+            265,
+            311
+          ]
+        }
+      ],
+      "timestamp": "2026-02-19T20:27:35.363083",
+      "priority_rank": 24
+    },
+    {
+      "id": "52322039-c0f4-4008-8734-060587c2eb65",
+      "filename": "testimagesforweb_crack-22.PNG",
+      "defect_count": 3,
+      "defect_summary": {
+        "Printing Error": {
+          "count": 2,
+          "confidences": [
+            0.8084544539451599,
+            0.3289429843425751
+          ],
+          "severity": "Medium",
+          "color": "#FFCC00",
+          "avg_confidence": 0.569
+        },
+        "Finger": {
+          "count": 1,
+          "confidences": [
+            0.4776744842529297
+          ],
+          "severity": "High",
+          "color": "#FF6B35",
+          "avg_confidence": 0.478
+        }
+      },
+      "health_score": 87.4,
+      "worst_severity": "High",
+      "image_size": {
+        "width": 335,
+        "height": 573
+      },
+      "annotated_image": "/results/e0765026-de91-4981-8366-8121c2025093/annotated_testimagesforweb_crack-22.PNG",
+      "original_image": "/uploads/e0765026-de91-4981-8366-8121c2025093/testimagesforweb_crack-22.PNG",
+      "detections": [
+        {
+          "class_id": 5,
+          "confidence": 0.8084544539451599,
+          "bbox": [
+            0,
+            145,
+            335,
+            213
+          ]
+        },
+        {
+          "class_id": 2,
+          "confidence": 0.4776744842529297,
+          "bbox": [
+            281,
+            451,
+            335,
+            475
+          ]
+        },
+        {
+          "class_id": 5,
+          "confidence": 0.3289429843425751,
+          "bbox": [
+            1,
+            475,
+            335,
+            572
+          ]
+        }
+      ],
+      "timestamp": "2026-02-19T20:27:03.543580",
+      "priority_rank": 25
+    },
+    {
+      "id": "98c47abe-0004-44a1-98f5-bb2fe3e97c2c",
+      "filename": "testimagesforweb_crack-42.PNG",
+      "defect_count": 3,
+      "defect_summary": {
+        "Finger": {
+          "count": 3,
+          "confidences": [
+            0.7849223017692566,
+            0.5589720010757446,
+            0.4864858090877533
+          ],
+          "severity": "High",
+          "color": "#FF6B35",
+          "avg_confidence": 0.61
+        }
+      },
+      "health_score": 78.0,
+      "worst_severity": "High",
+      "image_size": {
+        "width": 620,
+        "height": 533
+      },
+      "annotated_image": "/results/e0765026-de91-4981-8366-8121c2025093/annotated_testimagesforweb_crack-42.PNG",
+      "original_image": "/uploads/e0765026-de91-4981-8366-8121c2025093/testimagesforweb_crack-42.PNG",
+      "detections": [
+        {
+          "class_id": 2,
+          "confidence": 0.7849223017692566,
+          "bbox": [
+            304,
+            10,
+            484,
+            142
+          ]
+        },
+        {
+          "class_id": 2,
+          "confidence": 0.5589720010757446,
+          "bbox": [
+            1,
+            7,
+            306,
+            149
+          ]
+        },
+        {
+          "class_id": 2,
+          "confidence": 0.4864858090877533,
+          "bbox": [
+            7,
+            121,
+            489,
+            422
+          ]
+        }
+      ],
+      "timestamp": "2026-02-19T20:27:13.307178",
+      "priority_rank": 26
+    },
+    {
+      "id": "207ca3bb-4fbd-4a26-a66c-54a4c7a5b1c2",
+      "filename": "testimagesforweb_crack-37.PNG",
+      "defect_count": 2,
+      "defect_summary": {
+        "Printing Error": {
+          "count": 1,
+          "confidences": [
+            0.36188656091690063
+          ],
+          "severity": "Medium",
+          "color": "#FFCC00",
+          "avg_confidence": 0.362
+        },
+        "Finger": {
+          "count": 1,
+          "confidences": [
+            0.2929428815841675
+          ],
+          "severity": "High",
+          "color": "#FF6B35",
+          "avg_confidence": 0.293
+        }
+      },
+      "health_score": 94.3,
+      "worst_severity": "High",
+      "image_size": {
+        "width": 564,
+        "height": 340
+      },
+      "annotated_image": "/results/e0765026-de91-4981-8366-8121c2025093/annotated_testimagesforweb_crack-37.PNG",
+      "original_image": "/uploads/e0765026-de91-4981-8366-8121c2025093/testimagesforweb_crack-37.PNG",
+      "detections": [
+        {
+          "class_id": 5,
+          "confidence": 0.36188656091690063,
+          "bbox": [
+            365,
+            0,
+            409,
+            311
+          ]
+        },
+        {
+          "class_id": 2,
+          "confidence": 0.2929428815841675,
+          "bbox": [
+            503,
+            49,
+            559,
+            66
+          ]
+        }
+      ],
+      "timestamp": "2026-02-19T20:27:06.431884",
+      "priority_rank": 27
+    },
+    {
+      "id": "f56474a0-cbea-4862-867b-66da0d23e9ae",
+      "filename": "testimagesforweb_elektrolumineszenz_pv.jpg",
+      "defect_count": 2,
+      "defect_summary": {
+        "Finger": {
+          "count": 1,
+          "confidences": [
+            0.485709547996521
+          ],
+          "severity": "High",
+          "color": "#FF6B35",
+          "avg_confidence": 0.486
+        },
+        "Class 12": {
+          "count": 1,
+          "confidences": [
+            0.2547605633735657
+          ],
+          "severity": "Low",
+          "color": "#888",
+          "avg_confidence": 0.255
+        }
+      },
+      "health_score": 93.4,
+      "worst_severity": "High",
+      "image_size": {
+        "width": 520,
+        "height": 693
+      },
+      "annotated_image": "/results/e0765026-de91-4981-8366-8121c2025093/annotated_testimagesforweb_elektrolumineszenz_pv.jpg",
+      "original_image": "/uploads/e0765026-de91-4981-8366-8121c2025093/testimagesforweb_elektrolumineszenz_pv.jpg",
+      "detections": [
+        {
+          "class_id": 2,
+          "confidence": 0.485709547996521,
+          "bbox": [
+            442,
+            7,
+            510,
+            90
+          ]
+        },
+        {
+          "class_id": 12,
+          "confidence": 0.2547605633735657,
+          "bbox": [
+            154,
+            8,
+            195,
+            355
+          ]
+        }
+      ],
+      "timestamp": "2026-02-19T20:27:23.935264",
+      "priority_rank": 28
+    },
+    {
+      "id": "ed9aa776-3374-4d8d-8c11-4820e5a6d566",
+      "filename": "testimagesforweb_1479285761_1.jpg",
+      "defect_count": 1,
+      "defect_summary": {
+        "Finger": {
+          "count": 1,
+          "confidences": [
+            0.36936095356941223
+          ],
+          "severity": "High",
+          "color": "#FF6B35",
+          "avg_confidence": 0.369
+        }
+      },
+      "health_score": 95.6,
+      "worst_severity": "High",
+      "image_size": {
+        "width": 800,
+        "height": 533
+      },
+      "annotated_image": "/results/e0765026-de91-4981-8366-8121c2025093/annotated_testimagesforweb_1479285761_1.jpg",
+      "original_image": "/uploads/e0765026-de91-4981-8366-8121c2025093/testimagesforweb_1479285761_1.jpg",
+      "detections": [
+        {
+          "class_id": 2,
+          "confidence": 0.36936095356941223,
+          "bbox": [
+            744,
+            12,
+            799,
+            62
+          ]
+        }
+      ],
+      "timestamp": "2026-02-19T20:26:43.378341",
+      "priority_rank": 29
+    },
+    {
+      "id": "c599cab5-973c-4db4-a5d4-60d2d1aecb6d",
+      "filename": "testimagesforweb_elektrolumineszenz-pv.jpg",
+      "defect_count": 1,
+      "defect_summary": {
+        "Finger": {
+          "count": 1,
+          "confidences": [
+            0.37329521775245667
+          ],
+          "severity": "High",
+          "color": "#FF6B35",
+          "avg_confidence": 0.373
+        }
+      },
+      "health_score": 95.5,
+      "worst_severity": "High",
+      "image_size": {
+        "width": 520,
+        "height": 390
+      },
+      "annotated_image": "/results/e0765026-de91-4981-8366-8121c2025093/annotated_testimagesforweb_elektrolumineszenz-pv.jpg",
+      "original_image": "/uploads/e0765026-de91-4981-8366-8121c2025093/testimagesforweb_elektrolumineszenz-pv.jpg",
+      "detections": [
+        {
+          "class_id": 2,
+          "confidence": 0.37329521775245667,
+          "bbox": [
+            0,
+            253,
+            242,
+            347
+          ]
+        }
+      ],
+      "timestamp": "2026-02-19T20:27:21.274461",
+      "priority_rank": 30
+    },
+    {
+      "id": "8b58d249-0838-47dd-b252-1b9eccd3b490",
+      "filename": "testimagesforweb_crack-18.PNG",
+      "defect_count": 4,
+      "defect_summary": {
+        "Class 12": {
+          "count": 3,
+          "confidences": [
+            0.36451685428619385,
+            0.2966524660587311,
+            0.2815016508102417
+          ],
+          "severity": "Low",
+          "color": "#888",
+          "avg_confidence": 0.314
+        },
+        "Printing Error": {
+          "count": 1,
+          "confidences": [
+            0.34876689314842224
+          ],
+          "severity": "Medium",
+          "color": "#FFCC00",
+          "avg_confidence": 0.349
+        }
+      },
+      "health_score": 95.1,
+      "worst_severity": "Medium",
+      "image_size": {
+        "width": 623,
+        "height": 628
+      },
+      "annotated_image": "/results/e0765026-de91-4981-8366-8121c2025093/annotated_testimagesforweb_crack-18.PNG",
+      "original_image": "/uploads/e0765026-de91-4981-8366-8121c2025093/testimagesforweb_crack-18.PNG",
+      "detections": [
+        {
+          "class_id": 12,
+          "confidence": 0.36451685428619385,
+          "bbox": [
+            133,
+            5,
+            160,
+            303
+          ]
+        },
+        {
+          "class_id": 5,
+          "confidence": 0.34876689314842224,
+          "bbox": [
+            284,
+            2,
+            378,
+            395
+          ]
+        },
+        {
+          "class_id": 12,
+          "confidence": 0.2966524660587311,
+          "bbox": [
+            133,
+            364,
+            162,
+            611
+          ]
+        },
+        {
+          "class_id": 12,
+          "confidence": 0.2815016508102417,
+          "bbox": [
+            133,
+            211,
+            160,
+            417
+          ]
+        }
+      ],
+      "timestamp": "2026-02-19T20:26:55.885297",
+      "priority_rank": 31
+    },
+    {
+      "id": "8a0be80d-8228-425c-9249-4fc532985d72",
+      "filename": "testimagesforweb_elektrolumineszenz.png",
+      "defect_count": 4,
+      "defect_summary": {
+        "Printing Error": {
+          "count": 4,
+          "confidences": [
+            0.44941991567611694,
+            0.43419477343559265,
+            0.364850252866745,
+            0.3061596155166626
+          ],
+          "severity": "Medium",
+          "color": "#FFCC00",
+          "avg_confidence": 0.389
+        }
+      },
+      "health_score": 90.7,
+      "worst_severity": "Medium",
+      "image_size": {
+        "width": 582,
+        "height": 575
+      },
+      "annotated_image": "/results/e0765026-de91-4981-8366-8121c2025093/annotated_testimagesforweb_elektrolumineszenz.png",
+      "original_image": "/uploads/e0765026-de91-4981-8366-8121c2025093/testimagesforweb_elektrolumineszenz.png",
+      "detections": [
+        {
+          "class_id": 5,
+          "confidence": 0.44941991567611694,
+          "bbox": [
+            317,
+            1,
+            406,
+            575
+          ]
+        },
+        {
+          "class_id": 5,
+          "confidence": 0.43419477343559265,
+          "bbox": [
+            458,
+            0,
+            548,
+            575
+          ]
+        },
+        {
+          "class_id": 5,
+          "confidence": 0.364850252866745,
+          "bbox": [
+            26,
+            0,
+            115,
+            575
+          ]
+        },
+        {
+          "class_id": 5,
+          "confidence": 0.3061596155166626,
+          "bbox": [
+            172,
+            0,
+            249,
+            573
+          ]
+        }
+      ],
+      "timestamp": "2026-02-19T20:27:22.761831",
+      "priority_rank": 32
+    },
+    {
+      "id": "35fd221c-bcef-48a5-b61c-5506335853de",
+      "filename": "testimagesforweb_unnamed.jpg",
+      "defect_count": 3,
+      "defect_summary": {
+        "Printing Error": {
+          "count": 3,
+          "confidences": [
+            0.5945309400558472,
+            0.5264847278594971,
+            0.41031476855278015
+          ],
+          "severity": "Medium",
+          "color": "#FFCC00",
+          "avg_confidence": 0.51
+        }
+      },
+      "health_score": 90.8,
+      "worst_severity": "Medium",
+      "image_size": {
+        "width": 512,
+        "height": 384
+      },
+      "annotated_image": "/results/e0765026-de91-4981-8366-8121c2025093/annotated_testimagesforweb_unnamed.jpg",
+      "original_image": "/uploads/e0765026-de91-4981-8366-8121c2025093/testimagesforweb_unnamed.jpg",
+      "detections": [
+        {
+          "class_id": 5,
+          "confidence": 0.5945309400558472,
+          "bbox": [
+            395,
+            0,
+            474,
+            384
+          ]
+        },
+        {
+          "class_id": 5,
+          "confidence": 0.5264847278594971,
+          "bbox": [
+            64,
+            0,
+            134,
+            383
+          ]
+        },
+        {
+          "class_id": 5,
+          "confidence": 0.41031476855278015,
+          "bbox": [
+            424,
+            1,
+            510,
+            384
+          ]
+        }
+      ],
+      "timestamp": "2026-02-19T20:27:34.444581",
+      "priority_rank": 33
+    },
+    {
+      "id": "03414d4b-d299-4869-91d8-7d9aef93d41c",
+      "filename": "testimagesforweb_1479285761.jpg",
+      "defect_count": 2,
+      "defect_summary": {
+        "Printing Error": {
+          "count": 2,
+          "confidences": [
+            0.2951173484325409,
+            0.2790173590183258
+          ],
+          "severity": "Medium",
+          "color": "#FFCC00",
+          "avg_confidence": 0.287
+        }
+      },
+      "health_score": 96.6,
+      "worst_severity": "Medium",
+      "image_size": {
+        "width": 800,
+        "height": 533
+      },
+      "annotated_image": "/results/e0765026-de91-4981-8366-8121c2025093/annotated_testimagesforweb_1479285761.jpg",
+      "original_image": "/uploads/e0765026-de91-4981-8366-8121c2025093/testimagesforweb_1479285761.jpg",
+      "detections": [
+        {
+          "class_id": 5,
+          "confidence": 0.2951173484325409,
+          "bbox": [
+            101,
+            0,
+            227,
+            529
+          ]
+        },
+        {
+          "class_id": 5,
+          "confidence": 0.2790173590183258,
+          "bbox": [
+            172,
+            0,
+            298,
+            533
+          ]
+        }
+      ],
+      "timestamp": "2026-02-19T20:26:44.595062",
+      "priority_rank": 34
+    },
+    {
+      "id": "45d22e46-0cfc-4c7d-acbc-53ff178be424",
+      "filename": "testimagesforweb_crack-16.PNG",
+      "defect_count": 2,
+      "defect_summary": {
+        "Printing Error": {
+          "count": 2,
+          "confidences": [
+            0.3207918107509613,
+            0.2878830134868622
+          ],
+          "severity": "Medium",
+          "color": "#FFCC00",
+          "avg_confidence": 0.304
+        }
+      },
+      "health_score": 96.3,
+      "worst_severity": "Medium",
+      "image_size": {
+        "width": 472,
+        "height": 470
+      },
+      "annotated_image": "/results/e0765026-de91-4981-8366-8121c2025093/annotated_testimagesforweb_crack-16.PNG",
+      "original_image": "/uploads/e0765026-de91-4981-8366-8121c2025093/testimagesforweb_crack-16.PNG",
+      "detections": [
+        {
+          "class_id": 5,
+          "confidence": 0.3207918107509613,
+          "bbox": [
+            2,
+            158,
+            465,
+            291
+          ]
+        },
+        {
+          "class_id": 5,
+          "confidence": 0.2878830134868622,
+          "bbox": [
+            7,
+            313,
+            464,
+            461
+          ]
+        }
+      ],
+      "timestamp": "2026-02-19T20:26:52.750732",
+      "priority_rank": 35
+    },
+    {
+      "id": "1d4d571a-806c-438a-9e60-e3a3668f3367",
+      "filename": "testimagesforweb_images_4.jpg",
+      "defect_count": 2,
+      "defect_summary": {
+        "Printing Error": {
+          "count": 1,
+          "confidences": [
+            0.25582650303840637
+          ],
+          "severity": "Medium",
+          "color": "#FFCC00",
+          "avg_confidence": 0.256
+        },
+        "Class 12": {
+          "count": 1,
+          "confidences": [
+            0.25319552421569824
+          ],
+          "severity": "Low",
+          "color": "#888",
+          "avg_confidence": 0.253
+        }
+      },
+      "health_score": 97.7,
+      "worst_severity": "Medium",
+      "image_size": {
+        "width": 299,
+        "height": 168
+      },
+      "annotated_image": "/results/e0765026-de91-4981-8366-8121c2025093/annotated_testimagesforweb_images_4.jpg",
+      "original_image": "/uploads/e0765026-de91-4981-8366-8121c2025093/testimagesforweb_images_4.jpg",
+      "detections": [
+        {
+          "class_id": 5,
+          "confidence": 0.25582650303840637,
+          "bbox": [
+            279,
+            3,
+            298,
+            111
+          ]
+        },
+        {
+          "class_id": 12,
+          "confidence": 0.25319552421569824,
+          "bbox": [
+            165,
+            4,
+            185,
+            168
+          ]
+        }
+      ],
+      "timestamp": "2026-02-19T20:27:30.063526",
+      "priority_rank": 36
+    },
+    {
+      "id": "d71c0c78-a2e4-4da5-8430-e198cbd44a4f",
+      "filename": "testimagesforweb_crack-20.PNG",
+      "defect_count": 1,
+      "defect_summary": {
+        "Printing Error": {
+          "count": 1,
+          "confidences": [
+            0.26056942343711853
+          ],
+          "severity": "Medium",
+          "color": "#FFCC00",
+          "avg_confidence": 0.261
+        }
+      },
+      "health_score": 98.4,
+      "worst_severity": "Medium",
+      "image_size": {
+        "width": 537,
+        "height": 540
+      },
+      "annotated_image": "/results/e0765026-de91-4981-8366-8121c2025093/annotated_testimagesforweb_crack-20.PNG",
+      "original_image": "/uploads/e0765026-de91-4981-8366-8121c2025093/testimagesforweb_crack-20.PNG",
+      "detections": [
+        {
+          "class_id": 5,
+          "confidence": 0.26056942343711853,
+          "bbox": [
+            364,
+            8,
+            438,
+            540
+          ]
+        }
+      ],
+      "timestamp": "2026-02-19T20:27:00.699263",
+      "priority_rank": 37
+    },
+    {
+      "id": "834821ea-cff6-45f1-ab61-026def4de12b",
+      "filename": "testimagesforweb_crack-46.PNG",
+      "defect_count": 1,
+      "defect_summary": {
+        "Printing Error": {
+          "count": 1,
+          "confidences": [
+            0.45732372999191284
+          ],
+          "severity": "Medium",
+          "color": "#FFCC00",
+          "avg_confidence": 0.457
+        }
+      },
+      "health_score": 97.3,
+      "worst_severity": "Medium",
+      "image_size": {
+        "width": 463,
+        "height": 471
+      },
+      "annotated_image": "/results/e0765026-de91-4981-8366-8121c2025093/annotated_testimagesforweb_crack-46.PNG",
+      "original_image": "/uploads/e0765026-de91-4981-8366-8121c2025093/testimagesforweb_crack-46.PNG",
+      "detections": [
+        {
+          "class_id": 5,
+          "confidence": 0.45732372999191284,
+          "bbox": [
+            29,
+            2,
+            118,
+            471
+          ]
+        }
+      ],
+      "timestamp": "2026-02-19T20:27:16.278955",
+      "priority_rank": 38
+    },
+    {
+      "id": "1b51e776-64b4-4a11-a67c-ff772d269af4",
+      "filename": "testimagesforweb_el_crack.jpg",
+      "defect_count": 1,
+      "defect_summary": {
+        "Printing Error": {
+          "count": 1,
+          "confidences": [
+            0.40014615654945374
+          ],
+          "severity": "Medium",
+          "color": "#FFCC00",
+          "avg_confidence": 0.4
+        }
+      },
+      "health_score": 97.6,
+      "worst_severity": "Medium",
+      "image_size": {
+        "width": 956,
+        "height": 919
+      },
+      "annotated_image": "/results/e0765026-de91-4981-8366-8121c2025093/annotated_testimagesforweb_el_crack.jpg",
+      "original_image": "/uploads/e0765026-de91-4981-8366-8121c2025093/testimagesforweb_el_crack.jpg",
+      "detections": [
+        {
+          "class_id": 5,
+          "confidence": 0.40014615654945374,
+          "bbox": [
+            357,
+            0,
+            561,
+            919
+          ]
+        }
+      ],
+      "timestamp": "2026-02-19T20:27:25.367067",
+      "priority_rank": 39
+    },
+    {
+      "id": "5a6b2fa6-8632-47f8-96ef-53a3c2e7158b",
+      "filename": "testimagesforweb_crack-41.PNG",
+      "defect_count": 3,
+      "defect_summary": {
+        "Class 11": {
+          "count": 3,
+          "confidences": [
+            0.7429133057594299,
+            0.4897446632385254,
+            0.35939928889274597
+          ],
+          "severity": "Low",
+          "color": "#888",
+          "avg_confidence": 0.531
+        }
+      },
+      "health_score": 95.2,
+      "worst_severity": "Low",
+      "image_size": {
+        "width": 452,
+        "height": 452
+      },
+      "annotated_image": "/results/e0765026-de91-4981-8366-8121c2025093/annotated_testimagesforweb_crack-41.PNG",
+      "original_image": "/uploads/e0765026-de91-4981-8366-8121c2025093/testimagesforweb_crack-41.PNG",
+      "detections": [
+        {
+          "class_id": 11,
+          "confidence": 0.7429133057594299,
+          "bbox": [
+            43,
+            156,
+            80,
+            192
+          ]
+        },
+        {
+          "class_id": 11,
+          "confidence": 0.4897446632385254,
+          "bbox": [
+            366,
+            32,
+            386,
+            53
+          ]
+        },
+        {
+          "class_id": 11,
+          "confidence": 0.35939928889274597,
+          "bbox": [
+            271,
+            232,
+            300,
+            263
+          ]
+        }
+      ],
+      "timestamp": "2026-02-19T20:27:12.041030",
+      "priority_rank": 40
+    },
+    {
+      "id": "215ab09e-8a08-4c6d-85da-3062cdafd725",
+      "filename": "testimagesforweb_08-RE-Mike-Solar-PV-fig-05-490x620.jpg",
+      "defect_count": 0,
+      "defect_summary": {},
+      "health_score": 100,
+      "worst_severity": "Good",
+      "image_size": {
+        "width": 500,
+        "height": 279
+      },
+      "annotated_image": "/results/e0765026-de91-4981-8366-8121c2025093/annotated_testimagesforweb_08-RE-Mike-Solar-PV-fig-05-490x620.jpg",
+      "original_image": "/uploads/e0765026-de91-4981-8366-8121c2025093/testimagesforweb_08-RE-Mike-Solar-PV-fig-05-490x620.jpg",
+      "detections": [],
+      "timestamp": "2026-02-19T20:26:41.528998",
+      "priority_rank": 41
+    }
+  ],
+  "summary": {
+    "total_panels": 41,
+    "total_defects": 209,
+    "avg_health_score": 76.4,
+    "defect_type_distribution": {
+      "Other Defect": 8,
+      "Finger": 96,
+      "Fragment": 26,
+      "Class 11": 11,
+      "Printing Error": 40,
+      "Horizontal Dislocation": 1,
+      "Black Core": 4,
+      "Class 12": 23
+    },
+    "severity_distribution": {
+      "Critical": 14,
+      "High": 16,
+      "Medium": 9,
+      "Low": 1,
+      "Good": 1
+    },
+    "critical_panels": 14,
+    "healthy_panels": 1
+  }
+}
