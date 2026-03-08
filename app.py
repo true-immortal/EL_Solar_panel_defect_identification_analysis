@@ -22,23 +22,111 @@ def get_model():
     return model
 
 DEFECT_CLASSES = {
-    0:  {'name': 'Black Core',            'severity': 'Critical', 'color': '#FF2D55', 'power_loss_pct': 20, 'repair_cost': 4500},
-    1:  {'name': 'Crack',                 'severity': 'Critical', 'color': '#FF3B30', 'power_loss_pct': 12, 'repair_cost': 3000},
-    2:  {'name': 'Finger',                'severity': 'High',     'color': '#FF6B35', 'power_loss_pct': 5,  'repair_cost': 1500},
-    3:  {'name': 'Fragment',              'severity': 'Critical', 'color': '#FF0000', 'power_loss_pct': 30, 'repair_cost': 6000},
-    4:  {'name': 'Horizontal Dislocation','severity': 'High',     'color': '#FF9500', 'power_loss_pct': 8,  'repair_cost': 2000},
-    5:  {'name': 'Printing Error',        'severity': 'Medium',   'color': '#FFCC00', 'power_loss_pct': 3,  'repair_cost': 800},
-    6:  {'name': 'Scratch',               'severity': 'Low',      'color': '#007AFF', 'power_loss_pct': 2,  'repair_cost': 300},
-    7:  {'name': 'Short Circuit',         'severity': 'Critical', 'color': '#BF5AF2', 'power_loss_pct': 25, 'repair_cost': 5000},
-    8:  {'name': 'Star Crack',            'severity': 'Critical', 'color': '#FF375F', 'power_loss_pct': 15, 'repair_cost': 3500},
-    9:  {'name': 'Thick Line',            'severity': 'Medium',   'color': '#34C759', 'power_loss_pct': 3,  'repair_cost': 700},
-    10: {'name': 'Other Defect',          'severity': 'Low',      'color': '#636366', 'power_loss_pct': 2,  'repair_cost': 500},
+    # repair_cost_min/max = INR range per panel per defect instance
+    # repair_cost = midpoint used for estimates
+    0:  {'name': 'Black Core',            'severity': 'Critical', 'color': '#FF2D55', 'power_loss_pct': 20,
+         'repair_method': 'Laser isolation / bypass diode fitting',
+         'repair_cost_min': 80,  'repair_cost_max': 330,  'repair_cost': 205},
+    1:  {'name': 'Crack',                 'severity': 'Critical', 'color': '#FF3B30', 'power_loss_pct': 12,
+         'repair_method': 'Micro-crack stabilization / re-lamination',
+         'repair_cost_min': 170, 'repair_cost_max': 500,  'repair_cost': 335},
+    2:  {'name': 'Finger',                'severity': 'High',     'color': '#FF6B35', 'power_loss_pct': 5,
+         'repair_method': 'Laser or solder repair of metallization fingers',
+         'repair_cost_min': 40,  'repair_cost_max': 170,  'repair_cost': 105},
+    3:  {'name': 'Fragment',              'severity': 'Critical', 'color': '#FF0000', 'power_loss_pct': 30,
+         'repair_method': 'Cell removal and replacement before lamination',
+         'repair_cost_min': 330, 'repair_cost_max': 830,  'repair_cost': 580},
+    4:  {'name': 'Horizontal Dislocation','severity': 'High',     'color': '#FF9500', 'power_loss_pct': 8,
+         'repair_method': 'Laser cutting to isolate dislocated region',
+         'repair_cost_min': 170, 'repair_cost_max': 420,  'repair_cost': 295},
+    5:  {'name': 'Printing Error',        'severity': 'Medium',   'color': '#FFCC00', 'power_loss_pct': 3,
+         'repair_method': 'Re-screen printing of metallization pattern',
+         'repair_cost_min': 40,  'repair_cost_max': 125,  'repair_cost': 83},
+    6:  {'name': 'Scratch',               'severity': 'Low',      'color': '#007AFF', 'power_loss_pct': 2,
+         'repair_method': 'Surface cleaning and anti-reflective re-coating',
+         'repair_cost_min': 25,  'repair_cost_max': 80,   'repair_cost': 53},
+    7:  {'name': 'Short Circuit',         'severity': 'Critical', 'color': '#BF5AF2', 'power_loss_pct': 25,
+         'repair_method': 'Laser isolation of shorted cell area',
+         'repair_cost_min': 80,  'repair_cost_max': 250,  'repair_cost': 165},
+    8:  {'name': 'Star Crack',            'severity': 'Critical', 'color': '#FF375F', 'power_loss_pct': 15,
+         'repair_method': 'Encapsulation reinforcement / edge sealing',
+         'repair_cost_min': 170, 'repair_cost_max': 500,  'repair_cost': 335},
+    9:  {'name': 'Thick Line',            'severity': 'Medium',   'color': '#34C759', 'power_loss_pct': 3,
+         'repair_method': 'Laser trimming of oversized busbar / finger',
+         'repair_cost_min': 40,  'repair_cost_max': 170,  'repair_cost': 105},
+    10: {'name': 'Other Defect',          'severity': 'Low',      'color': '#636366', 'power_loss_pct': 2,
+         'repair_method': 'Manual inspection required — method depends on defect',
+         'repair_cost_min': 80,  'repair_cost_max': 420,  'repair_cost': 250},
 }
 
 SEVERITY_ORDER = {'Critical': 0, 'High': 1, 'Medium': 2, 'Low': 3, 'Good': 4}
 PANEL_WATT = 400
 ELECTRICITY_RATE = 7
 HOURS_PER_YEAR = 1600
+
+# Panel replacement cost breakdown (INR)
+REPLACEMENT_COST = {
+    'solar_cells':           {'min': 2000, 'max': 3500, 'mid': 2750},
+    'glass_encapsulation':   {'min': 1200, 'max': 2500, 'mid': 1850},
+    'frame_junction_box':    {'min': 800,  'max': 1500, 'mid': 1150},
+    'manufacturing_assembly':{'min': 800,  'max': 2000, 'mid': 1400},
+}
+REPLACEMENT_COST_MIN = sum(v['min'] for v in REPLACEMENT_COST.values())  # ₹4800
+REPLACEMENT_COST_MAX = sum(v['max'] for v in REPLACEMENT_COST.values())  # ₹9500
+REPLACEMENT_COST_MID = sum(v['mid'] for v in REPLACEMENT_COST.values())  # ₹7150
+
+def repair_vs_replace(repair_cost, health_score, power_loss_pct):
+    """
+    Returns recommendation dict: 'repair' or 'replace', with reasoning.
+    Logic:
+      - If repair cost > 70% of replacement mid cost → replace
+      - If health score < 35 → replace (too degraded to be worth repairing)
+      - If power loss > 40% → replace
+      - Otherwise → repair
+    """
+    threshold = REPLACEMENT_COST_MID * 0.70
+    reasons = []
+    replace_score = 0
+
+    if repair_cost >= REPLACEMENT_COST_MID:
+        replace_score += 3
+        reasons.append(f"Repair cost (₹{repair_cost:,}) equals or exceeds replacement cost (₹{REPLACEMENT_COST_MID:,})")
+    elif repair_cost >= threshold:
+        replace_score += 2
+        reasons.append(f"Repair cost (₹{repair_cost:,}) is {round(repair_cost/REPLACEMENT_COST_MID*100)}% of replacement cost")
+
+    if health_score < 35:
+        replace_score += 3
+        reasons.append(f"Health score ({health_score}%) is critically low — panel is severely degraded")
+    elif health_score < 50:
+        replace_score += 1
+        reasons.append(f"Health score ({health_score}%) indicates significant degradation")
+
+    if power_loss_pct > 40:
+        replace_score += 2
+        reasons.append(f"Power loss ({power_loss_pct}%) is very high — replacement yields better ROI")
+
+    if replace_score >= 3:
+        verdict = 'replace'
+        action = f"Replace panel. Estimated replacement cost: ₹{REPLACEMENT_COST_MIN:,} – ₹{REPLACEMENT_COST_MAX:,}"
+    else:
+        verdict = 'repair'
+        action = f"Repair recommended. Estimated repair cost: ₹{repair_cost:,} vs replacement ₹{REPLACEMENT_COST_MIN:,} – ₹{REPLACEMENT_COST_MAX:,}"
+        if not reasons:
+            reasons.append("Repair cost is within acceptable range and panel health is recoverable")
+
+    savings = max(0, REPLACEMENT_COST_MID - repair_cost) if verdict == 'repair' else 0
+
+    return {
+        'verdict': verdict,
+        'action': action,
+        'reasons': reasons,
+        'repair_cost': repair_cost,
+        'replacement_cost_range': f"₹{REPLACEMENT_COST_MIN:,} – ₹{REPLACEMENT_COST_MAX:,}",
+        'replacement_cost_mid': REPLACEMENT_COST_MID,
+        'savings_vs_replace': savings,
+        'replace_score': replace_score,
+    }
 
 def get_db():
     db = sqlite3.connect(app.config['DB_PATH'])
@@ -176,9 +264,16 @@ def analyze():
             info = DEFECT_CLASSES.get(cls_id, {})
             name = info.get('name', f'Class {cls_id}')
             if name not in defect_summary:
-                defect_summary[name] = {'count': 0, 'confidences': [], 'severity': info.get('severity','Low'),
-                                        'color': info.get('color','#888'), 'power_loss_pct': info.get('power_loss_pct',2),
-                                        'repair_cost': info.get('repair_cost',500)}
+                defect_summary[name] = {
+                    'count': 0, 'confidences': [],
+                    'severity': info.get('severity','Low'),
+                    'color': info.get('color','#888'),
+                    'power_loss_pct': info.get('power_loss_pct',2),
+                    'repair_cost': info.get('repair_cost',250),
+                    'repair_cost_min': info.get('repair_cost_min',80),
+                    'repair_cost_max': info.get('repair_cost_max',420),
+                    'repair_method': info.get('repair_method','Manual inspection required'),
+                }
             defect_summary[name]['count'] += 1
             defect_summary[name]['confidences'].append(det['confidence'])
         for k in defect_summary:
@@ -189,6 +284,7 @@ def analyze():
         power_loss    = compute_power_loss(detections)
         repair_cost   = compute_repair_cost(detections)
         revenue_loss  = compute_annual_revenue_loss(power_loss)
+        rvr           = repair_vs_replace(repair_cost, health_score, power_loss)
         worst_severity = 'Good'
         if detections:
             sevs = [DEFECT_CLASSES.get(d['class_id'],{}).get('severity','Low') for d in detections]
@@ -201,6 +297,7 @@ def analyze():
             'defect_summary': defect_summary, 'health_score': health_score,
             'power_loss_pct': power_loss, 'repair_cost': repair_cost,
             'annual_revenue_loss': revenue_loss, 'worst_severity': worst_severity,
+            'repair_vs_replace': rvr,
             'image_size': {'width': w, 'height': h},
             'annotated_image': f'/results/{session_id}/annotated_{filename}',
             'original_image': f'/uploads/{session_id}/{filename}',
@@ -223,6 +320,8 @@ def analyze():
     sev_dist = {'Critical':0,'High':0,'Medium':0,'Low':0,'Good':0}
     for p in panel_results: sev_dist[p['worst_severity']] = sev_dist.get(p['worst_severity'],0)+1
 
+    replace_count = sum(1 for p in panel_results if p.get('repair_vs_replace',{}).get('verdict')=='replace')
+
     result_data = {
         'session_id': session_id, 'folder_name': folder_name, 'conf_threshold': conf_threshold,
         'panels': panel_results,
@@ -230,8 +329,10 @@ def analyze():
             'total_panels': len(panel_results), 'total_defects': total_defects,
             'avg_health_score': avg_health, 'total_power_loss_pct': total_power,
             'total_repair_cost': total_repair, 'total_annual_revenue_loss': total_rev,
+            'replace_recommended': replace_count,
             'defect_type_distribution': defect_counts, 'severity_distribution': sev_dist,
-            'critical_panels': sev_dist.get('Critical',0), 'healthy_panels': sev_dist.get('Good',0)
+            'critical_panels': sev_dist.get('Critical',0), 'healthy_panels': sev_dist.get('Good',0),
+            'replacement_cost_range': f"₹{REPLACEMENT_COST_MIN:,} – ₹{REPLACEMENT_COST_MAX:,}",
         }
     }
     session_cache[session_id] = result_data
@@ -248,9 +349,6 @@ def analyze():
                  json.dumps(p['defect_summary']),json.dumps(p['detections']),p['timestamp']))
         db.commit(); db.close()
     except Exception as e: print(f'DB error: {e}')
-    for p in panel_results:
-        print(f"Original Image Path: {p['original_image']}")
-        print(f"Annotated Image Path: {p['annotated_image']}")
     return jsonify(result_data)
 
 @app.route('/api/session/<session_id>')
@@ -344,52 +442,106 @@ def generate_pdf(session_id):
     story.append(Spacer(1,0.4*cm)); story.append(HRFlowable(width='100%',thickness=2,color=GOLD)); story.append(Spacer(1,0.4*cm))
     story.append(Paragraph('Executive Summary', h1_style))
     kpis = [['Metric','Value'],
-            ['Total Panels Scanned', str(s['total_panels'])],
-            ['Total Defects Detected', str(s['total_defects'])],
-            ['Average Fleet Health Score', f"{s['avg_health_score']}%"],
-            ['Critical Panels', str(s['critical_panels'])],
-            ['Healthy Panels', str(s['healthy_panels'])],
-            ['Est. Total Power Loss', f"{s['total_power_loss_pct']}%"],
-            ['Est. Total Repair Cost', f"Rs.{s['total_repair_cost']:,}"],
-            ['Est. Annual Revenue Loss', f"Rs.{s['total_annual_revenue_loss']:,}"]]
+            ['Total Panels Scanned',        str(s['total_panels'])],
+            ['Total Defects Detected',      str(s['total_defects'])],
+            ['Average Fleet Health Score',  f"{s['avg_health_score']}%"],
+            ['Critical Panels',             str(s['critical_panels'])],
+            ['Healthy Panels',              str(s['healthy_panels'])],
+            ['Est. Total Power Loss',       f"{s['total_power_loss_pct']}%"],
+            ['Est. Total Repair Cost (INR)',f"Rs.{s['total_repair_cost']:,}"],
+            ['Est. Annual Revenue Loss',    f"Rs.{s['total_annual_revenue_loss']:,}/yr"],
+            ['Panels Recommended: Replace', str(s.get('replace_recommended',0))],
+            ['Panel Replacement Cost Range',s.get('replacement_cost_range','—')]]
     t = Table(kpis, colWidths=[9*cm,7*cm])
     t.setStyle(TableStyle([('BACKGROUND',(0,0),(-1,0),colors.HexColor('#1a1a1a')),('TEXTCOLOR',(0,0),(-1,0),GOLD),
         ('FONTNAME',(0,0),(-1,0),'Helvetica-Bold'),('FONTSIZE',(0,0),(-1,-1),9),
         ('ROWBACKGROUNDS',(0,1),(-1,-1),[LIGHT,colors.white]),('GRID',(0,0),(-1,-1),0.5,colors.HexColor('#dddddd')),('PADDING',(0,0),(-1,-1),7)]))
     story.append(t); story.append(Spacer(1,0.5*cm))
+
+    # Priority Queue
     story.append(Paragraph('Priority Inspection Queue', h1_style))
-    rows = [['Rank','Panel','Health','Defects','Severity','Power Loss','Repair Cost','Status']]
+    rows = [['Rank','Panel','Health','Defects','Severity','Power Loss','Repair Cost','Decision','Status']]
     for p in panels:
-        rows.append([str(p['priority_rank']), (p['filename'][:26]+'…' if len(p['filename'])>26 else p['filename']),
+        rvr = p.get('repair_vs_replace',{})
+        verdict = rvr.get('verdict','—').upper()
+        rows.append([str(p['priority_rank']), (p['filename'][:22]+'…' if len(p['filename'])>22 else p['filename']),
                      f"{p['health_score']}%", str(p['defect_count']), p['worst_severity'],
-                     f"{p['power_loss_pct']}%", f"Rs.{p['repair_cost']:,}", p.get('status','Pending')])
+                     f"{p['power_loss_pct']}%", f"Rs.{p['repair_cost']:,}", verdict, p.get('status','Pending')])
     sev_bg = {'Critical':colors.HexColor('#fff0f0'),'High':colors.HexColor('#fff6ee'),
               'Medium':colors.HexColor('#fffbee'),'Low':colors.HexColor('#f0fff4'),'Good':colors.white}
-    pt = Table(rows, colWidths=[1.2*cm,4.5*cm,1.6*cm,1.4*cm,2*cm,2*cm,2.5*cm,2*cm])
+    pt = Table(rows, colWidths=[1*cm,3.8*cm,1.5*cm,1.3*cm,1.8*cm,1.8*cm,2.2*cm,1.8*cm,1.8*cm])
     ts = [('BACKGROUND',(0,0),(-1,0),colors.HexColor('#1a1a1a')),('TEXTCOLOR',(0,0),(-1,0),GOLD),
-          ('FONTNAME',(0,0),(-1,0),'Helvetica-Bold'),('FONTSIZE',(0,0),(-1,-1),7.5),
-          ('GRID',(0,0),(-1,-1),0.4,colors.HexColor('#e0e0e0')),('PADDING',(0,0),(-1,-1),5),('ALIGN',(2,1),(-1,-1),'CENTER')]
+          ('FONTNAME',(0,0),(-1,0),'Helvetica-Bold'),('FONTSIZE',(0,0),(-1,-1),7),
+          ('GRID',(0,0),(-1,-1),0.4,colors.HexColor('#e0e0e0')),('PADDING',(0,0),(-1,-1),4),('ALIGN',(2,1),(-1,-1),'CENTER')]
     for i,p in enumerate(panels,1):
         ts.append(('BACKGROUND',(0,i),(-1,i),sev_bg.get(p['worst_severity'],colors.white)))
         if p['worst_severity']=='Critical': ts.append(('TEXTCOLOR',(4,i),(4,i),RED))
+        rvr = p.get('repair_vs_replace',{})
+        if rvr.get('verdict')=='replace':
+            ts.append(('TEXTCOLOR',(7,i),(7,i),RED))
+            ts.append(('FONTNAME',(7,i),(7,i),'Helvetica-Bold'))
+        else:
+            ts.append(('TEXTCOLOR',(7,i),(7,i),colors.HexColor('#34C759')))
     pt.setStyle(TableStyle(ts)); story.append(pt); story.append(Spacer(1,0.5*cm))
-    story.append(Paragraph('Defect Type Summary', h1_style))
-    drows = [['Defect Type','Count','Severity','Power Loss/Instance','Repair Cost/Instance']]
+
+    # Defect type with repair method
+    story.append(Paragraph('Defect Type & Repair Method Reference', h1_style))
+    drows = [['Defect Type','Count','Severity','Repair Method','Cost Range (INR)']]
     for cls_id, info in DEFECT_CLASSES.items():
         cnt = s['defect_type_distribution'].get(info['name'],0)
-        if cnt > 0: drows.append([info['name'],str(cnt),info['severity'],f"{info['power_loss_pct']}%",f"Rs.{info['repair_cost']:,}"])
-    dt = Table(drows, colWidths=[4.5*cm,1.5*cm,2.5*cm,4*cm,4.5*cm])
+        if cnt > 0:
+            drows.append([info['name'], str(cnt), info['severity'],
+                          info.get('repair_method','—'),
+                          f"Rs.{info['repair_cost_min']} – Rs.{info['repair_cost_max']}"])
+    dt = Table(drows, colWidths=[3.5*cm,1.2*cm,2*cm,6.5*cm,3.8*cm])
     dt.setStyle(TableStyle([('BACKGROUND',(0,0),(-1,0),colors.HexColor('#1a1a1a')),('TEXTCOLOR',(0,0),(-1,0),GOLD),
-        ('FONTNAME',(0,0),(-1,0),'Helvetica-Bold'),('FONTSIZE',(0,0),(-1,-1),8.5),
-        ('ROWBACKGROUNDS',(0,1),(-1,-1),[LIGHT,colors.white]),('GRID',(0,0),(-1,-1),0.4,colors.HexColor('#e0e0e0')),('PADDING',(0,0),(-1,-1),6)]))
+        ('FONTNAME',(0,0),(-1,0),'Helvetica-Bold'),('FONTSIZE',(0,0),(-1,-1),7.5),
+        ('ROWBACKGROUNDS',(0,1),(-1,-1),[LIGHT,colors.white]),('GRID',(0,0),(-1,-1),0.4,colors.HexColor('#e0e0e0')),
+        ('PADDING',(0,0),(-1,-1),5),('VALIGN',(0,0),(-1,-1),'MIDDLE')]))
     story.append(dt); story.append(Spacer(1,0.5*cm))
+
+    # Repair vs Replace per panel
+    rvr_panels = [p for p in panels if p.get('defect_count',0)>0]
+    if rvr_panels:
+        story.append(Paragraph('Repair vs. Replace Decision per Panel', h1_style))
+        story.append(Paragraph(f"Panel replacement cost estimate: Rs.{REPLACEMENT_COST_MIN:,} – Rs.{REPLACEMENT_COST_MAX:,} "
+                               f"(cells + glass + frame + assembly). Decision threshold: repair cost > 70% of mid replacement cost "
+                               f"(Rs.{REPLACEMENT_COST_MID:,}) or health < 35%.", body_style))
+        story.append(Spacer(1,0.3*cm))
+        rvr_rows = [['Panel','Health','Repair Cost','Decision','Reasoning']]
+        for p in rvr_panels:
+            rvr = p.get('repair_vs_replace',{})
+            verdict = rvr.get('verdict','repair').upper()
+            reasons = '; '.join(rvr.get('reasons',[])) or 'Repair cost within acceptable range'
+            rvr_rows.append([
+                p['filename'][:22]+'…' if len(p['filename'])>22 else p['filename'],
+                f"{p['health_score']}%",
+                f"Rs.{p['repair_cost']:,}",
+                verdict,
+                reasons[:80]+'…' if len(reasons)>80 else reasons
+            ])
+        rt = Table(rvr_rows, colWidths=[3.5*cm,1.6*cm,2.3*cm,1.8*cm,8*cm])
+        rts = [('BACKGROUND',(0,0),(-1,0),colors.HexColor('#1a1a1a')),('TEXTCOLOR',(0,0),(-1,0),GOLD),
+               ('FONTNAME',(0,0),(-1,0),'Helvetica-Bold'),('FONTSIZE',(0,0),(-1,-1),7),
+               ('ROWBACKGROUNDS',(0,1),(-1,-1),[LIGHT,colors.white]),
+               ('GRID',(0,0),(-1,-1),0.4,colors.HexColor('#e0e0e0')),('PADDING',(0,0),(-1,-1),5),
+               ('VALIGN',(0,0),(-1,-1),'MIDDLE')]
+        for i,p in enumerate(rvr_panels,1):
+            rvr = p.get('repair_vs_replace',{})
+            if rvr.get('verdict')=='replace':
+                rts.append(('TEXTCOLOR',(3,i),(3,i),RED)); rts.append(('FONTNAME',(3,i),(3,i),'Helvetica-Bold'))
+            else:
+                rts.append(('TEXTCOLOR',(3,i),(3,i),colors.HexColor('#34C759')))
+        rt.setStyle(TableStyle(rts)); story.append(rt); story.append(Spacer(1,0.5*cm))
+
     story.append(HRFlowable(width='100%',thickness=1,color=colors.HexColor('#dddddd'))); story.append(Spacer(1,0.3*cm))
     story.append(Paragraph('Recommendations', h1_style))
     recs = []
     if s['critical_panels']>0: recs.append(f"<b>{s['critical_panels']} critical panel(s)</b> require immediate inspection — prioritize within 48 hours.")
+    if s.get('replace_recommended',0)>0: recs.append(f"<b>{s['replace_recommended']} panel(s) are recommended for replacement</b> — repair cost exceeds economic threshold vs. panel replacement cost.")
     if s['total_power_loss_pct']>0: recs.append(f"Fleet power loss of <b>{s['total_power_loss_pct']}%</b> costs approx. <b>Rs.{s['total_annual_revenue_loss']:,}/year</b> in lost generation.")
-    if s['total_repair_cost']>0: recs.append(f"Total repair estimate: <b>Rs.{s['total_repair_cost']:,}</b>. Consider panel replacement for health scores below 40%.")
-    recs.append("Schedule a follow-up scan within 30 days after repairs to verify health improvement.")
+    if s['total_repair_cost']>0: recs.append(f"Total repair estimate: <b>Rs.{s['total_repair_cost']:,}</b>. Panel replacement range: <b>{s.get('replacement_cost_range','—')}</b> per panel.")
+    recs.append("Schedule a follow-up scan within 30 days after repairs to verify health score improvement.")
     for rec in recs: story.append(Paragraph(f"• {rec}", body_style)); story.append(Spacer(1,0.12*cm))
     story.append(Spacer(1,0.4*cm)); story.append(HRFlowable(width='100%',thickness=1,color=colors.HexColor('#dddddd'))); story.append(Spacer(1,0.2*cm))
     story.append(Paragraph('Generated by SolarGuard AI · Powered by YOLOv8 · For internal use only', meta_style))
@@ -401,13 +553,153 @@ def generate_pdf(session_id):
 def export_csv(session_id):
     resp = get_session(session_id); data = resp.get_json()
     if not data or 'error' in data: return jsonify({'error':'Session not found'}), 404
-    lines = ['Rank,Filename,Health Score,Defect Count,Severity,Power Loss %,Repair Cost (INR),Annual Revenue Loss (INR),Status,Notes']
+    lines = ['Rank,Filename,Health Score,Defect Count,Severity,Power Loss %,Repair Cost (INR),Annual Revenue Loss (INR),Decision,Status,Notes']
     for p in data['panels']:
+        rvr = p.get('repair_vs_replace',{})
         lines.append(','.join([str(p['priority_rank']),f'"{p["filename"]}"',str(p['health_score']),str(p['defect_count']),
                                p['worst_severity'],str(p['power_loss_pct']),str(p['repair_cost']),str(p['annual_revenue_loss']),
+                               rvr.get('verdict','repair').upper(),
                                p.get('status','Pending'),f'"{p.get("notes","")}"']))
     return send_file(BytesIO('\n'.join(lines).encode()), mimetype='text/csv', as_attachment=True,
                      download_name=f'SolarGuard_{session_id[:8]}.csv')
+
+@app.route('/api/reanalyze/<session_id>', methods=['POST'])
+def reanalyze(session_id):
+    """Re-run inference on already-uploaded images with a new conf threshold."""
+    data = request.json or {}
+    conf_threshold = float(data.get('conf_threshold', 0.25))
+
+    # Find original upload dir
+    session_dir = os.path.join(app.config['UPLOAD_FOLDER'], session_id)
+    if not os.path.isdir(session_dir):
+        return jsonify({'error': 'Original session images not found on server'}), 404
+
+    # Get folder_name from original session
+    orig = session_cache.get(session_id)
+    if not orig:
+        results_file = os.path.join(app.config['RESULTS_FOLDER'], session_id, 'results.json')
+        if os.path.exists(results_file):
+            with open(results_file) as f:
+                orig = json.load(f)
+    folder_name = orig.get('folder_name', 'Re-analysis') if orig else 'Re-analysis'
+
+    new_session_id = str(uuid.uuid4())
+    results_dir = os.path.join(app.config['RESULTS_FOLDER'], new_session_id)
+    new_session_dir = os.path.join(app.config['UPLOAD_FOLDER'], new_session_id)
+    os.makedirs(results_dir, exist_ok=True)
+    os.makedirs(new_session_dir, exist_ok=True)
+
+    panel_results = []
+    valid_ext = ('.png', '.jpg', '.jpeg', '.tif', '.tiff', '.bmp')
+
+    for filename in os.listdir(session_dir):
+        if not filename.lower().endswith(valid_ext):
+            continue
+        filepath = os.path.join(session_dir, filename)
+        # Copy to new session dir
+        import shutil
+        new_filepath = os.path.join(new_session_dir, filename)
+        shutil.copy2(filepath, new_filepath)
+
+        detections, (h, w) = run_inference(new_filepath, conf_threshold)
+        annotated_path = os.path.join(results_dir, f'annotated_{filename}')
+        draw_annotated_image(new_filepath, detections, annotated_path)
+
+        defect_summary = {}
+        for det in detections:
+            cls_id = det['class_id']
+            info = DEFECT_CLASSES.get(cls_id, {})
+            name = info.get('name', f'Class {cls_id}')
+            if name not in defect_summary:
+                defect_summary[name] = {
+                    'count': 0, 'confidences': [],
+                    'severity': info.get('severity', 'Low'),
+                    'color': info.get('color', '#888'),
+                    'power_loss_pct': info.get('power_loss_pct', 2),
+                    'repair_cost': info.get('repair_cost', 250),
+                    'repair_cost_min': info.get('repair_cost_min', 80),
+                    'repair_cost_max': info.get('repair_cost_max', 420),
+                    'repair_method': info.get('repair_method', 'Manual inspection required'),
+                }
+            defect_summary[name]['count'] += 1
+            defect_summary[name]['confidences'].append(det['confidence'])
+        for k in defect_summary:
+            confs = defect_summary[k]['confidences']
+            defect_summary[k]['avg_confidence'] = round(sum(confs) / len(confs), 3)
+
+        health_score = compute_health_score(detections)
+        power_loss   = compute_power_loss(detections)
+        repair_cost  = compute_repair_cost(detections)
+        revenue_loss = compute_annual_revenue_loss(power_loss)
+        rvr          = repair_vs_replace(repair_cost, health_score, power_loss)
+
+        worst_severity = 'Good'
+        if detections:
+            sevs = [DEFECT_CLASSES.get(d['class_id'], {}).get('severity', 'Low') for d in detections]
+            for s in ['Critical', 'High', 'Medium', 'Low']:
+                if s in sevs: worst_severity = s; break
+
+        panel_results.append({
+            'id': str(uuid.uuid4()), 'filename': filename, 'defect_count': len(detections),
+            'defect_summary': defect_summary, 'health_score': health_score,
+            'power_loss_pct': power_loss, 'repair_cost': repair_cost,
+            'annual_revenue_loss': revenue_loss, 'worst_severity': worst_severity,
+            'repair_vs_replace': rvr,
+            'image_size': {'width': w, 'height': h},
+            'annotated_image': f'/results/{new_session_id}/annotated_{filename}',
+            'original_image': f'/uploads/{new_session_id}/{filename}',
+            'detections': detections, 'status': 'Pending', 'notes': '',
+            'timestamp': datetime.now().isoformat()
+        })
+
+    panel_results.sort(key=lambda x: (SEVERITY_ORDER.get(x['worst_severity'], 99), -x['defect_count']))
+    for i, p in enumerate(panel_results): p['priority_rank'] = i + 1
+
+    total_defects = sum(p['defect_count'] for p in panel_results)
+    total_power   = round(sum(p['power_loss_pct'] for p in panel_results), 1)
+    total_repair  = sum(p['repair_cost'] for p in panel_results)
+    total_rev     = sum(p['annual_revenue_loss'] for p in panel_results)
+    avg_health    = round(sum(p['health_score'] for p in panel_results) / len(panel_results), 1) if panel_results else 100
+    defect_counts = {}
+    for p in panel_results:
+        for dtype, info in p['defect_summary'].items():
+            defect_counts[dtype] = defect_counts.get(dtype, 0) + info['count']
+    sev_dist = {'Critical': 0, 'High': 0, 'Medium': 0, 'Low': 0, 'Good': 0}
+    for p in panel_results: sev_dist[p['worst_severity']] = sev_dist.get(p['worst_severity'], 0) + 1
+    replace_count = sum(1 for p in panel_results if p.get('repair_vs_replace', {}).get('verdict') == 'replace')
+
+    result_data = {
+        'session_id': new_session_id,
+        'folder_name': f"{folder_name} (re-run @ {conf_threshold})",
+        'conf_threshold': conf_threshold,
+        'panels': panel_results,
+        'summary': {
+            'total_panels': len(panel_results), 'total_defects': total_defects,
+            'avg_health_score': avg_health, 'total_power_loss_pct': total_power,
+            'total_repair_cost': total_repair, 'total_annual_revenue_loss': total_rev,
+            'replace_recommended': replace_count,
+            'defect_type_distribution': defect_counts, 'severity_distribution': sev_dist,
+            'critical_panels': sev_dist.get('Critical', 0), 'healthy_panels': sev_dist.get('Good', 0),
+            'replacement_cost_range': f"₹{REPLACEMENT_COST_MIN:,} – ₹{REPLACEMENT_COST_MAX:,}",
+        }
+    }
+    session_cache[new_session_id] = result_data
+    with open(os.path.join(results_dir, 'results.json'), 'w') as fh:
+        json.dump(result_data, fh, indent=2)
+    try:
+        db = get_db()
+        db.execute('INSERT INTO sessions VALUES (?,?,?,?,?,?,?)',
+            (new_session_id, result_data['folder_name'], datetime.now().isoformat(),
+             len(panel_results), total_defects, avg_health, json.dumps(result_data['summary'])))
+        for p in panel_results:
+            db.execute('INSERT INTO panels VALUES (?,?,?,?,?,?,?,?,?,?,?,?,?)',
+                (p['id'], new_session_id, p['filename'], p['health_score'], p['defect_count'],
+                 p['worst_severity'], p['power_loss_pct'], p['repair_cost'], 'Pending', '',
+                 json.dumps(p['defect_summary']), json.dumps(p['detections']), p['timestamp']))
+        db.commit(); db.close()
+    except Exception as e:
+        print(f'DB error: {e}')
+    return jsonify({'session_id': new_session_id})
 
 @app.route('/uploads/<path:filename>')
 def uploaded_file(filename): return send_from_directory(app.config['UPLOAD_FOLDER'], filename)

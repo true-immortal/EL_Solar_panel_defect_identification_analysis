@@ -74,6 +74,7 @@ function renderTopbar(){
 // ── KPIs ──────────────────────────────────────────────────────────────────────
 function animNum(id,target,suffix=''){
   const el=document.getElementById(id);
+  if(!el)return;
   let v=0; const step=Math.ceil(target/40)||1;
   const t=setInterval(()=>{ v=Math.min(v+step,target); el.textContent=v+suffix; if(v>=target)clearInterval(t); },20);
 }
@@ -222,7 +223,8 @@ function renderTable(panels, filter='all'){
       <td><span class="defect-count-badge" style="color:${p.defect_count>0?'var(--orange)':'var(--green)'}">${p.defect_count}</span></td>
       <td><span class="severity-tag" style="background:${sc.bg};color:${sc.color};border:1px solid ${sc.border}">${p.worst_severity}</span></td>
       <td style="font-family:var(--font-mono);font-size:12px;color:#FF9500">${p.power_loss_pct}%</td>
-      <td style="font-family:var(--font-mono);font-size:12px">${fmt(p.repair_cost)}</td>
+      <td style="font-family:var(--font-mono);font-size:12px">₹${p.repair_cost.toLocaleString('en-IN')}</td>
+      <td><span class="${(p.repair_vs_replace?.verdict==='replace')?'verdict-replace':'verdict-repair'}">${(p.repair_vs_replace?.verdict==='replace')?'🔴 REPLACE':'🟢 REPAIR'}</span></td>
       <td><span class="status-pill" style="background:${stc}22;color:${stc};border:1px solid ${stc}44" onclick="event.stopPropagation();openStatusModal('${p.id}')">${p.status||'Pending'}</span></td>
       <td><button class="btn-inspect" onclick="event.stopPropagation();openInspectorAndSwitch('${p.id}')">Inspect →</button></td>
     </tr>`;
@@ -269,10 +271,32 @@ window.openInspector=panel=>{
   document.querySelectorAll('.inspector-item').forEach(el=>el.classList.toggle('active',el.dataset.id===panel.id));
   const sc=SEV_STYLE[panel.worst_severity]||SEV_STYLE.Low;
   const stc=STATUS_COLORS[panel.status||'Pending']||'#888';
+  const rvr=panel.repair_vs_replace||{};
+  const isReplace=rvr.verdict==='replace';
+  const rvrColor=isReplace?'#FF3B30':'#34C759';
+  const rvrBg=isReplace?'rgba(255,59,48,0.1)':'rgba(52,199,89,0.1)';
+  const rvrBorder=isReplace?'rgba(255,59,48,0.25)':'rgba(52,199,89,0.25)';
+
+  // Defect tags with repair method tooltip
   const tags=Object.entries(panel.defect_summary||{}).sort((a,b)=>b[1].count-a[1].count).map(([nm,inf])=>{
     const col=DEFECT_COLORS[nm]||'#888';
-    return `<span class="defect-tag" style="color:${col};border-color:${col}44;background:${col}11"><span class="defect-tag-dot" style="background:${col}"></span>${nm} ×${inf.count} (${Math.round(inf.avg_confidence*100)}%)</span>`;
+    const method=inf.repair_method||'';
+    const costRange=inf.repair_cost_min?`₹${inf.repair_cost_min}–₹${inf.repair_cost_max}`:'';
+    return `<span class="defect-tag" style="color:${col};border-color:${col}44;background:${col}11" title="${method}${costRange?' | '+costRange:''}">
+      <span class="defect-tag-dot" style="background:${col}"></span>${nm} ×${inf.count} (${Math.round(inf.avg_confidence*100)}%)</span>`;
   }).join('');
+
+  // Repair method list
+  const methodsList=Object.entries(panel.defect_summary||{}).map(([nm,inf])=>{
+    const col=DEFECT_COLORS[nm]||'#888';
+    const costRange=inf.repair_cost_min?` — <span style="font-family:var(--font-mono);color:${col}">₹${inf.repair_cost_min}–₹${inf.repair_cost_max}</span>`:'';
+    return `<div class="repair-method-item"><span class="defect-tag-dot" style="background:${col};margin-right:6px;flex-shrink:0"></span>
+      <span style="color:var(--text-2);font-size:12px"><b style="color:${col}">${nm}:</b> ${inf.repair_method||'—'}${costRange}</span></div>`;
+  }).join('');
+
+  // Repair vs Replace reasons
+  const rvrReasons=(rvr.reasons||[]).map(r=>`<li style="font-size:11px;color:var(--text-2);margin-bottom:3px">${r}</li>`).join('');
+
   document.getElementById('inspectorMain').innerHTML=`
     <div class="inspector-detail">
       <div class="inspector-img-wrap">
@@ -285,12 +309,33 @@ window.openInspector=panel=>{
       <div class="inspector-info">
         <div class="info-block"><span class="info-key">Health Score</span><span class="info-val" style="color:${healthColor(panel.health_score)}">${panel.health_score}%</span></div>
         <div class="info-block"><span class="info-key">Power Loss</span><span class="info-val" style="color:#FF9500">${panel.power_loss_pct}%</span></div>
-        <div class="info-block"><span class="info-key">Repair Cost</span><span class="info-val">${fmt(panel.repair_cost)}</span></div>
+        <div class="info-block"><span class="info-key">Repair Cost</span><span class="info-val">₹${panel.repair_cost.toLocaleString('en-IN')}</span></div>
         <div class="info-block"><span class="info-key">Priority Rank</span><span class="info-val">#${panel.priority_rank}</span></div>
         <div class="info-block"><span class="info-key">Severity</span><span class="info-val" style="color:${sc.color}">${panel.worst_severity}</span></div>
         <div class="info-block"><span class="info-key">Status</span><span class="info-val status-pill" style="background:${stc}22;color:${stc};border:1px solid ${stc}44;cursor:pointer" onclick="openStatusModal('${panel.id}')">${panel.status||'Pending'}</span></div>
-        ${panel.notes?`<div class="info-block" style="grid-column:span 3"><span class="info-key">Notes</span><span style="font-size:12px;color:var(--text-2)">${panel.notes}</span></div>`:''}
-        ${tags?`<div class="defect-tags" style="grid-column:span 3">${tags}</div>`:''}
+
+        ${panel.defect_count>0?`
+        <!-- Repair vs Replace -->
+        <div style="grid-column:span 6;background:${rvrBg};border:1px solid ${rvrBorder};border-radius:var(--r-sm);padding:10px 14px;">
+          <div style="display:flex;align-items:center;gap:10px;margin-bottom:6px">
+            <span style="font-size:10px;color:var(--text-3);font-family:var(--font-mono);text-transform:uppercase;letter-spacing:.8px">Recommendation</span>
+            <span style="padding:2px 10px;border-radius:999px;font-size:11px;font-weight:700;font-family:var(--font-mono);background:${rvrBg};color:${rvrColor};border:1px solid ${rvrBorder}">${isReplace?'🔴 REPLACE':'🟢 REPAIR'}</span>
+          </div>
+          <p style="font-size:11px;color:var(--text-2);margin-bottom:4px">${rvr.action||'—'}</p>
+          ${rvrReasons?`<ul style="padding-left:14px;margin:0">${rvrReasons}</ul>`:''}
+        </div>
+
+        <!-- Repair Method per defect -->
+        ${methodsList?`
+        <div style="grid-column:span 6;">
+          <div style="font-size:9px;color:var(--text-3);font-family:var(--font-mono);text-transform:uppercase;letter-spacing:.8px;margin-bottom:6px">Factory Repair Methods</div>
+          <div style="display:flex;flex-direction:column;gap:4px">${methodsList}</div>
+        </div>`:''}
+
+        ${tags?`<div class="defect-tags" style="grid-column:span 6">${tags}</div>`:''}
+        `:'<div style="grid-column:span 6;color:var(--text-3);font-size:13px;text-align:center;padding:8px">✓ No defects detected on this panel</div>'}
+
+        ${panel.notes?`<div class="info-block" style="grid-column:span 6"><span class="info-key">Notes</span><span style="font-size:12px;color:var(--text-2)">${panel.notes}</span></div>`:''}
       </div>
     </div>`;
 };
@@ -310,6 +355,34 @@ function renderFinancials(){
   document.getElementById('finRevLoss').textContent=fmt(s.total_annual_revenue_loss)+'/yr';
   const roi=s.total_repair_cost>0?((s.total_annual_revenue_loss/s.total_repair_cost)*100).toFixed(0)+'%':'N/A';
   document.getElementById('finRoi').textContent=roi;
+
+  // Repair vs Replace summary card
+  const replaceCount=s.replace_recommended||0;
+  const repairCount=panels.filter(p=>p.defect_count>0).length-replaceCount;
+  const rvrEl=document.getElementById('rvrSummary');
+  if(rvrEl){
+    const replacePanels=panels.filter(p=>p.repair_vs_replace?.verdict==='replace');
+    rvrEl.innerHTML=`
+      <div class="rvr-header">
+        <div class="rvr-badge rvr-repair">🟢 REPAIR: ${repairCount} panel${repairCount!==1?'s':''}</div>
+        <div class="rvr-badge rvr-replace">🔴 REPLACE: ${replaceCount} panel${replaceCount!==1?'s':''}</div>
+      </div>
+      <div class="rvr-cost-breakdown">
+        <div class="rvr-cost-row"><span>Solar Cells</span><span>₹2,000 – ₹3,500</span></div>
+        <div class="rvr-cost-row"><span>Glass + Encapsulation</span><span>₹1,200 – ₹2,500</span></div>
+        <div class="rvr-cost-row"><span>Frame + Junction Box</span><span>₹800 – ₹1,500</span></div>
+        <div class="rvr-cost-row"><span>Manufacturing + Assembly</span><span>₹800 – ₹2,000</span></div>
+        <div class="rvr-cost-row rvr-cost-total"><span>Total Panel Replacement</span><span>₹4,800 – ₹9,500</span></div>
+      </div>
+      ${replacePanels.length?`<div style="margin-top:12px"><div style="font-size:10px;color:var(--text-3);font-family:var(--font-mono);text-transform:uppercase;letter-spacing:.8px;margin-bottom:8px">Panels flagged for replacement</div>
+        ${replacePanels.map(p=>`<div class="rvr-panel-row" onclick="openInspectorAndSwitch('${p.id}')">
+          <span style="font-family:var(--font-mono);font-size:12px;color:var(--text)">${p.filename}</span>
+          <span style="font-size:11px;color:var(--text-3)">Health: <b style="color:#FF3B30">${p.health_score}%</b></span>
+          <span style="font-size:11px;color:var(--text-3)">Repair: <b>₹${p.repair_cost.toLocaleString('en-IN')}</b></span>
+          <span class="btn-inspect" style="font-size:10px;padding:3px 8px">Inspect →</span>
+        </div>`).join('')}
+      </div>`:''}`;
+  }
 
   // Power loss per panel
   const labels=panels.map(p=>p.filename.replace(/\.[^.]+$/,''));
@@ -339,10 +412,11 @@ function renderFinancials(){
   if(charts.bb)charts.bb.destroy();
   charts.bb=new Chart(document.getElementById('bubbleChart'),{
     type:'bubble',
-    data:{datasets:[{label:'Panels',data:panels.map(p=>({x:p.priority_rank,y:p.health_score,r:Math.max(4,Math.min(p.repair_cost/200,20))})),
-      backgroundColor:panels.map(p=>healthColor(p.health_score)+'88'),borderColor:panels.map(p=>healthColor(p.health_score)),borderWidth:1.5}]},
+    data:{datasets:[{label:'Panels',data:panels.map(p=>({x:p.priority_rank,y:p.health_score,r:Math.max(4,Math.min(p.repair_cost/100,22))})),
+      backgroundColor:panels.map(p=>(p.repair_vs_replace?.verdict==='replace'?'#FF3B30':healthColor(p.health_score))+'88'),
+      borderColor:panels.map(p=>p.repair_vs_replace?.verdict==='replace'?'#FF3B30':healthColor(p.health_score)),borderWidth:1.5}]},
     options:{responsive:true,maintainAspectRatio:false,plugins:{legend:{display:false},
-      tooltip:{callbacks:{label:ctx=>{const p=panels[ctx.dataIndex];return[`${p.filename}`,`Health: ${p.health_score}%`,`Repair: ${fmt(p.repair_cost)}`];}}}},
+      tooltip:{callbacks:{label:ctx=>{const p=panels[ctx.dataIndex];const v=p.repair_vs_replace?.verdict||'repair';return[`${p.filename}`,`Health: ${p.health_score}%`,`Repair: ₹${p.repair_cost.toLocaleString('en-IN')}`,`Decision: ${v.toUpperCase()}`];}}}},
       scales:{x:{title:{display:true,text:'Priority Rank',color:'#666',font:{size:10}},grid:{color:'rgba(255,255,255,0.04)'}},
               y:{title:{display:true,text:'Health Score (%)',color:'#666',font:{size:10}},min:0,max:100,grid:{color:'rgba(255,255,255,0.04)'}}}}
   });
@@ -420,10 +494,23 @@ function setupConf(){
   const slider=document.getElementById('confSlider');
   const val=document.getElementById('confVal');
   slider.addEventListener('input',()=>{ val.textContent=(slider.value/100).toFixed(2); });
-  document.getElementById('rerunBtn').addEventListener('click',()=>{
-    if(!confirm(`Re-run analysis at threshold ${val.textContent}? This will re-process all images.`))return;
-    window._rerunConf=parseFloat(val.textContent);
-    window.location.href=`/?rerun=${currentSessionId}&conf=${val.textContent}`;
+  document.getElementById('rerunBtn').addEventListener('click', async ()=>{
+    const newConf=parseFloat(val.textContent);
+    if(!confirm(`Re-run analysis at threshold ${newConf}?\nThe same images already on the server will be re-processed.`)) return;
+    const btn=document.getElementById('rerunBtn');
+    btn.textContent='Running…'; btn.disabled=true;
+    try {
+      const resp=await fetch(`/api/reanalyze/${currentSessionId}`,{
+        method:'POST', headers:{'Content-Type':'application/json'},
+        body:JSON.stringify({conf_threshold:newConf})
+      });
+      if(!resp.ok) throw new Error(`Server error ${resp.status}`);
+      const data=await resp.json();
+      window.location.href=`/dashboard?session=${data.session_id}`;
+    } catch(e) {
+      alert('Re-run failed: '+e.message);
+      btn.textContent='Re-run'; btn.disabled=false;
+    }
   });
 }
 

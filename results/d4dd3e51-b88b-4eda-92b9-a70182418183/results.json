@@ -1,0 +1,585 @@
+{
+  "session_id": "d4dd3e51-b88b-4eda-92b9-a70182418183",
+  "folder_name": "testimagesforweb (re-run @ 0.58)",
+  "conf_threshold": 0.58,
+  "panels": [
+    {
+      "id": "10e853d2-81e6-4a43-8146-fc765aa6defe",
+      "filename": "testimagesforweb_images_2.jpg",
+      "defect_count": 2,
+      "defect_summary": {
+        "Finger": {
+          "count": 1,
+          "confidences": [
+            0.756
+          ],
+          "severity": "High",
+          "color": "#FF6B35",
+          "power_loss_pct": 5,
+          "repair_cost": 105,
+          "repair_cost_min": 40,
+          "repair_cost_max": 170,
+          "repair_method": "Laser or solder repair of metallization fingers",
+          "avg_confidence": 0.756
+        },
+        "Fragment": {
+          "count": 1,
+          "confidences": [
+            0.626
+          ],
+          "severity": "Critical",
+          "color": "#FF0000",
+          "power_loss_pct": 30,
+          "repair_cost": 580,
+          "repair_cost_min": 330,
+          "repair_cost_max": 830,
+          "repair_method": "Cell removal and replacement before lamination",
+          "avg_confidence": 0.626
+        }
+      },
+      "health_score": 78.4,
+      "power_loss_pct": 22.6,
+      "repair_cost": 442,
+      "annual_revenue_loss": 1012,
+      "worst_severity": "Critical",
+      "repair_vs_replace": {
+        "verdict": "repair",
+        "action": "Repair recommended. Estimated repair cost: \u20b9442 vs replacement \u20b94,800 \u2013 \u20b99,500",
+        "reasons": [
+          "Repair cost is within acceptable range and panel health is recoverable"
+        ],
+        "repair_cost": 442,
+        "replacement_cost_range": "\u20b94,800 \u2013 \u20b99,500",
+        "replacement_cost_mid": 7150,
+        "savings_vs_replace": 6708,
+        "replace_score": 0
+      },
+      "image_size": {
+        "width": 225,
+        "height": 225
+      },
+      "annotated_image": "/results/d4dd3e51-b88b-4eda-92b9-a70182418183/annotated_testimagesforweb_images_2.jpg",
+      "original_image": "/uploads/d4dd3e51-b88b-4eda-92b9-a70182418183/testimagesforweb_images_2.jpg",
+      "detections": [
+        {
+          "class_id": 2,
+          "confidence": 0.756,
+          "bbox": [
+            82,
+            108,
+            158,
+            176
+          ]
+        },
+        {
+          "class_id": 3,
+          "confidence": 0.626,
+          "bbox": [
+            100,
+            10,
+            104,
+            36
+          ]
+        }
+      ],
+      "status": "Pending",
+      "notes": "",
+      "timestamp": "2026-03-09T04:53:25.302919",
+      "priority_rank": 1
+    },
+    {
+      "id": "94f1d970-9b8d-47be-baf9-4d02757ee9e7",
+      "filename": "testimagesforweb_Chinese-22_9_15-EL-e1494353617635-1.jpg",
+      "defect_count": 2,
+      "defect_summary": {
+        "Other Defect": {
+          "count": 1,
+          "confidences": [
+            0.809
+          ],
+          "severity": "Low",
+          "color": "#636366",
+          "power_loss_pct": 2,
+          "repair_cost": 250,
+          "repair_cost_min": 80,
+          "repair_cost_max": 420,
+          "repair_method": "Manual inspection required \u2014 method depends on defect",
+          "avg_confidence": 0.809
+        },
+        "Finger": {
+          "count": 1,
+          "confidences": [
+            0.618
+          ],
+          "severity": "High",
+          "color": "#FF6B35",
+          "power_loss_pct": 5,
+          "repair_cost": 105,
+          "repair_cost_min": 40,
+          "repair_cost_max": 170,
+          "repair_method": "Laser or solder repair of metallization fingers",
+          "avg_confidence": 0.618
+        }
+      },
+      "health_score": 90.2,
+      "power_loss_pct": 4.7,
+      "repair_cost": 267,
+      "annual_revenue_loss": 211,
+      "worst_severity": "High",
+      "repair_vs_replace": {
+        "verdict": "repair",
+        "action": "Repair recommended. Estimated repair cost: \u20b9267 vs replacement \u20b94,800 \u2013 \u20b99,500",
+        "reasons": [
+          "Repair cost is within acceptable range and panel health is recoverable"
+        ],
+        "repair_cost": 267,
+        "replacement_cost_range": "\u20b94,800 \u2013 \u20b99,500",
+        "replacement_cost_mid": 7150,
+        "savings_vs_replace": 6883,
+        "replace_score": 0
+      },
+      "image_size": {
+        "width": 758,
+        "height": 400
+      },
+      "annotated_image": "/results/d4dd3e51-b88b-4eda-92b9-a70182418183/annotated_testimagesforweb_Chinese-22_9_15-EL-e1494353617635-1.jpg",
+      "original_image": "/uploads/d4dd3e51-b88b-4eda-92b9-a70182418183/testimagesforweb_Chinese-22_9_15-EL-e1494353617635-1.jpg",
+      "detections": [
+        {
+          "class_id": 10,
+          "confidence": 0.809,
+          "bbox": [
+            688,
+            198,
+            756,
+            263
+          ]
+        },
+        {
+          "class_id": 2,
+          "confidence": 0.618,
+          "bbox": [
+            402,
+            180,
+            509,
+            369
+          ]
+        }
+      ],
+      "status": "Pending",
+      "notes": "",
+      "timestamp": "2026-03-09T04:53:23.761454",
+      "priority_rank": 2
+    },
+    {
+      "id": "528beb1c-b518-4fd0-ade6-11218072380c",
+      "filename": "testimagesforweb_Zellbruch.png",
+      "defect_count": 1,
+      "defect_summary": {
+        "Finger": {
+          "count": 1,
+          "confidences": [
+            0.87
+          ],
+          "severity": "High",
+          "color": "#FF6B35",
+          "power_loss_pct": 5,
+          "repair_cost": 105,
+          "repair_cost_min": 40,
+          "repair_cost_max": 170,
+          "repair_method": "Laser or solder repair of metallization fingers",
+          "avg_confidence": 0.87
+        }
+      },
+      "health_score": 89.6,
+      "power_loss_pct": 4.3,
+      "repair_cost": 91,
+      "annual_revenue_loss": 193,
+      "worst_severity": "High",
+      "repair_vs_replace": {
+        "verdict": "repair",
+        "action": "Repair recommended. Estimated repair cost: \u20b991 vs replacement \u20b94,800 \u2013 \u20b99,500",
+        "reasons": [
+          "Repair cost is within acceptable range and panel health is recoverable"
+        ],
+        "repair_cost": 91,
+        "replacement_cost_range": "\u20b94,800 \u2013 \u20b99,500",
+        "replacement_cost_mid": 7150,
+        "savings_vs_replace": 7059,
+        "replace_score": 0
+      },
+      "image_size": {
+        "width": 500,
+        "height": 313
+      },
+      "annotated_image": "/results/d4dd3e51-b88b-4eda-92b9-a70182418183/annotated_testimagesforweb_Zellbruch.png",
+      "original_image": "/uploads/d4dd3e51-b88b-4eda-92b9-a70182418183/testimagesforweb_Zellbruch.png",
+      "detections": [
+        {
+          "class_id": 2,
+          "confidence": 0.87,
+          "bbox": [
+            434,
+            161,
+            498,
+            245
+          ]
+        }
+      ],
+      "status": "Pending",
+      "notes": "",
+      "timestamp": "2026-03-09T04:53:28.451018",
+      "priority_rank": 3
+    },
+    {
+      "id": "aa33ea4c-f067-448a-8625-09be9e3d2a34",
+      "filename": "testimagesforweb_unnamed.jpg",
+      "defect_count": 1,
+      "defect_summary": {
+        "Printing Error": {
+          "count": 1,
+          "confidences": [
+            0.595
+          ],
+          "severity": "Medium",
+          "color": "#FFCC00",
+          "power_loss_pct": 3,
+          "repair_cost": 83,
+          "repair_cost_min": 40,
+          "repair_cost_max": 125,
+          "repair_method": "Re-screen printing of metallization pattern",
+          "avg_confidence": 0.595
+        }
+      },
+      "health_score": 96.4,
+      "power_loss_pct": 1.8,
+      "repair_cost": 49,
+      "annual_revenue_loss": 81,
+      "worst_severity": "Medium",
+      "repair_vs_replace": {
+        "verdict": "repair",
+        "action": "Repair recommended. Estimated repair cost: \u20b949 vs replacement \u20b94,800 \u2013 \u20b99,500",
+        "reasons": [
+          "Repair cost is within acceptable range and panel health is recoverable"
+        ],
+        "repair_cost": 49,
+        "replacement_cost_range": "\u20b94,800 \u2013 \u20b99,500",
+        "replacement_cost_mid": 7150,
+        "savings_vs_replace": 7101,
+        "replace_score": 0
+      },
+      "image_size": {
+        "width": 512,
+        "height": 384
+      },
+      "annotated_image": "/results/d4dd3e51-b88b-4eda-92b9-a70182418183/annotated_testimagesforweb_unnamed.jpg",
+      "original_image": "/uploads/d4dd3e51-b88b-4eda-92b9-a70182418183/testimagesforweb_unnamed.jpg",
+      "detections": [
+        {
+          "class_id": 5,
+          "confidence": 0.595,
+          "bbox": [
+            395,
+            0,
+            474,
+            384
+          ]
+        }
+      ],
+      "status": "Pending",
+      "notes": "",
+      "timestamp": "2026-03-09T04:53:27.896720",
+      "priority_rank": 4
+    },
+    {
+      "id": "f68e72b1-0b69-45d0-8220-d0ec71313eac",
+      "filename": "testimagesforweb_images_3.jpg",
+      "defect_count": 1,
+      "defect_summary": {
+        "Class 11": {
+          "count": 1,
+          "confidences": [
+            0.626
+          ],
+          "severity": "Low",
+          "color": "#888",
+          "power_loss_pct": 2,
+          "repair_cost": 250,
+          "repair_cost_min": 80,
+          "repair_cost_max": 420,
+          "repair_method": "Manual inspection required",
+          "avg_confidence": 0.626
+        }
+      },
+      "health_score": 98.1,
+      "power_loss_pct": 1.3,
+      "repair_cost": 313,
+      "annual_revenue_loss": 58,
+      "worst_severity": "Low",
+      "repair_vs_replace": {
+        "verdict": "repair",
+        "action": "Repair recommended. Estimated repair cost: \u20b9313 vs replacement \u20b94,800 \u2013 \u20b99,500",
+        "reasons": [
+          "Repair cost is within acceptable range and panel health is recoverable"
+        ],
+        "repair_cost": 313,
+        "replacement_cost_range": "\u20b94,800 \u2013 \u20b99,500",
+        "replacement_cost_mid": 7150,
+        "savings_vs_replace": 6837,
+        "replace_score": 0
+      },
+      "image_size": {
+        "width": 183,
+        "height": 181
+      },
+      "annotated_image": "/results/d4dd3e51-b88b-4eda-92b9-a70182418183/annotated_testimagesforweb_images_3.jpg",
+      "original_image": "/uploads/d4dd3e51-b88b-4eda-92b9-a70182418183/testimagesforweb_images_3.jpg",
+      "detections": [
+        {
+          "class_id": 11,
+          "confidence": 0.626,
+          "bbox": [
+            157,
+            69,
+            165,
+            76
+          ]
+        }
+      ],
+      "status": "Pending",
+      "notes": "",
+      "timestamp": "2026-03-09T04:53:26.084515",
+      "priority_rank": 5
+    },
+    {
+      "id": "04a301cb-4d4a-42f4-8f20-feb0026eca1d",
+      "filename": "testimagesforweb_08-RE-Mike-Solar-PV-fig-05-490x620.jpg",
+      "defect_count": 0,
+      "defect_summary": {},
+      "health_score": 100.0,
+      "power_loss_pct": 0.0,
+      "repair_cost": 0,
+      "annual_revenue_loss": 0,
+      "worst_severity": "Good",
+      "repair_vs_replace": {
+        "verdict": "repair",
+        "action": "Repair recommended. Estimated repair cost: \u20b90 vs replacement \u20b94,800 \u2013 \u20b99,500",
+        "reasons": [
+          "Repair cost is within acceptable range and panel health is recoverable"
+        ],
+        "repair_cost": 0,
+        "replacement_cost_range": "\u20b94,800 \u2013 \u20b99,500",
+        "replacement_cost_mid": 7150,
+        "savings_vs_replace": 7150,
+        "replace_score": 0
+      },
+      "image_size": {
+        "width": 500,
+        "height": 279
+      },
+      "annotated_image": "/results/d4dd3e51-b88b-4eda-92b9-a70182418183/annotated_testimagesforweb_08-RE-Mike-Solar-PV-fig-05-490x620.jpg",
+      "original_image": "/uploads/d4dd3e51-b88b-4eda-92b9-a70182418183/testimagesforweb_08-RE-Mike-Solar-PV-fig-05-490x620.jpg",
+      "detections": [],
+      "status": "Pending",
+      "notes": "",
+      "timestamp": "2026-03-09T04:53:21.983746",
+      "priority_rank": 6
+    },
+    {
+      "id": "845e57a2-f397-400d-ba9c-033444c85bd5",
+      "filename": "testimagesforweb_1479285761.jpg",
+      "defect_count": 0,
+      "defect_summary": {},
+      "health_score": 100.0,
+      "power_loss_pct": 0.0,
+      "repair_cost": 0,
+      "annual_revenue_loss": 0,
+      "worst_severity": "Good",
+      "repair_vs_replace": {
+        "verdict": "repair",
+        "action": "Repair recommended. Estimated repair cost: \u20b90 vs replacement \u20b94,800 \u2013 \u20b99,500",
+        "reasons": [
+          "Repair cost is within acceptable range and panel health is recoverable"
+        ],
+        "repair_cost": 0,
+        "replacement_cost_range": "\u20b94,800 \u2013 \u20b99,500",
+        "replacement_cost_mid": 7150,
+        "savings_vs_replace": 7150,
+        "replace_score": 0
+      },
+      "image_size": {
+        "width": 800,
+        "height": 533
+      },
+      "annotated_image": "/results/d4dd3e51-b88b-4eda-92b9-a70182418183/annotated_testimagesforweb_1479285761.jpg",
+      "original_image": "/uploads/d4dd3e51-b88b-4eda-92b9-a70182418183/testimagesforweb_1479285761.jpg",
+      "detections": [],
+      "status": "Pending",
+      "notes": "",
+      "timestamp": "2026-03-09T04:53:22.582735",
+      "priority_rank": 7
+    },
+    {
+      "id": "dd96ca40-43bc-49ec-84c7-a892e233e518",
+      "filename": "testimagesforweb_1479285761_1.jpg",
+      "defect_count": 0,
+      "defect_summary": {},
+      "health_score": 100.0,
+      "power_loss_pct": 0.0,
+      "repair_cost": 0,
+      "annual_revenue_loss": 0,
+      "worst_severity": "Good",
+      "repair_vs_replace": {
+        "verdict": "repair",
+        "action": "Repair recommended. Estimated repair cost: \u20b90 vs replacement \u20b94,800 \u2013 \u20b99,500",
+        "reasons": [
+          "Repair cost is within acceptable range and panel health is recoverable"
+        ],
+        "repair_cost": 0,
+        "replacement_cost_range": "\u20b94,800 \u2013 \u20b99,500",
+        "replacement_cost_mid": 7150,
+        "savings_vs_replace": 7150,
+        "replace_score": 0
+      },
+      "image_size": {
+        "width": 800,
+        "height": 533
+      },
+      "annotated_image": "/results/d4dd3e51-b88b-4eda-92b9-a70182418183/annotated_testimagesforweb_1479285761_1.jpg",
+      "original_image": "/uploads/d4dd3e51-b88b-4eda-92b9-a70182418183/testimagesforweb_1479285761_1.jpg",
+      "detections": [],
+      "status": "Pending",
+      "notes": "",
+      "timestamp": "2026-03-09T04:53:23.286062",
+      "priority_rank": 8
+    },
+    {
+      "id": "4ca0744e-e58e-4a06-8fca-fc02ba74e41b",
+      "filename": "testimagesforweb_images.jpg",
+      "defect_count": 0,
+      "defect_summary": {},
+      "health_score": 100.0,
+      "power_loss_pct": 0.0,
+      "repair_cost": 0,
+      "annual_revenue_loss": 0,
+      "worst_severity": "Good",
+      "repair_vs_replace": {
+        "verdict": "repair",
+        "action": "Repair recommended. Estimated repair cost: \u20b90 vs replacement \u20b94,800 \u2013 \u20b99,500",
+        "reasons": [
+          "Repair cost is within acceptable range and panel health is recoverable"
+        ],
+        "repair_cost": 0,
+        "replacement_cost_range": "\u20b94,800 \u2013 \u20b99,500",
+        "replacement_cost_mid": 7150,
+        "savings_vs_replace": 7150,
+        "replace_score": 0
+      },
+      "image_size": {
+        "width": 225,
+        "height": 225
+      },
+      "annotated_image": "/results/d4dd3e51-b88b-4eda-92b9-a70182418183/annotated_testimagesforweb_images.jpg",
+      "original_image": "/uploads/d4dd3e51-b88b-4eda-92b9-a70182418183/testimagesforweb_images.jpg",
+      "detections": [],
+      "status": "Pending",
+      "notes": "",
+      "timestamp": "2026-03-09T04:53:24.532805",
+      "priority_rank": 9
+    },
+    {
+      "id": "58f7c76a-acd6-41e9-a1c5-1a222ff72502",
+      "filename": "testimagesforweb_images_4.jpg",
+      "defect_count": 0,
+      "defect_summary": {},
+      "health_score": 100.0,
+      "power_loss_pct": 0.0,
+      "repair_cost": 0,
+      "annual_revenue_loss": 0,
+      "worst_severity": "Good",
+      "repair_vs_replace": {
+        "verdict": "repair",
+        "action": "Repair recommended. Estimated repair cost: \u20b90 vs replacement \u20b94,800 \u2013 \u20b99,500",
+        "reasons": [
+          "Repair cost is within acceptable range and panel health is recoverable"
+        ],
+        "repair_cost": 0,
+        "replacement_cost_range": "\u20b94,800 \u2013 \u20b99,500",
+        "replacement_cost_mid": 7150,
+        "savings_vs_replace": 7150,
+        "replace_score": 0
+      },
+      "image_size": {
+        "width": 299,
+        "height": 168
+      },
+      "annotated_image": "/results/d4dd3e51-b88b-4eda-92b9-a70182418183/annotated_testimagesforweb_images_4.jpg",
+      "original_image": "/uploads/d4dd3e51-b88b-4eda-92b9-a70182418183/testimagesforweb_images_4.jpg",
+      "detections": [],
+      "status": "Pending",
+      "notes": "",
+      "timestamp": "2026-03-09T04:53:26.566168",
+      "priority_rank": 10
+    },
+    {
+      "id": "d10ef966-ddc9-4ad1-ad91-b372fe4123fb",
+      "filename": "testimagesforweb_images_6.jpg",
+      "defect_count": 0,
+      "defect_summary": {},
+      "health_score": 100.0,
+      "power_loss_pct": 0.0,
+      "repair_cost": 0,
+      "annual_revenue_loss": 0,
+      "worst_severity": "Good",
+      "repair_vs_replace": {
+        "verdict": "repair",
+        "action": "Repair recommended. Estimated repair cost: \u20b90 vs replacement \u20b94,800 \u2013 \u20b99,500",
+        "reasons": [
+          "Repair cost is within acceptable range and panel health is recoverable"
+        ],
+        "repair_cost": 0,
+        "replacement_cost_range": "\u20b94,800 \u2013 \u20b99,500",
+        "replacement_cost_mid": 7150,
+        "savings_vs_replace": 7150,
+        "replace_score": 0
+      },
+      "image_size": {
+        "width": 225,
+        "height": 225
+      },
+      "annotated_image": "/results/d4dd3e51-b88b-4eda-92b9-a70182418183/annotated_testimagesforweb_images_6.jpg",
+      "original_image": "/uploads/d4dd3e51-b88b-4eda-92b9-a70182418183/testimagesforweb_images_6.jpg",
+      "detections": [],
+      "status": "Pending",
+      "notes": "",
+      "timestamp": "2026-03-09T04:53:27.299748",
+      "priority_rank": 11
+    }
+  ],
+  "summary": {
+    "total_panels": 11,
+    "total_defects": 7,
+    "avg_health_score": 95.7,
+    "total_power_loss_pct": 34.7,
+    "total_repair_cost": 1162,
+    "total_annual_revenue_loss": 1555,
+    "replace_recommended": 0,
+    "defect_type_distribution": {
+      "Finger": 3,
+      "Fragment": 1,
+      "Other Defect": 1,
+      "Printing Error": 1,
+      "Class 11": 1
+    },
+    "severity_distribution": {
+      "Critical": 1,
+      "High": 2,
+      "Medium": 1,
+      "Low": 1,
+      "Good": 6
+    },
+    "critical_panels": 1,
+    "healthy_panels": 6,
+    "replacement_cost_range": "\u20b94,800 \u2013 \u20b99,500"
+  }
+}
